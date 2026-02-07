@@ -833,7 +833,7 @@ export function TechnologyPage() {
                     {/* Phase 0 - Built & Validated */}
                     <div className="w-[85vw] md:w-[28vw] flex-shrink-0 overflow-visible">
                       <div className="bg-white border-2 border-[#026448] rounded-2xl p-[4vh] h-full relative overflow-visible">
-                        <div className="absolute top-[2vh] right-[2vh] bg-[#026448] text-white px-3 py-1 rounded-full text-xs font-medium z-50">
+                        <div className="absolute top-[2vh] right-[2vh] bg-[#026448] text-white px-3 py-1 rounded-full text-xs font-medium">
                           ✓ Completed
                         </div>
                         <div className="mb-[2vh]">
@@ -1022,10 +1022,10 @@ export function TechnologyPage() {
               {/* Bottom Context */}
               <div className="mt-[8vh] bg-[#f8f8f8] border border-[#e0e0e0] rounded-2xl p-[4vh] md:p-[5vh]">
                 <p className="text-[#1a1a1a] leading-[1.75] mb-[2vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 500 }}>
-                  Built with industry, not in a lab
+                  Building with industry partners
                 </p>
                 <p className="text-[#4a4a4a] leading-[1.85]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  We're building this with converters and retailers from day one. Every phase gets us closer to deployment, with real data from real production lines and real stores. By end of 2026, we'll have everything needed for commercial rollout across Europe.
+                  RipeSwitch is developed alongside converters and retailers, with each phase validated on production lines and in stores. We invite partners to quantify spoilage and co-design margin-protecting solutions. Commercial rollout across Europe is planned for the end of 2026; new partners are welcomed now.
                 </p>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import { Navigation } from "../components/Navigation";
 import Logo from "../../imports/Logo";
 import { motion } from "motion/react";
-import { FileText, Download, Mail } from "lucide-react";
+import { FileText, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function TechnicalSpecificationPage() {
@@ -37,10 +37,15 @@ export function TechnicalSpecificationPage() {
                 RipeSwitch™ Active Ripening Control for Paper-Based Fruit Packaging
               </h2>
             </div>
-            <button className="flex items-center gap-2 px-6 py-3 bg-white border border-[#026448] text-[#026448] rounded-lg hover:bg-[#026448] hover:text-white transition-all">
-              <Download className="w-4 h-4" />
-              <span style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)', fontWeight: 600 }}>Download PDF</span>
-            </button>
+            <Link
+              to="/contact"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#026448] text-[#026448] rounded-lg hover:bg-[#026448] hover:text-white transition-all"
+            >
+              <Mail className="w-4 h-4" />
+              <span style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)', fontWeight: 600 }}>
+                Request Technical Specification
+              </span>
+            </Link>
           </div>
           
           <p className="text-[#666] leading-[1.7] mt-[3vh] max-w-[800px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
