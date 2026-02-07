@@ -3,7 +3,7 @@ import { CheckCircle, XCircle, AlertTriangle, Minus } from "lucide-react";
 
 export function CompetitiveBenchmark() {
   const criteria = [
-    { label: "EU 2029 packaging ready", competitors: [false, false, true, false], ripeswitch: true },
+    { label: "Aligned with expected EU 2029 packaging requirements", competitors: [false, false, true, false], ripeswitch: true },
     { label: "Intrinsic ripening control", competitors: ["n/a", "n/a", "n/a", true], ripeswitch: true },
     { label: "No plastic components", competitors: ["n/a", "n/a", true, false], ripeswitch: true },
     { label: "Supply chain integration", competitors: [true, true, true, false], ripeswitch: true },
@@ -112,7 +112,7 @@ export function CompetitiveBenchmark() {
                 transition={{ duration: 0.6, delay: 0.9 }}
               >
                 <p className="text-[#026448] font-bold leading-[1.5]" style={{ fontSize: 'clamp(1rem, 1.1vw, 1.2rem)', letterSpacing: '-0.01em' }}>
-                  Only RipeSwitch delivers compliance + control without tradeoffs.
+                  RipeSwitch delivers compliance + control without tradeoffs.
                 </p>
               </motion.div>
 
@@ -184,19 +184,19 @@ export function CompetitiveBenchmark() {
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                   <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                    Paper converters ready
+                    Converter-ready
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                   <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                    No capital investment required
+                    No significant capital investment typically required
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                   <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                    Proven at retail scale
+                    Demonstrated in pilot retail settings
                   </p>
                 </div>
               </div>
@@ -312,7 +312,7 @@ export function CompetitiveBenchmark() {
             transition={{ duration: 0.6, delay: 1.6 }}
           >
             <p className="text-[#026448] font-semibold leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 2.8vw, 1.05rem)' }}>
-              Only RipeSwitch delivers compliance + control without tradeoffs.
+              RipeSwitch delivers compliance + control without tradeoffs.
             </p>
           </motion.div>
 
@@ -381,19 +381,19 @@ export function CompetitiveBenchmark() {
               <div className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                 <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                  Paper converters ready
+                  Converter-ready
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                 <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                  No capital investment required
+                  No significant capital investment typically required
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                 <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                  Proven at retail scale
+                  Demonstrated in pilot retail settings
                 </p>
               </div>
             </div>

@@ -18,7 +18,7 @@ export default function Solution() {
 
         {/* Plus Icon */}
         <div className="flex-shrink-0">
-          <Plus className="w-10 h-10 md:w-8 md:h-8 lg:w-12 lg:h-12 text-black" strokeWidth={3} />
+          <Plus className="w-10 h-10 md:w-8 md:h-8 lg:w-12 lg:h-12 text-[#1a1a1a]" strokeWidth={3} />
         </div>
 
         {/* Card 2 - Patch */}
@@ -30,7 +30,7 @@ export default function Solution() {
 
         {/* Equals Icon */}
         <div className="flex-shrink-0">
-          <Equal className="w-10 h-10 md:w-8 md:h-8 lg:w-12 lg:h-12 text-[#EEFF41]" strokeWidth={3} />
+          <Equal className="w-10 h-10 md:w-8 md:h-8 lg:w-12 lg:h-12 text-[#1a1a1a]" strokeWidth={3} />
         </div>
 
         {/* Card 3 - Banana */}

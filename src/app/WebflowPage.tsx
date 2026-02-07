@@ -1,6 +1,13 @@
 import { motion } from "motion/react";
 import Logo from "../imports/Logo";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
+import heroImage from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077.webp";
+import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
+import plasticPackaging from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b.webp";
+import mechanismIllustration from "@/assets/92b9f5e155f2beeff77bbad48b5895559f909d98.webp";
+import retailUse from "@/assets/705e0dd601e893c242eb4bf0eeb9c749ae0a98c5.webp";
+import paperConverting from "@/assets/0df46eb4c699ca7f1ee082a13c21a365cb336417.webp";
+import tomatoesRetail from "@/assets/c50c398b51941255d564f13fc1a9a02a97c84aef.webp";
 
 export default function WebflowPage() {
   return (
@@ -33,7 +40,7 @@ export default function WebflowPage() {
                 className="text-[#4a4a4a] leading-[1.6] max-w-[900px] mx-auto"
                 style={{ fontSize: 'clamp(1.1rem, 1.8vw, 2rem)', fontWeight: 400 }}
               >
-                The first scalable paper packaging component that gives control over produce ripening and extends usable life, without plastics, electronics, or coatings.
+              A scalable paper packaging component that controls produce ripening and extends usable life within standard paper-based formats.
               </p>
             </motion.div>
 
@@ -45,11 +52,7 @@ export default function WebflowPage() {
               className="relative"
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1741461527158-2a5799c3d26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXBlJTIwYmFuYW5hcyUyMHBhcGVyJTIwYmFnfGVufDF8fHx8MTc3MDM3ODkyN3ww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="RipeSwitch paper packaging"
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={heroImage} alt="RipeSwitch paper packaging" className="w-full h-full object-cover" />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"
@@ -74,11 +77,7 @@ export default function WebflowPage() {
               transition={{ duration: 0.8 }}
               className="relative h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden"
             >
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1701937946120-e0945bb71e35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwd2FzdGUlMjBvdmVycmlwZSUyMGZydWl0JTIwaG91c2Vob2xkfGVufDF8fHx8MTc3MDM3ODkyNHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Household and retail fruit waste"
-                className="w-full h-full object-cover"
-              />
+              <ImageWithFallback src={overripeFruit} alt="Household and retail fruit waste" className="w-full h-full object-cover" />
               <figcaption 
                 className="text-[#666] mt-[2vh] italic"
                 style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}
@@ -133,7 +132,7 @@ export default function WebflowPage() {
               className="text-[#4a4a4a] leading-[1.8] max-w-[800px] mx-auto mb-[8vh] space-y-[2vh]"
               style={{ fontSize: 'clamp(1.1rem, 1.4vw, 1.6rem)' }}
             >
-              <p>Single-use plastic is being phased out.<br />That's necessary, but it removes the only packaging tool that slowed spoilage.</p>
+              <p>Single-use plastic is being phased out.<br />That's necessary, but it removes a major tool that slowed spoilage.</p>
               <p className="pt-[2vh]">Standard paper increases dehydration and ripening loss.<br />Shrink rises. Margins suffer.</p>
             </div>
 
@@ -146,11 +145,7 @@ export default function WebflowPage() {
               className="relative"
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1649677364678-45a69944db3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGFzdGljJTIwcHJvZHVjZSUyMHBhY2thZ2luZyUyMHJldGFpbHxlbnwxfHx8fDE3NzAzNzg5MzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Plastic produce packaging"
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={plasticPackaging} alt="Plastic produce packaging" className="w-full h-full object-cover" />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"
@@ -186,9 +181,7 @@ export default function WebflowPage() {
               <strong className="text-[#EEFF41]">READY</strong> when it's meant to ripen.</p>
               
               <div className="pt-[4vh] space-y-[2vh]">
-                <p>No apps.</p>
-                <p>No electronics.</p>
-                <p>No chemical coatings.</p>
+                <p>No apps, electronics, or chemical coatings.</p>
               </div>
               
               <p className="pt-[4vh]" style={{ fontSize: 'clamp(1.3rem, 1.8vw, 2rem)' }}>
@@ -196,7 +189,7 @@ export default function WebflowPage() {
               </p>
             </div>
 
-            {/* Product Visual Placeholder */}
+            {/* Product Visual */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -205,9 +198,7 @@ export default function WebflowPage() {
               className="mt-[10vh]"
             >
               <div className="relative h-[45vh] md:h-[55vh] rounded-3xl overflow-hidden bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center">
-                <div className="text-white/60 text-center">
-                  <div style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>Product visual or cross-section diagram</div>
-                </div>
+                <ImageWithFallback src={mechanismIllustration} alt="RipeSwitch mechanism illustration" className="w-full h-full object-contain p-[4vh]" />
               </div>
               <figcaption 
                 className="text-white/70 text-center mt-[2vh] italic"
@@ -300,8 +291,7 @@ export default function WebflowPage() {
                 </div>
                 
                 <div className="pt-[3vh] space-y-[1.5vh]">
-                  <p>No training.</p>
-                  <p>No behaviour change.</p>
+                  <p>No training or behaviour change.</p>
                 </div>
               </div>
             </motion.div>
@@ -315,11 +305,7 @@ export default function WebflowPage() {
               className="relative"
             >
               <div className="relative h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1767028531570-1def40fd58b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncm9jZXJ5JTIwc3RvcmUlMjBvcGVuJTIwcHJvZHVjZSUyMGRpc3BsYXl8ZW58MXx8fHwxNzcwMzc4OTM2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Retail produce display"
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={retailUse} alt="Retail produce display" className="w-full h-full object-cover" />
               </div>
               <figcaption 
                 className="text-[#666] mt-[2vh] italic"
@@ -363,11 +349,7 @@ export default function WebflowPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1729551610640-e8adee1172e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXBlciUyMHBhY2thZ2luZyUyMG1hbnVmYWN0dXJpbmclMjByb2xsfGVufDF8fHx8MTc3MDM3ODkzNnww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Paper manufacturing process"
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={paperConverting} alt="Paper manufacturing process" className="w-full h-full object-cover" />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"
@@ -462,11 +444,7 @@ export default function WebflowPage() {
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1655168339415-fc5a98a7184f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdm9jYWRvcyUyMG1hbmdvZXMlMjBwZWFycyUyMGZydWl0fGVufDF8fHx8MTc3MDM3ODkzNnww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Target produce categories"
-                  className="w-full h-full object-cover"
-                />
+                <ImageWithFallback src={tomatoesRetail} alt="Target produce categories" className="w-full h-full object-cover" />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"

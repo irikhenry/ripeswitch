@@ -94,7 +94,7 @@ function HomePage() {
               Active ripening control, built into paper.
             </h1>
             <p className="text-white/90 leading-[1.6] max-w-full lg:max-w-[42vw] mx-auto lg:mx-0 mb-[4vh]" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.8rem)', fontWeight: 400 }}>
-              Extends produce shelf life without plastics, electronics, or coatings.
+              Extends produce shelf life within paper-based packaging.
             </p>
           </motion.div>
 
@@ -237,7 +237,7 @@ function HomePage() {
                 19%
               </div>
               <h2 className="text-[#1a1a1a] leading-[1.2]" style={{ fontSize: 'clamp(1.6rem, 2.8vw, 3.2rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>
-                of food available to consumers becomes waste
+                of food available to consumers ends up as waste
               </h2>
             </div>
 
@@ -646,7 +646,7 @@ function HomePage() {
               Paper-based ripening control
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1.1rem, 1.4vw, 1.7rem)', fontWeight: 400 }}>
-              RipeSwitch is a scalable paper packaging component that actively manages gas exchange around fresh produce, delaying ripening progression without plastics, electronics, or chemical coatings.
+              RipeSwitch is a scalable paper packaging component that actively manages gas exchange around fresh produce, delaying ripening progression within standard paper-based formats.
             </p>
           </motion.div>
 
@@ -656,7 +656,7 @@ function HomePage() {
               {
                 number: "01",
                 title: "Material simplicity",
-                description: "Integrates into standard paper converting. No exotic materials, no electronics, no custom equipment."
+                description: "Integrates into standard paper converting with standard equipment."
               },
               {
                 number: "02",
@@ -991,6 +991,96 @@ function HomePage() {
 
           {/* Interactive Calculator */}
           <EconomicCalculator />
+
+          {/* Consumer Impact (Merged) */}
+          <motion.div
+            className="mt-[10vh] md:mt-[12vh]"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="bg-[#1a1a1a] rounded-3xl p-[6vh] md:p-[8vh]">
+              <div className="text-center mb-[6vh]">
+                <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[3vh]">
+                  <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)', fontWeight: 700 }}>
+                    Consumer Impact
+                  </span>
+                </div>
+                <h3 className="text-[#EEFF41] leading-[1.1] mb-[3vh]" style={{ fontSize: 'clamp(2rem, 3.5vw, 4.2rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  How shrink shapes food prices
+                </h3>
+                <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
+                  Shrink costs are embedded in retail pricing. Reducing loss creates room for price stability and margin optimization.
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[5vh] md:p-[8vh]">
+                  <h3 className="text-white text-center leading-[1.2] mb-[6vh]" style={{ fontSize: 'clamp(1.4rem, 2vw, 2.5rem)', fontWeight: 700 }}>
+                    Current pricing model embeds waste cost
+                  </h3>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[3vh] md:gap-[3vw]">
+                    {[
+                      { 
+                        step: '01',
+                        title: 'Purchase cost',
+                        value: '€1.00',
+                        description: 'Per unit from supplier'
+                      },
+                      { 
+                        step: '02',
+                        title: 'Shrink factor',
+                        value: '+15%',
+                        description: '5% unit loss amplified through retail margin structure',
+                        highlight: true
+                      },
+                      { 
+                        step: '03',
+                        title: 'Target margin',
+                        value: '+40%',
+                        description: 'Retailer gross margin'
+                      },
+                      { 
+                        step: '04',
+                        title: 'Shelf price',
+                        value: '€1.61',
+                        description: 'Consumer pays for loss'
+                      }
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        className={`relative ${item.highlight ? 'bg-[#026448]' : 'bg-white/5'} border ${item.highlight ? 'border-[#EEFF41]' : 'border-white/10'} rounded-2xl p-[3vh] md:p-[4vh]`}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                      >
+                        <div className="text-white/70 text-xs uppercase tracking-wider mb-[1vh]" style={{ fontSize: 'clamp(0.65rem, 0.75vw, 0.8rem)', fontWeight: 600 }}>
+                          Step {item.step}
+                        </div>
+                        <h4 className="text-white leading-[1.2] mb-[1vh]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)', fontWeight: 700 }}>
+                          {item.title}
+                        </h4>
+                        <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[1vh]`} style={{ fontSize: 'clamp(1.4rem, 2vw, 2.4rem)', fontWeight: 700 }}>
+                          {item.value}
+                        </div>
+                        <p className="text-white/70 leading-[1.5]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
+                          {item.description}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -1122,7 +1212,7 @@ function HomePage() {
                   {/* Critical Economic Insight */}
                   <div className="mt-[3vh] pt-[3vh] border-t border-white/20">
                     <div className="text-[#EEFF41] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-                      Margin recovery occurs without consumer price inflation
+                      Margin recovery can reduce pressure on price inflation
                     </div>
                   </div>
                 </div>
@@ -1149,7 +1239,7 @@ function HomePage() {
                 metric: 'Capital requirement', 
                 value: 'Zero', 
                 unit: '',
-                description: 'No new equipment or infrastructure' 
+                description: 'Minimal operational change' 
               },
               { 
                 metric: 'Supply chain risk', 
@@ -1186,98 +1276,9 @@ function HomePage() {
         </div>
       </section>
 
-      {/* Impact on Food Prices Section */}
-      <section className="relative w-full min-h-screen bg-[#1a1a1a] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
+      {/* Impact Scenarios */}
+      <section className="relative w-full bg-[#1a1a1a] px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
         <div className="max-w-[1400px] w-full mx-auto">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-[10vh] md:mb-[14vh]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[4vh]">
-              <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)', fontWeight: 700 }}>
-                Consumer Impact
-              </span>
-            </div>
-            <h2 className="text-[#EEFF41] leading-[1.1] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              How shrink structurally shapes food prices
-            </h2>
-            <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              Shrink costs are embedded in retail pricing. Reducing loss creates room for price stability and margin optimization.
-            </p>
-          </motion.div>
-
-          {/* Price Flow Visualization */}
-          <motion.div
-            className="mb-[10vh] md:mb-[14vh]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[5vh] md:p-[8vh]">
-              <h3 className="text-white text-center leading-[1.2] mb-[6vh]" style={{ fontSize: 'clamp(1.4rem, 2vw, 2.5rem)', fontWeight: 700 }}>
-                Current pricing model embeds waste cost
-              </h3>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[3vh] md:gap-[3vw]">
-                {[
-                  { 
-                    step: '01',
-                    title: 'Purchase cost',
-                    value: '€1.00',
-                    description: 'Per unit from supplier'
-                  },
-                  { 
-                    step: '02',
-                    title: 'Shrink factor',
-                    value: '+15%',
-                    description: '5% unit loss amplified through retail margin structure',
-                    highlight: true
-                  },
-                  { 
-                    step: '03',
-                    title: 'Target margin',
-                    value: '+40%',
-                    description: 'Retailer gross margin'
-                  },
-                  { 
-                    step: '04',
-                    title: 'Shelf price',
-                    value: '€1.61',
-                    description: 'Consumer pays for loss'
-                  }
-                ].map((item, index) => (
-                  <motion.div
-                    key={index}
-                    className={`relative ${item.highlight ? 'bg-[#026448]' : 'bg-white/5'} border ${item.highlight ? 'border-[#EEFF41]' : 'border-white/10'} rounded-2xl p-[3vh] md:p-[4vh]`}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  >
-                    <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white/40'} mb-[2vh] font-bold`} style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                      {item.step}
-                    </div>
-                    <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[2vh]`} style={{ fontSize: 'clamp(2rem, 3vw, 3.5rem)', fontWeight: 700 }}>
-                      {item.value}
-                    </div>
-                    <div className={`${item.highlight ? 'text-white' : 'text-white/80'} font-bold mb-[1vh]`} style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                      {item.title}
-                    </div>
-                    <div className={`${item.highlight ? 'text-white/80' : 'text-white/60'} leading-[1.5]`} style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                      {item.description}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Impact Scenarios */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vh] md:gap-[5vw] mb-[10vh] md:mb-[14vh]">
             {/* Scenario 1 */}
             <motion.div
@@ -1395,7 +1396,7 @@ function HomePage() {
                 The strategic choice
               </h3>
               <p className="text-white/90 leading-[1.7] mb-[3vh]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.5rem)' }}>
-                RipeSwitch converts shrink from a hidden tax on consumers into a controllable operating variable. Retailers can reinvest savings into lower prices, margin resilience, or both—without changing consumer behaviour or pricing models.
+                RipeSwitch converts shrink from a hidden tax on consumers into a controllable operating variable. Retailers can reinvest savings into lower prices, margin resilience, or both—without changing core pricing models.
               </p>
               <p className="text-[#EEFF41] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.15vw, 1.35rem)', fontWeight: 600 }}>
                 Economic shock absorption for food retail.
@@ -1425,7 +1426,7 @@ function HomePage() {
               Built for industrial production
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              RipeSwitch is designed to integrate directly into existing paper converting operations. No exotic equipment, no specialized facilities.
+              RipeSwitch is designed to integrate directly into existing paper converting operations to keep implementation simple.
             </p>
           </motion.div>
 
@@ -1490,7 +1491,7 @@ function HomePage() {
             {[
               {
                 title: "Low unit economics",
-                description: "Material costs compatible with commodity packaging. No premium pricing required for market entry."
+                description: "Material costs compatible with commodity packaging. Premium pricing is not typically required for initial market entry."
               },
               {
                 title: "Rapid scale-up",
@@ -1498,7 +1499,7 @@ function HomePage() {
               },
               {
                 title: "Supply chain ready",
-                description: "Works within current logistics. No cold chain, no special handling, no infrastructure build-out."
+                description: "Works within current logistics with minimal special handling or infrastructure build-out."
               }
             ].map((benefit, index) => (
               <motion.div

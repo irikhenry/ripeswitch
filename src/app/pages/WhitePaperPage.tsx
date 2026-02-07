@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Navigation } from "../components/Navigation";
 import Logo from "../../imports/Logo";
+import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
 
 export function WhitePaperPage() {
   const location = useLocation();
@@ -77,7 +78,7 @@ export function WhitePaperPage() {
             </p>
 
             <p className="text-[#666] leading-[1.85] mb-[6vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-              The current phase enables retail and supply-chain operators to validate performance in their own operating environments, generating independent data at scale under real handling conditions. This pilot validation directly supports commercial readiness and provides the performance evidence required for scaled deployment.
+              The current phase enables retail and supply-chain operators to validate performance in their own operating environments, generating independent data under real handling conditions.
             </p>
 
             <div className="bg-[#f8f8f8] border-l-4 border-[#026448] p-[4vh]">
@@ -85,7 +86,7 @@ export function WhitePaperPage() {
                 Path to Commercial Deployment
               </p>
               <p className="text-[#666] leading-[1.85]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                Piloting with retail operators enables validation of manufacturability, shrink reduction, and operational integration before full-scale rollout. Partner-generated data supports both commercial decision-making and formal IP protection, positioning the system for market entry.
+                Piloting with retail operators validates manufacturability, shrink reduction, and operational integration before full-scale rollout. Partner-generated data supports commercial decision-making and formal IP protection, positioning the system for market entry.
               </p>
             </div>
 
@@ -141,7 +142,7 @@ export function WhitePaperPage() {
             
             <div className="border border-[#1a1a1a]/10 overflow-hidden mb-[8vh]">
               <ImageWithFallback 
-                src="https://images.unsplash.com/photo-1665976243823-e9e5b416dfd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmcmVzaCUyMHByb2R1Y2UlMjByaXBlbmluZyUyMHJlc2VhcmNofGVufDF8fHx8MTc3MDQ3MzI5OXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src={overripeFruit}
                 alt="Fresh produce ripening research"
                 className="w-full h-[300px] md:h-[400px] object-cover"
               />

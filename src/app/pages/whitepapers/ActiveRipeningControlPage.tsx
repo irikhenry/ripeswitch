@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
 import { WhitePaperDetailWrapper } from "../../components/WhitePaperDetailWrapper";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
+import heroImage from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077.webp";
+import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
+import plasticPackaging from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b.webp";
 
 export function ActiveRipeningControlPage() {
   return (
@@ -28,7 +31,7 @@ export function ActiveRipeningControlPage() {
               className="text-[#4a4a4a] leading-[1.6] max-w-[900px] mx-auto"
               style={{ fontSize: 'clamp(1.1rem, 1.8vw, 2rem)', fontWeight: 400 }}
             >
-              The first scalable paper packaging component that gives control over produce ripening and extends usable life, without plastics, electronics, or coatings.
+              A scalable paper packaging component that gives control over produce ripening and extends usable life, without plastics, electronics, or coatings.
             </p>
           </motion.div>
 
@@ -41,7 +44,7 @@ export function ActiveRipeningControlPage() {
           >
             <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1741461527158-2a5799c3d26c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXBlJTIwYmFuYW5hcyUyMHBhcGVyJTIwYmFnfGVufDF8fHx8MTc3MDM3ODkyN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={heroImage}
                 alt="RipeSwitch paper packaging"
                 className="w-full h-full object-cover"
               />
@@ -69,7 +72,7 @@ export function ActiveRipeningControlPage() {
               className="relative h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1701937946120-e0945bb71e35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb29kJTIwd2FzdGUlMjBvdmVycmlwZSUyMGZydWl0JTIwaG91c2Vob2xkfGVufDF8fHx8MTc3MDM3ODkyNHww&ixlib=rb-4.1.0&q=80&w=1080"
+                src={overripeFruit}
                 alt="Household and retail fruit waste"
                 className="w-full h-full object-cover"
               />
@@ -127,7 +130,7 @@ export function ActiveRipeningControlPage() {
               className="text-[#4a4a4a] leading-[1.8] max-w-[800px] mx-auto mb-[8vh] space-y-[2vh]"
               style={{ fontSize: 'clamp(1.1rem, 1.4vw, 1.6rem)' }}
             >
-              <p>Single-use plastic is being phased out.<br />That's necessary, but it removes the only packaging tool that slowed spoilage.</p>
+              <p>Single-use plastic is being phased out.<br />That's necessary, but it removes a major tool that slowed spoilage.</p>
               <p className="pt-[2vh]">Standard paper increases dehydration and ripening loss.<br />Shrink rises. Margins suffer.</p>
             </div>
 
@@ -141,7 +144,7 @@ export function ActiveRipeningControlPage() {
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1649677364678-45a69944db3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwbGFzdGljJTIwcHJvZHVjZSUyMHBhY2thZ2luZyUyMHJldGFpbHxlbnwxfHx8fDE3NzAzNzg5MzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={plasticPackaging}
                   alt="Plastic produce packaging"
                   className="w-full h-full object-cover"
                 />
@@ -180,9 +183,7 @@ export function ActiveRipeningControlPage() {
               <strong className="text-[#EEFF41]">READY</strong> when it's meant to ripen.</p>
               
               <div className="pt-[4vh] space-y-[2vh]">
-                <p>No apps.</p>
-                <p>No electronics.</p>
-                <p>No chemical coatings.</p>
+                <p>No apps, electronics, or chemical coatings.</p>
               </div>
               
               <p className="pt-[4vh]" style={{ fontSize: 'clamp(1.3rem, 1.8vw, 2rem)' }}>

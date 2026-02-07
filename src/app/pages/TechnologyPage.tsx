@@ -331,7 +331,7 @@ export function TechnologyPage() {
             {[
               {
                 title: "Low unit economics",
-                description: "Material costs compatible with commodity packaging. No premium pricing required for market entry."
+                description: "Material costs compatible with commodity packaging. Premium pricing is not typically required for market entry."
               },
               {
                 title: "Rapid scale-up",
@@ -339,7 +339,7 @@ export function TechnologyPage() {
               },
               {
                 title: "Supply chain ready",
-                description: "Works within current logistics. No cold chain, no special handling, no infrastructure build-out."
+                description: "Works within current logistics with minimal special handling or infrastructure build-out."
               }
             ].map((benefit, index) => (
               <motion.div
@@ -667,7 +667,7 @@ export function TechnologyPage() {
               </h3>
               
               <p className="text-[#4a4a4a] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                RipeSwitch performance data is derived from material simulation, laboratory testing, and controlled environment studies. The technology is currently undergoing staged validation with industry partners to assess performance under real-world retail and supply-chain conditions.
+                RipeSwitch has validated its core mechanism in lab settings and is now in retailer-led pilots to confirm performance under real-world retail and supply-chain conditions.
               </p>
               
               <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.5rem)', fontWeight: 700 }}>
@@ -722,6 +722,9 @@ export function TechnologyPage() {
               <p className="text-white/90 leading-[1.7] mb-[5vh]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
                 We adapt RipeSwitch technology to your specific produce categories, package geometries, and supply chain requirements. From pilot testing to production scale.
               </p>
+              <p className="text-white/80 leading-[1.6] mb-[4vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
+                Retailer validation is the next step.
+              </p>
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-3 bg-[#EEFF41] text-[#026448] px-[5vw] md:px-[3vw] py-[2.5vh] rounded-full hover:bg-[#EEFF41]/90 transition-colors"
@@ -750,7 +753,7 @@ export function TechnologyPage() {
                 Where we are today
               </h2>
               <p className="text-[#666] leading-[1.6] max-w-[750px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                RipeSwitch has proven the concept in lab testing. The next phase is moving to pilot production with converters and real-world validation with retail partners.
+                RipeSwitch has validated the core mechanism in lab testing and is now moving into pilot production with converters and retailer validation.
               </p>
               <div className="w-24 h-[1px] bg-[#1a1a1a]/20 mt-[4vh]"></div>
             </div>
@@ -763,13 +766,13 @@ export function TechnologyPage() {
                 </p>
                 <div className="space-y-[3vh] text-[#4a4a4a]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 300 }}>
                   <p className="leading-[1.85]">
-                    RipeSwitch is a paper-based packaging system that manages ripening through the package itself—no chemicals on the fruit, no special handling required.
+                    RipeSwitch is a paper-based packaging system that manages ripening through the package itself, without applying chemicals to the fruit and with minimal special handling.
                   </p>
                   <p className="leading-[1.85]">
                     The technology works through engineered material properties built into standard paper substrates. It integrates into existing converting lines and fits current retail workflows.
                   </p>
                   <p className="leading-[1.85]">
-                    We've validated the core mechanism in controlled lab conditions. The system does what it's supposed to do—now we need to prove it at scale.
+                    The core mechanism is validated in lab conditions; scale validation now depends on retailer pilots.
                   </p>
                 </div>
               </div>
@@ -810,7 +813,7 @@ export function TechnologyPage() {
                   What we've built and what's coming in 2026
                 </h3>
                 <p className="text-[#666] leading-[1.75] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 300 }}>
-                  From proven technology to commercial deployment. Here's where we are and where we're going.
+                  From validated technology to commercial deployment. Here's where we are and where we're going.
                 </p>
               </div>
 
@@ -848,9 +851,9 @@ export function TechnologyPage() {
                           </p>
                         </div>
                         <ul className="space-y-[1.5vh] text-[#4a4a4a] mb-[3vh]" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)', fontWeight: 300 }}>
-                          <li className="leading-[1.6]">• Product works—tested and proven</li>
+                          <li className="leading-[1.6]">• Product tested and validated in pilots</li>
                           <li className="leading-[1.6]">• Material system ready for production</li>
-                          <li className="leading-[1.6]">• Prototypes performing in real conditions</li>
+                          <li className="leading-[1.6]">• Prototypes performing in pilot conditions</li>
                         </ul>
                         <div className="pt-[2vh] border-t border-[#e0e0e0]">
                           <p className="text-[#026448] leading-[1.5]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)', fontWeight: 500 }}>
@@ -914,7 +917,7 @@ export function TechnologyPage() {
                         </ul>
                         <div className="pt-[2vh] border-t border-[#e0e0e0]">
                           <p className="text-[#1a1a1a] leading-[1.5]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)', fontWeight: 500 }}>
-                            Proven at scale
+                            Scaling validation
                           </p>
                         </div>
                       </div>
