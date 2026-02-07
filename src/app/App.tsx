@@ -677,7 +677,7 @@ function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 + index * 0.15 }}
               >
-                <div className="text-[#EEFF41] leading-none mb-[2vh]" style={{ fontSize: 'clamp(3rem, 4vw, 5rem)', fontWeight: 700 }}>
+                <div className="text-[#026448] leading-none mb-[2vh]" style={{ fontSize: 'clamp(3rem, 4vw, 5rem)', fontWeight: 700 }}>
                   {benefit.number}
                 </div>
                 <h3 className="text-[#026448] leading-[1.2] mb-[2vh]" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)', fontWeight: 700 }}>
