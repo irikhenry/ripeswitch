@@ -1,8 +1,7 @@
 
   # ripeswitch
 
-
-  ## Running the code
+  ## Running the code properly
 
   Run `npm i` to install the dependencies.
 
