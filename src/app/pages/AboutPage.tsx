@@ -1,0 +1,304 @@
+import { Navigation } from "../components/Navigation";
+import { motion } from "motion/react";
+import { Mail } from "lucide-react";
+import { Link } from "react-router-dom";
+import samsonPhoto from "@/assets/f4e2c86928833b32f1baae17c514d963b0472964.webp";
+import toniPhoto from "@/assets/58c8dfd193737b928db3520fe4ec5b90a88052f6.webp";
+import nooraPhoto from "@/assets/8cb3d96c9bfa471d24a5bb662296595c2d94d011.webp";
+import irikefPhoto from "@/assets/fb1c1a29447e97798098143cc0c2b7650477fd59.webp";
+import simonePhoto from "@/assets/43c1704256a7315de76c9b3b7c45f48f30ea29f7.webp";
+
+export function AboutPage() {
+  return (
+    <div className="w-full bg-white min-h-screen">
+      {/* Hero Section */}
+      <section className="relative w-full bg-[#026448] min-h-screen flex items-center">
+        <Navigation />
+
+        <div className="w-full max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[20vh] md:py-[25vh]">
+          <p className="text-white/60 uppercase tracking-[0.25em] mb-[3vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 400 }}>
+            About Us
+          </p>
+
+          <h1 className="text-white leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(3rem, 6.5vw, 7.5rem)', fontWeight: 300, letterSpacing: '-0.04em' }}>
+            Team
+          </h1>
+
+          <div className="w-24 h-[1px] bg-white/30 mb-[6vh]"></div>
+
+          <p className="text-white/90 leading-[1.85] max-w-[650px] mb-[2.5vh]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)', fontWeight: 300 }}>
+            Building fibre-based systems for controlled ripening
+          </p>
+
+          <p className="text-white/80 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)', fontWeight: 300 }}>
+            Applied materials science for scalable alternatives to plastic food packaging
+          </p>
+        </div>
+      </section>
+
+      {/* Company Overview Section */}
+      <section className="relative w-full bg-white">
+        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-[#1a1a1a] leading-[1.2] mb-[5vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+              Company Overview
+            </h2>
+
+            <div className="space-y-[3vh] text-[#4a4a4a] leading-[1.8]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
+              <p>
+                RipeSwitch is a Helsinki-based materials and packaging development initiative focused on fibre-based systems for ripening control in fresh produce. The work combines materials engineering, post-harvest physiology, and industrial converting compatibility to address the limitations of paper packaging following the phase-out of single-use plastics.
+              </p>
+
+              <p>
+                The project is currently in an applied research and pilot preparation phase. Development is supported by material simulation, laboratory testing, and industrial feasibility assessment, with the objective of validating performance under real retail and logistics conditions.
+              </p>
+
+              <p>
+                RipeSwitch is structured as a research-led invention project, progressing toward patent protection and pilot-scale deployment in collaboration with packaging converters and retail partners.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Team Section */}
+      <section className="relative w-full bg-[#f8f8f8]">
+        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-[#1a1a1a] leading-[1.2] mb-[7vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+              Core Team
+            </h2>
+
+            <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
+              Materials Development, Production & Manufacturing
+            </h3>
+
+            <div className="bg-white rounded-2xl overflow-hidden border border-[#e0e0e0] shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-0">
+                <div className="relative aspect-[3/4] md:aspect-[4/5] bg-[#e0e0e0] overflow-hidden group">
+                  <img 
+                    src={samsonPhoto} 
+                    alt="Samson Emuraishe" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                  <div className="absolute inset-0 bg-black opacity-20 mix-blend-multiply"></div>
+                </div>
+                <div className="p-[5vh] md:p-[6vh] flex flex-col justify-center">
+                  <h3 className="text-[#1a1a1a] leading-[1.2] mb-[1vh]" style={{ fontSize: 'clamp(1.4rem, 1.8vw, 2.2rem)', fontWeight: 700 }}>
+                    Samson Emuraishe
+                  </h3>
+                  <p className="text-[#026448] leading-[1.4] mb-[3vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.35rem)', fontWeight: 600 }}>
+                    Founder, Inventor and Product Architect
+                  </p>
+                  <div className="text-[#4a4a4a] leading-[1.75] space-y-[2vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.25rem)' }}>
+                    <p>
+                      Samson is the inventor of the RipeSwitch system and the original architect of its product concept and functional structure. His background spans fibre-based materials, paper converting processes, and consumer packaging systems, with a focus on translating observed real-world problems into manufacturable product solutions.
+                    </p>
+                    <p>
+                      The RipeSwitch concept originated from direct observation of fruit spoilage and the limitations of existing packaging approaches, particularly the trade-off between plastic-based shelf-life control and fibre-based sustainability. Samson conceived the core system architecture that combines material behaviour, controlled gas exchange, and compatibility with existing industrial converting lines.
+                    </p>
+                    <p>
+                      At RipeSwitch, he is responsible for the overall product concept, system-level design decisions, validation strategy, and the progression of the invention from early concept through laboratory evaluation toward pilot-ready packaging formats.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Advisory Network Section */}
+      <section className="relative w-full bg-white">
+        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-[#1a1a1a] leading-[1.2] mb-[7vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+              Advisory Network
+            </h2>
+
+            {/* Brand & Commercial Strategy */}
+            <div className="mb-[10vh]">
+              <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
+                Brand & Commercial Strategy
+              </h3>
+              
+              <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
+                <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0">
+                  <div className="relative aspect-[3/4] md:aspect-auto bg-[#e0e0e0] overflow-hidden group">
+                  <img 
+                    src={toniPhoto} 
+                    alt="Toni Hukkanen" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                    <div className="absolute inset-0 bg-black opacity-20 mix-blend-multiply"></div>
+                  </div>
+                  <div className="p-[4vh] md:p-[5vh] flex flex-col justify-center">
+                    <h4 className="text-[#1a1a1a] leading-[1.2] mb-[0.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.7rem)', fontWeight: 700 }}>
+                      Toni Hukkanen
+                    </h4>
+                    <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
+                      Brand Building & Commercialisation
+                    </p>
+                    <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                      Toni is a strategic brand and digital design leader with extensive experience building commercially viable brands in regulated and industrial contexts. He supports RipeSwitch in positioning, narrative clarity, and translating technical value into understandable propositions for retail and industrial stakeholders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Structuring & Change Management */}
+            <div className="mb-[10vh]">
+              <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
+                Project Structuring & Change Management
+              </h3>
+              
+              <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
+                <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0">
+                  <div className="relative aspect-[3/4] md:aspect-auto bg-[#e0e0e0] overflow-hidden group">
+                  <img 
+                    src={nooraPhoto} 
+                    alt="Noora Silkanen" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                    <div className="absolute inset-0 bg-black opacity-20 mix-blend-multiply"></div>
+                  </div>
+                  <div className="p-[4vh] md:p-[5vh] flex flex-col justify-center">
+                    <h4 className="text-[#1a1a1a] leading-[1.2] mb-[0.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.7rem)', fontWeight: 700 }}>
+                      Noora Silkanen
+                    </h4>
+                    <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
+                      Project Management & Development
+                    </p>
+                    <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                      Noora has experience in structured project development, organisational change, and cross-stakeholder coordination. She supports RipeSwitch in aligning technical development with funding requirements, pilot structuring, and long-term programme planning.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Creative Sustainability & Systems Thinking */}
+            <div className="mb-[10vh]">
+              <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
+                Creative Sustainability & Systems Thinking
+              </h3>
+              
+              <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
+                <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0">
+                  <div className="relative aspect-[3/4] md:aspect-auto bg-[#e0e0e0] overflow-hidden group">
+                  <img 
+                    src={simonePhoto} 
+                    alt="Simone Gagileone" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                    <div className="absolute inset-0 bg-black opacity-20 mix-blend-multiply"></div>
+                  </div>
+                  <div className="p-[4vh] md:p-[5vh] flex flex-col justify-center">
+                    <h4 className="text-[#1a1a1a] leading-[1.2] mb-[0.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.7rem)', fontWeight: 700 }}>
+                      Simone Gagileone
+                    </h4>
+                    <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
+                      Sustainability, Product and Packging Design
+                    </p>
+                    <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                      Simone works at the intersection of sustainability, design, and systems thinking, with a focus on translating environmental challenges into practical, human-centred solutions. She contributes perspective on circularity, material ethics, and long-term sustainability framing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Materials Science & Engineering */}
+            <div>
+              <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
+                Materials Science & Engineering
+              </h3>
+              
+              <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
+                <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-0">
+                  <div className="relative aspect-[3/4] md:aspect-auto bg-[#e0e0e0] overflow-hidden group">
+                  <img 
+                    src={irikefPhoto} 
+                    alt="Irikefe Mosilily" 
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover grayscale"
+                  />
+                    <div className="absolute inset-0 bg-black opacity-20 mix-blend-multiply"></div>
+                  </div>
+                  <div className="p-[4vh] md:p-[5vh] flex flex-col justify-center">
+                    <h4 className="text-[#1a1a1a] leading-[1.2] mb-[0.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.7rem)', fontWeight: 700 }}>
+                      Irikefe Mosilily
+                    </h4>
+                    <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
+                      Materials Science & Process Engineering Advisor
+                    </p>
+                    <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                      Irikefe is a materials science specialist with experience in fibre materials, packaging machinery, and industrial-scale process engineering. His background includes work connected to large pulp and paper ecosystems and applied research environments. He advises RipeSwitch on material behaviour, integration feasibility, and scale-up considerations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative w-full bg-[#026448]">
+        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh] text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-white leading-[1.2] mb-[4vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+              Interested in pilot collaboration?
+            </h2>
+
+            <p className="text-white/90 leading-[1.75] max-w-[700px] mx-auto mb-[5vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
+              RipeSwitch is seeking industrial partners, packaging converters, and retail organisations interested in participating in pilot validation under real operating conditions.
+            </p>
+
+            <Link 
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#026448] rounded-lg hover:bg-[#EEFF41] transition-all"
+            >
+              <Mail className="w-5 h-5" />
+              <span style={{ fontSize: 'clamp(1rem, 1.1vw, 1.25rem)', fontWeight: 600 }}>
+                Contact Technical Team
+              </span>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+    </div>
+  );
+}
