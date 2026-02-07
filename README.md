@@ -1,7 +1,6 @@
 
   # ripeswitch
 
-  This is a code bundle for ripeswitch. The original project is available at https://www.figma.com/design/kP1JqtFO7Ku86m56tlnVag/ripeswitch.
 
   ## Running the code
 
