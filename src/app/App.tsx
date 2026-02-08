@@ -82,18 +82,18 @@ function HomePage() {
         <Navigation />
 
         {/* Hero Content */}
-        <div className="flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between px-[5vw] md:px-[8vw] gap-[1vh] md:gap-[2vh] lg:gap-[8vw] pt-[24vh] md:pt-[26vh] lg:pt-[22vh] pb-[6vh] lg:pb-[6vh]">
+        <div className="flex-1 flex flex-col lg:flex-row items-center justify-start lg:justify-between px-[5vw] md:px-[8vw] gap-[3vh] md:gap-[4vh] lg:gap-[6vw] pt-[22vh] md:pt-[24vh] lg:pt-[20vh] pb-[6vh] lg:pb-[8vh]">
           {/* Left Content */}
           <motion.div 
-            className="flex-1 w-full lg:max-w-[52vw] z-10 text-center lg:text-left"
+            className="flex-1 w-full lg:max-w-[46vw] z-10 text-center lg:text-left"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h1 className="text-white leading-[1.05] mb-[2.5vh] md:mb-[5vh]" style={{ fontSize: 'clamp(2rem, 5.2vw, 6.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+            <h1 className="text-white leading-[1.02] mb-[2.5vh] md:mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 5.6vw, 7rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
               Active ripening control, built into paper.
             </h1>
-            <p className="text-white/90 leading-[1.6] max-w-full lg:max-w-[42vw] mx-auto lg:mx-0 mb-[4vh]" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.8rem)', fontWeight: 400 }}>
+            <p className="text-white/90 leading-[1.55] max-w-full lg:max-w-[38vw] mx-auto lg:mx-0 mb-[4vh]" style={{ fontSize: 'clamp(1rem, 1.4vw, 1.7rem)', fontWeight: 400 }}>
               Extends produce shelf life within paper-based packaging.
             </p>
           </motion.div>
@@ -105,10 +105,12 @@ function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
           >
-            <div className="w-full lg:w-[clamp(320px,38vw,700px)] flex flex-col items-center justify-center lg:items-center gap-[3vh] overflow-visible">
+            <div className="w-full lg:w-[clamp(360px,40vw,720px)] flex flex-col items-center justify-center lg:items-center gap-[3vh] overflow-visible">
               {/* Image container with particle effect */}
               <div className="relative w-full overflow-visible -mx-[5vw] md:-mx-[8vw] lg:mx-0 flex items-center justify-center">
-                <img src={heroImage} alt="RipeSwitch" className="w-[110vw] md:w-[100vw] lg:w-full scale-110 md:scale-100" />
+                <div className="relative w-full rounded-[28px] backdrop-blur-sm p-[2vh] md:p-[2.5vh] overflow-visible">
+                  <img src={heroImage} alt="RipeSwitch" className="w-full h-auto block" />
+                </div>
                 
                 {/* Particle overlay */}
                 <div className="absolute inset-0 pointer-events-none overflow-visible">
@@ -197,12 +199,12 @@ function HomePage() {
       </section>
 
       {/* Problem Section */}
-      <section className="relative w-full min-h-screen bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
+      <section className="relative w-full min-h-screen bg-[#f8f8f8] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
         {/* Two-Column Hero Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6vh] lg:gap-[8vw] items-center mb-[6vh] md:mb-[8vh]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6vh] lg:gap-[7vw] items-center mb-[6vh] md:mb-[8vh] max-w-[1300px] w-full mx-auto">
           {/* Left - Hero Image */}
           <motion.div
-            className="relative h-[40vh] md:h-[55vh] lg:h-[70vh] rounded-3xl overflow-hidden order-2 lg:order-1"
+            className="relative h-[40vh] md:h-[55vh] lg:h-[70vh] rounded-3xl overflow-hidden order-2 lg:order-1 border border-black/10 shadow-[0_18px_50px_rgba(0,0,0,0.12)] lg:ml-[-6vw] lg:mr-[2vw] w-full z-0"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -218,7 +220,7 @@ function HomePage() {
 
           {/* Right - Content */}
           <motion.div
-            className="order-1 lg:order-2"
+            className="order-1 lg:order-2 relative z-10"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -236,13 +238,13 @@ function HomePage() {
               <div className="text-[#026448] leading-[0.9] mb-[2vh]" style={{ fontSize: 'clamp(5rem, 12vw, 14rem)', fontWeight: 700 }}>
                 19%
               </div>
-              <h2 className="text-[#1a1a1a] leading-[1.2]" style={{ fontSize: 'clamp(1.6rem, 2.8vw, 3.2rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>
+              <h2 className="text-[#1a1a1a] leading-[1.15]" style={{ fontSize: 'clamp(1.8rem, 3vw, 3.4rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>
                 of food available to consumers ends up as waste
               </h2>
             </div>
 
             {/* Description */}
-            <p className="text-[#4a4a4a] leading-[1.7] mb-[4vh] md:mb-[5vh]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
+            <p className="text-[#4a4a4a] leading-[1.75] mb-[4vh] md:mb-[5vh] max-w-[520px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
               Conventional paper lacks moisture and ripening control, increasing food waste.
             </p>
 
@@ -260,7 +262,7 @@ function HomePage() {
 
         {/* Stats Row */}
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-3 gap-[4vh] md:gap-[3vw] mb-[6vh] md:mb-[8vh] pb-[5vh] md:pb-[7vh] border-b border-[#e0e0e0]"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-[4vh] md:gap-[3vw] mb-[6vh] md:mb-[8vh] pb-[5vh] md:pb-[7vh] border-b border-[#e0e0e0] sm:divide-x sm:divide-[#e3e3e3]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -273,16 +275,16 @@ function HomePage() {
           ].map((stat, index) => (
             <motion.div
               key={index}
-              className="text-center sm:text-left"
+              className="text-center sm:text-left sm:px-[2.5vw]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
             >
-              <div className={`leading-none mb-2 ${stat.highlight ? 'text-[#026448]' : 'text-[#1a1a1a]'}`} style={{ fontSize: 'clamp(2.8rem, 4.5vw, 5.5rem)', fontWeight: 700 }}>
+              <div className={`leading-none mb-2 ${stat.highlight ? 'text-[#026448]' : 'text-[#1a1a1a]'}`} style={{ fontSize: 'clamp(2.6rem, 4.2vw, 5rem)', fontWeight: 700 }}>
                 {stat.value}
               </div>
-              <div className="text-[#4a4a4a] leading-[1.5] max-w-[280px] mx-auto sm:mx-0" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500 }}>
+              <div className="text-[#4a4a4a] leading-[1.5] max-w-[280px] mx-auto sm:mx-0" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500, letterSpacing: '0.01em' }}>
                 {stat.label}
               </div>
             </motion.div>
@@ -294,33 +296,33 @@ function HomePage() {
           {[
             {
               image: plasticPackaging,
-              title: "Plastic exit is fixed",
+              title: "Plastic exit is set",
               emoji: "🇪🇺",
-              description: "EU phase-out of single-use plastic packaging by 31 December 2029 creates a need for alternative materials that maintain functional shelf-life performance."
+              description: "EU phase-out of single-use plastic packaging by 31 December 2029 demands alternatives that preserve shelf-life performance."
             },
             {
               image: warehouse,
               title: "Ripening-related loss",
               emoji: "📦",
-              description: "Happens primarily in transit and back rooms, before the shelf—where visibility is low but impact is highest."
+              description: "Most loss occurs in transit and back rooms, before the shelf—low visibility, high impact."
             },
             {
               image: overripeFruit,
               title: "Produce waste",
               emoji: "🍌",
-              description: "Food produce waste is structurally unsolved. Household waste is the visible outcome, not the root cause."
+              description: "Household waste is the visible outcome, not the root cause in the supply chain."
             }
           ].map((problem, index) => (
             <motion.div
               key={index}
-              className="group"
+              className="group bg-white border border-black/10 rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.06)]"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
             >
               {/* Image */}
-              <div className="relative h-[25vh] md:h-[32vh] rounded-2xl overflow-hidden mb-[3vh] border border-[#e0e0e0] group-hover:border-[#026448]/30 transition-colors">
+              <div className="relative h-[24vh] md:h-[28vh] overflow-hidden group-hover:scale-[1.01] transition-transform duration-500">
                 <img
                   src={problem.image}
                   alt={problem.title}
@@ -329,17 +331,19 @@ function HomePage() {
               </div>
 
               {/* Content */}
-              <div className="flex items-start gap-3 mb-[2vh]">
-                <div className="text-2xl leading-none">
-                  {problem.emoji}
+              <div className="px-6 py-6">
+                <div className="flex items-start gap-3 mb-[2vh]">
+                  <div className="text-2xl leading-none">
+                    {problem.emoji}
+                  </div>
+                  <h3 className="text-[#1a1a1a] leading-[1.25] flex-1" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
+                    {problem.title}
+                  </h3>
                 </div>
-                <h3 className="text-[#1a1a1a] leading-[1.25] flex-1" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
-                  {problem.title}
-                </h3>
+                <p className="text-[#4a4a4a] leading-[1.65]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)' }}>
+                  {problem.description}
+                </p>
               </div>
-              <p className="text-[#4a4a4a] leading-[1.65]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)' }}>
-                {problem.description}
-              </p>
             </motion.div>
           ))}
         </div>
@@ -424,18 +428,19 @@ function HomePage() {
                 </h2>
 
                 {/* Animated Stats */}
-                <div className="space-y-[4vh]">
+                <div className="divide-y divide-white/10">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 }}
+                    className="py-[2.5vh] first:pt-0"
                   >
-                    <div className="text-white/50 mb-2" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500 }}>
+                    <div className="text-white/60 mb-2 uppercase tracking-widest" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
                       Total waste (tonnes)
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative"
+                      className="text-white leading-none relative tabular-nums"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -466,12 +471,13 @@ function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.5 }}
+                    className="py-[2.5vh]"
                   >
-                    <div className="text-white/50 mb-2" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500 }}>
+                    <div className="text-white/60 mb-2 uppercase tracking-widest" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
                       Per capita (kg)
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative"
+                      className="text-white leading-none relative tabular-nums"
                       style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}
                     >
                       <motion.span
@@ -498,12 +504,13 @@ function HomePage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.7 }}
+                    className="py-[2.5vh] last:pb-0"
                   >
-                    <div className="text-white/50 mb-2" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500 }}>
+                    <div className="text-white/60 mb-2 uppercase tracking-widest" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
                       GHG emissions value
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative"
+                      className="text-white leading-none relative tabular-nums"
                       style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}
                     >
                       <motion.span
@@ -546,33 +553,35 @@ function HomePage() {
 
           {/* Bottom Full-Width Impact Section */}
           <motion.div 
-            className="relative bg-[#026448] px-[5vw] md:px-[8vw] py-[10vh] md:py-[14vh]"
+            className="relative bg-[#026448] px-[5vw] md:px-[8vw] py-[10vh] md:py-[14vh] overflow-hidden"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
+            <div className="absolute top-[-10vh] right-[-12vw] w-[45vw] h-[45vw] rounded-full bg-white/5 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-[-15vh] left-[-10vw] w-[50vw] h-[50vw] rounded-full bg-black/10 blur-3xl pointer-events-none" />
             <div className="max-w-[1400px] mx-auto">
               {/* Critical Insight */}
               <motion.div
-                className="text-center mb-[8vh] md:mb-[12vh]"
+                className="text-center mb-[8vh] md:mb-[12vh] relative"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.5 }}
               >
-                <div className="inline-block px-6 py-3 bg-[#EEFF41] rounded-full mb-[4vh]">
-                  <span className="text-[#026448] tracking-wider uppercase font-bold" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#EEFF41] rounded-full mb-[4vh] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+                  <span className="text-[#026448] tracking-widest uppercase font-bold" style={{ fontSize: 'clamp(0.8rem, 0.95vw, 1.05rem)' }}>
                     Critical Insight
                   </span>
                 </div>
-                <h3 className="text-[#EEFF41] leading-[1.15] max-w-[1000px] mx-auto" style={{ fontSize: 'clamp(2rem, 4vw, 5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                  Policy can't override physics
+                <h3 className="text-[#EEFF41] leading-[1.1] max-w-[1000px] mx-auto" style={{ fontSize: 'clamp(2.1rem, 4.2vw, 5.2rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  Policy cannot substitute for material performance
                 </h3>
               </motion.div>
 
               {/* Global Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw] mb-[8vh] md:mb-[12vh]">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-[3.5vh] md:gap-[2.8vw] mb-[8vh] md:mb-[12vh]">
                 {[
                   { value: '~1B', label: 'Tonnes lost annually', sublabel: 'Global supply chain waste' },
                   { value: '14%', label: 'Of global methane emissions', sublabel: 'From food system losses' },
@@ -580,16 +589,16 @@ function HomePage() {
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
-                    className="text-center"
+                    className="text-center bg-white/5 rounded-3xl border border-white/10 px-6 py-8 backdrop-blur-sm"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.15 }}
                   >
-                    <div className="text-[#EEFF41] leading-none mb-[2vh]" style={{ fontSize: 'clamp(3.5rem, 6vw, 8rem)', fontWeight: 700 }}>
+                    <div className="text-[#EEFF41] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(3.2rem, 5.2vw, 7.2rem)', fontWeight: 700 }}>
                       {stat.value}
                     </div>
-                    <div className="text-white leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.2rem, 1.6vw, 2rem)', fontWeight: 600 }}>
+                    <div className="text-white leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.8rem)', fontWeight: 600 }}>
                       {stat.label}
                     </div>
                     <div className="text-white/60 leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 400 }}>
@@ -608,7 +617,7 @@ function HomePage() {
                 transition={{ duration: 0.8, delay: 0.9 }}
               >
                 <p className="text-white/80 leading-[1.7]" style={{ fontSize: 'clamp(1.1rem, 1.35vw, 1.6rem)', fontWeight: 400 }}>
-                  The root problem isn't behavior. It's the absence of a packaging component that actively manages ripening at a systems level.
+                  The root issue isn’t behavior—it’s missing system-level ripening control in packaging.
                 </p>
               </motion.div>
             </div>
@@ -651,33 +660,33 @@ function HomePage() {
           </motion.div>
 
           {/* Three Key Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[4vw] mb-[10vh] md:mb-[14vh]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw] mb-[10vh] md:mb-[14vh]">
             {[
               {
                 number: "01",
                 title: "Material simplicity",
-                description: "Integrates into standard paper converting with standard equipment."
+                description: "Integrates into standard paper converting with existing equipment."
               },
               {
                 number: "02",
                 title: "Active control",
-                description: "Manages the micro-climate around produce. Not a passive barrier—an active ripening regulator."
+                description: "Controls the micro-climate around produce. Not a passive barrier—an active ripening regulator."
               },
               {
                 number: "03",
                 title: "Scalable economics",
-                description: "Compatible with existing manufacturing and distribution. Built for global rollout, not pilot projects."
+                description: "Compatible with existing manufacturing and distribution. Built for rollout, not one-off pilots."
               }
             ].map((benefit, index) => (
               <motion.div
                 key={index}
-                className="text-center"
+                className="bg-white border border-black/10 rounded-3xl p-8 md:p-10 shadow-[0_16px_40px_rgba(0,0,0,0.06)] text-left"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 + index * 0.15 }}
               >
-                <div className="text-[#026448] leading-none mb-[2vh]" style={{ fontSize: 'clamp(3rem, 4vw, 5rem)', fontWeight: 700 }}>
+                <div className="text-[#026448] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(2.6rem, 3.8vw, 4.6rem)', fontWeight: 700 }}>
                   {benefit.number}
                 </div>
                 <h3 className="text-[#026448] leading-[1.2] mb-[2vh]" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)', fontWeight: 700 }}>
@@ -723,7 +732,7 @@ function HomePage() {
               Active control through material design
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              RipeSwitch manages ripening by controlling gas exchange at the fruit surface. Not through sealing—through selective ventilation.
+              RipeSwitch manages ripening by regulating gas exchange at the fruit surface—through selective ventilation, not sealing.
             </p>
           </motion.div>
 
@@ -735,7 +744,7 @@ function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.3 }}
           >
-            <div className="w-full lg:w-3/4 lg:mx-auto rounded-3xl overflow-hidden">
+            <div className="w-full lg:w-3/4 lg:mx-auto rounded-3xl overflow-hidden bg-white border border-black/10 shadow-[0_18px_50px_rgba(0,0,0,0.08)]">
               <ImageWithFallback 
                 src={mechanismImage}
                 alt="Active Control Mechanism - RipeSwitch technology illustration"
@@ -748,7 +757,7 @@ function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vh] lg:gap-[5vw] mb-[10vh] md:mb-[14vh]">
             {/* HOLD Mode */}
             <motion.div
-              className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh] text-white"
+              className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh] text-white border border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -764,11 +773,13 @@ function HomePage() {
                   HOLD
                 </h3>
                 <p className="text-white/80 leading-[1.6]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
-                  Delays ripening when produce is in transit or storage
+                  Delays ripening during transit and storage.
                 </p>
               </div>
 
-              <div className="relative h-[28vh] md:h-[35vh] rounded-2xl overflow-hidden mb-[3vh]">
+              <div
+                className="relative h-[22vh] md:h-[28vh] rounded-2xl overflow-hidden mb-[3vh] flex items-center justify-center [&>svg]:w-auto [&>svg]:h-auto [&>svg]:max-w-full [&>svg]:max-h-full"
+              >
                 <Vector />
               </div>
 
@@ -782,7 +793,7 @@ function HomePage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#EEFF41] flex-shrink-0 mt-1" />
                   <p className="text-white/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Maintains firmness longer
+                    Preserves firmness longer
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -796,7 +807,7 @@ function HomePage() {
 
             {/* READY Mode */}
             <motion.div
-              className="bg-[#EEFF41] rounded-3xl p-[5vh] md:p-[6vh]"
+              className="bg-[#EEFF41] rounded-3xl p-[5vh] md:p-[6vh] border border-black/10 shadow-[0_18px_40px_rgba(0,0,0,0.12)]"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -812,11 +823,11 @@ function HomePage() {
                   READY
                 </h3>
                 <p className="text-[#026448]/80 leading-[1.6]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
-                  Allows natural ripening when fruit reaches consumer
+                  Allows natural ripening at the consumer stage.
                 </p>
               </div>
 
-              <div className="relative w-full rounded-2xl overflow-hidden mb-[3vh]" style={{ aspectRatio: '515.5 / 347.5' }}>
+              <div className="relative w-full rounded-2xl overflow-hidden mb-[3vh]" style={{ aspectRatio: '455.573 / 335.048' }}>
                 <Vector3 />
               </div>
 
@@ -830,7 +841,7 @@ function HomePage() {
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-[#026448] flex-shrink-0 mt-1" />
                   <p className="text-[#026448]/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Predictable ripening progression
+                    Predictable ripening curve
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -881,7 +892,7 @@ function HomePage() {
               Why alternatives fall short
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[800px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              Current solutions either don't scale, require behavior change, or sacrifice the core function.
+              Current solutions either don’t scale, require behavior change, or compromise core performance.
             </p>
           </motion.div>
 
@@ -892,21 +903,21 @@ function HomePage() {
                 icon: ShoppingBag,
                 image: paperImage,
                 title: "Plain paper",
-                problem: "Can't control moisture or ripening",
-                result: "Accelerates spoilage"
+                problem: "No moisture or ripening control.",
+                result: "Spoilage accelerates."
               },
               {
                 icon: SprayCan,
                 image: coatingsImage,
                 title: "Chemical coatings",
-                problem: "Add complexity and cost",
+                problem: "Adds complexity and cost.",
                 result: "Regulatory uncertainty"
               },
               {
                 icon: Cpu,
                 image: gadgetsImage,
                 title: "Smart packaging",
-                problem: "Requires infrastructure",
+                problem: "Requires new infrastructure.",
                 result: "Unscalable economics"
               }
             ].map((alt, index) => {
@@ -914,14 +925,14 @@ function HomePage() {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-2xl overflow-hidden border border-[#e0e0e0] hover:border-[#026448]/30 transition-all group"
+                  className="bg-white rounded-3xl overflow-hidden border border-black/10 shadow-[0_16px_40px_rgba(0,0,0,0.06)] hover:border-[#026448]/30 hover:shadow-[0_22px_50px_rgba(0,0,0,0.1)] transition-all group"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: index * 0.15 }}
                 >
                   {/* Image */}
-                  <div className="relative h-[25vh] md:h-[28vh] overflow-hidden">
+                  <div className="relative h-[26vh] md:h-[30vh] overflow-hidden">
                     <img
                       src={alt.image}
                       alt={alt.title}
@@ -985,7 +996,7 @@ function HomePage() {
               The numbers that matter
             </h2>
             <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              Even small reductions in produce shrink deliver substantial economic impact at retail scale.
+              Modest reductions in produce shrink deliver substantial impact at retail scale.
             </p>
           </motion.div>
 
@@ -1000,18 +1011,18 @@ function HomePage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-[#1a1a1a] rounded-3xl p-[6vh] md:p-[8vh]">
-              <div className="text-center mb-[6vh]">
+            <div className="bg-[#1a1a1a] rounded-3xl p-[5vh] md:p-[6vh] border border-white/10 shadow-[0_18px_50px_rgba(0,0,0,0.25)]">
+              <div className="text-center mb-[4vh]">
                 <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[3vh]">
                   <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)', fontWeight: 700 }}>
                     Consumer Impact
                   </span>
                 </div>
-                <h3 className="text-[#EEFF41] leading-[1.1] mb-[3vh]" style={{ fontSize: 'clamp(2rem, 3.5vw, 4.2rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                  How shrink shapes food prices
+                <h3 className="text-[#EEFF41] leading-[1.1] mb-[2.5vh]" style={{ fontSize: 'clamp(1.9rem, 3.2vw, 3.8rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  Shrink and price pressure
                 </h3>
-                <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
-                  Shrink costs are embedded in retail pricing. Reducing loss creates room for price stability and margin optimization.
+                <p className="text-white/90 leading-[1.7] max-w-[820px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
+                  Shrink costs are embedded in retail pricing. Reducing loss creates room for price stability and margin protection.
                 </p>
               </div>
 
@@ -1021,42 +1032,42 @@ function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[5vh] md:p-[8vh]">
-                  <h3 className="text-white text-center leading-[1.2] mb-[6vh]" style={{ fontSize: 'clamp(1.4rem, 2vw, 2.5rem)', fontWeight: 700 }}>
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[3.5vh] md:p-[5vh]">
+                  <h3 className="text-white text-center leading-[1.2] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.7vw, 2rem)', fontWeight: 700 }}>
                     Current pricing model embeds waste cost
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[3vh] md:gap-[3vw]">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 max-w-[980px] mx-auto">
                     {[
                       { 
                         step: '01',
                         title: 'Purchase cost',
                         value: '€1.00',
-                        description: 'Per unit from supplier'
+                        description: 'Supplier unit cost'
                       },
                       { 
                         step: '02',
                         title: 'Shrink factor',
                         value: '+15%',
-                        description: '5% unit loss amplified through retail margin structure',
+                        description: '5% unit loss amplified by margin structure',
                         highlight: true
                       },
                       { 
                         step: '03',
                         title: 'Target margin',
                         value: '+40%',
-                        description: 'Retailer gross margin'
+                        description: 'Target gross margin'
                       },
                       { 
                         step: '04',
                         title: 'Shelf price',
                         value: '€1.61',
-                        description: 'Consumer pays for loss'
+                        description: 'Loss embedded in price'
                       }
                     ].map((item, index) => (
                       <motion.div
                         key={index}
-                        className={`relative ${item.highlight ? 'bg-[#026448]' : 'bg-white/5'} border ${item.highlight ? 'border-[#EEFF41]' : 'border-white/10'} rounded-2xl p-[3vh] md:p-[4vh]`}
+                        className={`relative ${item.highlight ? 'bg-[#026448]' : 'bg-white/5'} border ${item.highlight ? 'border-[#EEFF41]' : 'border-white/10'} rounded-2xl p-5 md:p-6 min-h-[200px]`}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -1065,10 +1076,10 @@ function HomePage() {
                         <div className="text-white/70 text-xs uppercase tracking-wider mb-[1vh]" style={{ fontSize: 'clamp(0.65rem, 0.75vw, 0.8rem)', fontWeight: 600 }}>
                           Step {item.step}
                         </div>
-                        <h4 className="text-white leading-[1.2] mb-[1vh]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)', fontWeight: 700 }}>
+                        <h4 className="text-white leading-[1.2] mb-[1vh]" style={{ fontSize: 'clamp(0.95rem, 1.15vw, 1.3rem)', fontWeight: 700 }}>
                           {item.title}
                         </h4>
-                        <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[1vh]`} style={{ fontSize: 'clamp(1.4rem, 2vw, 2.4rem)', fontWeight: 700 }}>
+                        <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[0.8vh]`} style={{ fontSize: 'clamp(1.2rem, 1.7vw, 2rem)', fontWeight: 700 }}>
                           {item.value}
                         </div>
                         <p className="text-white/70 leading-[1.5]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
@@ -1104,7 +1115,7 @@ function HomePage() {
               Why finance teams care
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              Produce shrink directly impacts gross margin. RipeSwitch turns a recurring loss into a controlled variable.
+              Produce shrink directly erodes gross margin. RipeSwitch turns a recurring loss into a controlled operating variable.
             </p>
           </motion.div>
 
@@ -1168,8 +1179,9 @@ function HomePage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh] h-full">
-                <div className="flex items-start gap-4 mb-[4vh]">
+              <div className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh] h-full relative overflow-hidden">
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#EEFF41]/10 via-transparent to-black/20 pointer-events-none" />
+                <div className="flex items-start gap-4 mb-[4vh] relative z-10">
                   <div className="w-14 h-14 rounded-full bg-[#EEFF41] flex items-center justify-center flex-shrink-0">
                     <CheckCircle className="w-7 h-7 text-[#026448]" />
                   </div>
@@ -1183,11 +1195,11 @@ function HomePage() {
                   </div>
                 </div>
 
-                <div className="space-y-[3vh]">
+                <div className="space-y-[3vh] relative z-10">
                   {[
-                    { label: 'Shrink reduction potential', value: '20-40%', impact: 'Of addressable produce shrink' },
+                    { label: 'Shrink reduction potential', value: '20-40%', impact: 'Pilot range for addressable produce shrink' },
                     { label: 'Margin recovery', value: '3-12%', impact: 'Of category gross margin' },
-                    { label: 'Implementation cost', value: 'Minimal', impact: 'Standard paper economics' }
+                    { label: 'Implementation cost', value: 'Low (all-in)', impact: 'Standard paper economics' }
                   ].map((item, index) => (
                     <motion.div
                       key={index}
@@ -1212,7 +1224,7 @@ function HomePage() {
                   {/* Critical Economic Insight */}
                   <div className="mt-[3vh] pt-[3vh] border-t border-white/20">
                     <div className="text-[#EEFF41] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-                      Margin recovery can reduce pressure on price inflation
+                      Margin recovery reduces reliance on price increases
                     </div>
                   </div>
                 </div>
@@ -1230,16 +1242,16 @@ function HomePage() {
           >
             {[
               { 
-                metric: 'ROI timeline', 
+                metric: 'ROI', 
                 value: '6-12', 
                 unit: 'months',
-                description: 'Depending on category rollout speed. Earlier payback in high-shrink categories (berries, avocados, tomatoes)' 
+                description: 'Faster in high-shrink categories (berries, avocados, tomatoes)' 
               },
               { 
                 metric: 'Capital requirement', 
-                value: 'Zero', 
+                value: 'No new capex', 
                 unit: '',
-                description: 'Minimal operational change' 
+                description: 'No new capital equipment' 
               },
               { 
                 metric: 'Supply chain risk', 
@@ -1289,15 +1301,18 @@ function HomePage() {
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[5vh] md:p-[6vh] h-full">
                 <div className="text-[#EEFF41] mb-[3vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
-                  Scenario A: Price reduction
+                  Scenario A — Price reduction
                 </div>
                 <div className="space-y-[3vh]">
                   <div>
                     <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                      If savings passed to consumer
+                      If savings are passed to consumers
                     </div>
                     <div className="text-white leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
                       €1.61 → €1.46
+                    </div>
+                    <div className="text-white/50 mt-[1vh]" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)' }}>
+                      Illustrative example
                     </div>
                   </div>
                   <div className="border-t border-white/10 pt-[3vh]">
@@ -1307,7 +1322,7 @@ function HomePage() {
                     <ul className="space-y-[1.5vh] text-white/80" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
-                        <span>9% price reduction on affected categories</span>
+                        <span>Up to 9% price reduction in affected categories</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
@@ -1315,7 +1330,7 @@ function HomePage() {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
-                        <span>Higher customer satisfaction & loyalty</span>
+                        <span>Higher customer satisfaction and loyalty</span>
                       </li>
                     </ul>
                   </div>
@@ -1332,12 +1347,12 @@ function HomePage() {
             >
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-[5vh] md:p-[6vh] h-full">
                 <div className="text-[#EEFF41] mb-[3vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
-                  Scenario B: Margin optimization
+                  Scenario B — Margin optimization
                 </div>
                 <div className="space-y-[3vh]">
                   <div>
                     <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                      If margin retained at current price
+                      If margin is retained at current price
                     </div>
                     <div className="text-white leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
                       40% → 46%
@@ -1350,11 +1365,11 @@ function HomePage() {
                     <ul className="space-y-[1.5vh] text-white/80" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
-                        <span>15% relative margin improvement</span>
+                        <span>~15% relative margin improvement</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
-                        <span>Funds for sustainability investments</span>
+                        <span>Funds sustainability investments</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="text-[#EEFF41] mt-1">•</span>
@@ -1377,7 +1392,7 @@ function HomePage() {
           >
             <div className="bg-white/5 backdrop-blur-sm border border-[#EEFF41]/30 rounded-2xl p-[4vh] md:p-[5vh]">
               <p className="text-white/90 leading-[1.7]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)', fontWeight: 500 }}>
-                Waste reduction doesn't mandate price cuts, but it removes the need for inflationary recovery pricing. Price stability is a competitive advantage in inflationary markets.
+                Waste reduction reduces reliance on inflationary recovery pricing; price stability remains a competitive advantage.
               </p>
             </div>
           </motion.div>
@@ -1396,7 +1411,7 @@ function HomePage() {
                 The strategic choice
               </h3>
               <p className="text-white/90 leading-[1.7] mb-[3vh]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.5rem)' }}>
-                RipeSwitch converts shrink from a hidden tax on consumers into a controllable operating variable. Retailers can reinvest savings into lower prices, margin resilience, or both—without changing core pricing models.
+                RipeSwitch turns shrink into a controllable operating variable, enabling disciplined category management and predictable outcomes.
               </p>
               <p className="text-[#EEFF41] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.15vw, 1.35rem)', fontWeight: 600 }}>
                 Economic shock absorption for food retail.
@@ -1431,10 +1446,11 @@ function HomePage() {
           </motion.div>
 
           {/* Process Flow */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-[4vh] sm:gap-[3vh] md:gap-[2vw] mb-[10vh] md:mb-[14vh]">
-            {[
-              {
-                step: "01",
+          <div className="relative mb-[10vh] md:mb-[14vh]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-[4vh] sm:gap-[3vh] lg:gap-[3vw] xl:gap-[2vw]">
+              {[
+                {
+                  step: "01",
                 title: "Raw material",
                 image: rawMaterial,
                 description: "Standard paper substrates"
@@ -1460,51 +1476,56 @@ function HomePage() {
             ].map((stage, index) => (
               <motion.div
                 key={index}
-                className="text-center"
+                className="text-left bg-white rounded-3xl border border-black/10 shadow-[0_16px_40px_rgba(0,0,0,0.06)] overflow-hidden min-h-[420px] lg:min-h-[460px]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.1 }}
               >
-                <div className="text-[#026448] leading-none mb-[2vh]" style={{ fontSize: 'clamp(2rem, 2.5vw, 3rem)', fontWeight: 700 }}>
-                  {stage.step}
-                </div>
-                <div className="relative h-[22vh] md:h-[24vh] rounded-2xl overflow-hidden mb-[2vh] border border-[#e0e0e0]">
+                <div className="relative h-[220px] md:h-[240px] lg:h-[260px]">
                   <img
                     src={stage.image}
                     alt={stage.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="text-[#026448] leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)', fontWeight: 700 }}>
-                  {stage.title}
-                </h4>
-                <p className="text-[#4a4a4a] leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                  {stage.description}
-                </p>
+                <div className="p-6 md:p-7">
+                  <div className="text-[#026448] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(2rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                    {stage.step}
+                  </div>
+                  <h4 className="text-[#026448] leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)', fontWeight: 700 }}>
+                    {stage.title}
+                  </h4>
+                  <p className="text-[#4a4a4a] leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                    {stage.description}
+                  </p>
+                </div>
               </motion.div>
             ))}
+            </div>
+
           </div>
+
 
           {/* Scale Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw]">
             {[
               {
                 title: "Low unit economics",
-                description: "Material costs compatible with commodity packaging. Premium pricing is not typically required for initial market entry."
+                description: "Material costs align with commodity packaging. Premium pricing is typically not required."
               },
               {
                 title: "Rapid scale-up",
-                description: "Leverages existing global paper converting capacity. Fast path from validation to volume."
+                description: "Uses existing global converting capacity. Faster path from validation to volume."
               },
               {
                 title: "Supply chain ready",
-                description: "Works within current logistics with minimal special handling or infrastructure build-out."
+                description: "Operates within current logistics with minimal special handling or infrastructure."
               }
             ].map((benefit, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl p-[4vh] md:p-[5vh] border border-[#e0e0e0]"
+                className="bg-white rounded-3xl p-[4vh] md:p-[5vh] border border-black/10 shadow-[0_16px_40px_rgba(0,0,0,0.06)]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1518,8 +1539,9 @@ function HomePage() {
                 </p>
               </motion.div>
             ))}
+            </div>
+
           </div>
-        </div>
       </section>
 
       {/* Future Research Section */}
@@ -1546,25 +1568,28 @@ function HomePage() {
               </div>
 
               <h2 className="text-[#EEFF41] leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(2.5rem, 5vw, 6.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                From concept to commercial validation
+                From validated prototype to commercial scale, with industry partners
               </h2>
+              <p className="text-white/85 leading-[1.7] max-w-[820px] mb-[6vh]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
+                Core feasibility has been validated; commercial pilot partners are now being engaged.
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-[4vh] md:gap-[5vw]">
                 {[
                   {
                     phase: "Short term",
                     items: [
-                      "Material optimization and shelf-life testing",
-                      "Pilot production with converting partners",
-                      "Retail trial program with target chains"
+                      "Material optimization and shelf-life validation to support customer qualification and production approval",
+                      "Pilot production with converting partners for qualification runs",
+                      "Retail trials with target chains for commercial validation"
                     ]
                   },
                   {
                     phase: "Medium term",
                     items: [
-                      "Scale manufacturing capability",
+                      "Scale manufacturing capacity for volume production",
                       "Expand produce category coverage",
-                      "Geographic rollout strategy"
+                      "Define geographic rollout strategy"
                     ]
                   }
                 ].map((roadmap, index) => (
@@ -1606,10 +1631,10 @@ function HomePage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#1a1a1a] leading-[1.05] mb-[6vh]" style={{ fontSize: 'clamp(2.5rem, 5.5vw, 7rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              Paper that finally works for fresh food
+              Paper packaging that performs for fresh produce
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] mb-[8vh]" style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.8rem)', fontWeight: 400 }}>
-              Less waste. Better margins. Packaging designed for how produce actually behaves.
+              Less waste. Better margins. Designed around produce behavior.
             </p>
           </motion.div>
         </div>

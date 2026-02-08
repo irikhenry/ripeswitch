@@ -59,7 +59,7 @@ export function EconomicCalculator() {
             className="px-4 py-2 bg-[#EEFF41] text-[#026448] rounded-full font-semibold hover:bg-[#EEFF41]/90 transition-colors"
             style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}
           >
-            Use typical retailer preset (€300M / 12% / 7% / 20%)
+            Typical retailer preset: €300M / 12% / 7% / 20%
           </button>
         </div>
 

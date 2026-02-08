@@ -3,7 +3,7 @@ import { CheckCircle, XCircle, AlertTriangle, Minus } from "lucide-react";
 
 export function CompetitiveBenchmark() {
   const criteria = [
-    { label: "Aligned with expected EU 2029 packaging requirements", competitors: [false, false, true, false], ripeswitch: true },
+    { label: "EU 2029 compliance alignment", competitors: [false, false, true, false], ripeswitch: true },
     { label: "Intrinsic ripening control", competitors: ["n/a", "n/a", "n/a", true], ripeswitch: true },
     { label: "No plastic components", competitors: ["n/a", "n/a", true, false], ripeswitch: true },
     { label: "Supply chain integration", competitors: [true, true, true, false], ripeswitch: true },
@@ -112,7 +112,7 @@ export function CompetitiveBenchmark() {
                 transition={{ duration: 0.6, delay: 0.9 }}
               >
                 <p className="text-[#026448] font-bold leading-[1.5]" style={{ fontSize: 'clamp(1rem, 1.1vw, 1.2rem)', letterSpacing: '-0.01em' }}>
-                  RipeSwitch delivers compliance + control without tradeoffs.
+                  RipeSwitch delivers compliance + control without compromising core performance.
                 </p>
               </motion.div>
 
@@ -128,15 +128,15 @@ export function CompetitiveBenchmark() {
                 <div className="flex items-center gap-6 flex-wrap">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="text-[#026448]" style={{ width: '16px', height: '16px' }} />
-                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">Native support</span>
+                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">Native</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <AlertTriangle className="text-[#f59e0b]/50" style={{ width: '16px', height: '16px' }} />
-                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">Conditional / limited</span>
+                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">Conditional</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Minus className="text-[#1a1a1a]/20" style={{ width: '16px', height: '16px' }} />
-                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">Not applicable</span>
+                    <span className="text-[#1a1a1a]/50 text-[0.8rem] leading-none">N/A</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <XCircle className="text-[#1a1a1a]/30" style={{ width: '16px', height: '16px' }} />
@@ -146,12 +146,12 @@ export function CompetitiveBenchmark() {
 
                 {/* Footnote */}
                 <div className="text-[#1a1a1a]/50 text-[0.75rem] leading-[1.5]">
-                  <span className="font-semibold">†</span> Retail-scale economics: compatibility with existing packaging lines, unit economics, and distribution workflows without additional capital equipment.
+                  <span className="font-semibold">†</span> Retail-scale economics: compatible with existing packaging lines, unit economics, and distribution workflows without new capital equipment.
                 </div>
 
                 {/* Disclaimer */}
                 <div className="text-[#1a1a1a]/40 text-[0.7rem] leading-[1.4] italic">
-                  Capability classification based on publicly disclosed material composition, operating principles, and deployment models.
+                  Capability classification based on publicly disclosed materials, operating principles, and deployment models.
                 </div>
               </motion.div>
             </div>
@@ -168,15 +168,15 @@ export function CompetitiveBenchmark() {
         >
           <div className="max-w-[340px]">
             <h3 className="text-[#026448] font-bold mb-4 leading-[1.3]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.5rem)' }}>
-              IMPORTANT
+              Key takeaway
             </h3>
             
             <p className="text-[#1a1a1a]/80 leading-[1.6] mb-6" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
-              EU regulations + waste targets require <span className="font-semibold text-[#026448]">both compliance and control</span>.
+              EU targets require <span className="font-semibold text-[#026448]">both compliance and control</span>.
             </p>
             
             <p className="text-[#1a1a1a]/80 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
-              Every alternative sacrifices one for the other.
+              Most alternatives sacrifice one for the other.
             </p>
 
             <div className="pt-4 border-t border-[#1a1a1a]/10">
@@ -196,7 +196,7 @@ export function CompetitiveBenchmark() {
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                   <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                    Demonstrated in pilot retail settings
+                    Pilot validation planned with retail partners
                   </p>
                 </div>
               </div>
@@ -204,7 +204,7 @@ export function CompetitiveBenchmark() {
               {/* Partnership Note */}
               <div className="mt-6 pt-6 border-t border-[#026448]/10">
                 <p className="text-[#026448]/60 leading-[1.5] italic" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.95rem)' }}>
-                  Stora Enso's paper solutions show promise for future partnership opportunities.
+                  European paper platforms show promise for future partnership opportunities.
                 </p>
               </div>
             </div>
@@ -312,7 +312,7 @@ export function CompetitiveBenchmark() {
             transition={{ duration: 0.6, delay: 1.6 }}
           >
             <p className="text-[#026448] font-semibold leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 2.8vw, 1.05rem)' }}>
-              RipeSwitch delivers compliance + control without tradeoffs.
+              RipeSwitch delivers compliance + control without compromising core performance.
             </p>
           </motion.div>
 
@@ -328,15 +328,15 @@ export function CompetitiveBenchmark() {
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-[#026448]" style={{ width: '16px', height: '16px' }} />
-                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">Native support</span>
+                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">Native</span>
               </div>
               <div className="flex items-center gap-2">
                 <AlertTriangle className="text-[#f59e0b]/50" style={{ width: '16px', height: '16px' }} />
-                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">Conditional / limited</span>
+                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">Conditional</span>
               </div>
               <div className="flex items-center gap-2">
                 <Minus className="text-[#1a1a1a]/20" style={{ width: '16px', height: '16px' }} />
-                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">Not applicable</span>
+                <span className="text-[#1a1a1a]/50 text-[0.75rem] leading-none">N/A</span>
               </div>
               <div className="flex items-center gap-2">
                 <XCircle className="text-[#1a1a1a]/30" style={{ width: '16px', height: '16px' }} />
@@ -346,12 +346,12 @@ export function CompetitiveBenchmark() {
 
             {/* Footnote */}
             <div className="text-[#1a1a1a]/50 text-[0.7rem] leading-[1.5]">
-              <span className="font-semibold">†</span> Retail-scale economics: compatibility with existing packaging lines, unit economics, and distribution workflows without additional capital equipment.
+              <span className="font-semibold">†</span> Retail-scale economics: compatible with existing packaging lines, unit economics, and distribution workflows without new capital equipment.
             </div>
 
             {/* Disclaimer */}
             <div className="text-[#1a1a1a]/40 text-[0.65rem] leading-[1.4] italic">
-              Capability classification based on publicly disclosed material composition, operating principles, and deployment models.
+              Capability classification based on publicly disclosed materials, operating principles, and deployment models.
             </div>
           </motion.div>
         </motion.div>
@@ -365,7 +365,7 @@ export function CompetitiveBenchmark() {
           transition={{ duration: 0.8, delay: 1.7 }}
         >
           <h3 className="text-[#026448] font-bold leading-[1.3]" style={{ fontSize: 'clamp(1.15rem, 3.5vw, 1.4rem)' }}>
-            Important
+            Key takeaway
           </h3>
           
           <p className="text-[#1a1a1a]/80 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 2.8vw, 1.1rem)' }}>
@@ -387,13 +387,13 @@ export function CompetitiveBenchmark() {
               <div className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                 <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                  No significant capital investment typically required
+                  No new capital equipment typically required
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-[#026448] mt-2 flex-shrink-0" />
                 <p className="text-[#1a1a1a]/70 leading-[1.5]" style={{ fontSize: 'clamp(0.85rem, 2.5vw, 1rem)' }}>
-                  Demonstrated in pilot retail settings
+                  Pilot validation planned with retail partners
                 </p>
               </div>
             </div>
@@ -401,7 +401,7 @@ export function CompetitiveBenchmark() {
             {/* Partnership Note */}
             <div className="mt-6 pt-6 border-t border-[#026448]/10">
               <p className="text-[#026448]/60 leading-[1.5] italic" style={{ fontSize: 'clamp(0.8rem, 2.5vw, 0.95rem)' }}>
-                Stora Enso's paper solutions show promise for future partnership opportunities.
+                European paper platforms offer credible partnership potential.
               </p>
             </div>
           </div>

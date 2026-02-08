@@ -3,7 +3,7 @@ import svgPaths from "./svg-7fpy5yxagf";
 export default function Vector() {
   return (
     <div className="relative size-full" data-name="Vector">
-      <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 455.573 335.048">
+      <svg className="block size-full" fill="none" preserveAspectRatio="xMidYMid meet" viewBox="0 0 455.573 335.048">
         <g id="Vector">
           <path d={svgPaths.p35b8e900} fill="white" />
           <path d={svgPaths.pd18c000} fill="var(--fill-0, #CFD57B)" />

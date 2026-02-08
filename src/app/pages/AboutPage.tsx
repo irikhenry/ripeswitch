@@ -36,7 +36,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Company Overview Section */}
+      {/* Project Overview Section */}
       <section className="relative w-full bg-white">
         <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
           <motion.div
@@ -46,20 +46,16 @@ export function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#1a1a1a] leading-[1.2] mb-[5vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
-              Company Overview
+              Project Overview
             </h2>
 
             <div className="space-y-[3vh] text-[#4a4a4a] leading-[1.8]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
               <p>
-                RipeSwitch is a Helsinki-based materials and packaging development initiative focused on fibre-based systems for ripening control in fresh produce. The work combines materials engineering, post-harvest physiology, and industrial converting compatibility to address the limitations of paper packaging following the phase-out of single-use plastics.
+                RipeSwitch is a Helsinki-based initiative developing fibre-based ripening control for fresh produce. It integrates materials engineering, post-harvest physiology, and converting compatibility to deliver paper packaging that performs after plastic phase-out.
               </p>
 
               <p>
-                The project is currently in an applied research and pilot preparation phase. Development is supported by material simulation, laboratory testing, and industrial feasibility assessment, with the objective of validating performance under real retail and logistics conditions.
-              </p>
-
-              <p>
-                RipeSwitch is structured as a research-led invention project, progressing toward patent protection and pilot-scale deployment in collaboration with packaging converters and retail partners.
+                The project is now in applied research and pilot preparation, moving toward patent protection and pilot-scale deployment with converters and retail partners.
               </p>
             </div>
           </motion.div>
@@ -100,17 +96,14 @@ export function AboutPage() {
                     Samson Emuraishe
                   </h3>
                   <p className="text-[#026448] leading-[1.4] mb-[3vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.35rem)', fontWeight: 600 }}>
-                    Founder, Inventor and Product Architect
+                    Founder & Product Architect
                   </p>
                   <div className="text-[#4a4a4a] leading-[1.75] space-y-[2vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.25rem)' }}>
                     <p>
-                      Samson is the inventor of the RipeSwitch system and the original architect of its product concept and functional structure. His background spans fibre-based materials, paper converting processes, and consumer packaging systems, with a focus on translating observed real-world problems into manufacturable product solutions.
+                      Samson is the inventor of the RipeSwitch system and leads product architecture. His background spans fibre-based materials, paper converting, and consumer packaging.
                     </p>
                     <p>
-                      The RipeSwitch concept originated from direct observation of fruit spoilage and the limitations of existing packaging approaches, particularly the trade-off between plastic-based shelf-life control and fibre-based sustainability. Samson conceived the core system architecture that combines material behaviour, controlled gas exchange, and compatibility with existing industrial converting lines.
-                    </p>
-                    <p>
-                      At RipeSwitch, he is responsible for the overall product concept, system-level design decisions, validation strategy, and the progression of the invention from early concept through laboratory evaluation toward pilot-ready packaging formats.
+                      He drives system design, validation strategy, and the transition from lab evaluation to pilot-ready packaging formats.
                     </p>
                   </div>
                 </div>
@@ -120,7 +113,7 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* Advisory Network Section */}
+      {/* Project Advisory Board Section */}
       <section className="relative w-full bg-white">
         <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
           <motion.div
@@ -130,13 +123,13 @@ export function AboutPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#1a1a1a] leading-[1.2] mb-[7vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
-              Advisory Network
+              Project Advisory Board
             </h2>
 
-            {/* Brand & Commercial Strategy */}
+            {/* Market Positioning & Go-to-Market */}
             <div className="mb-[10vh]">
               <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
-                Brand & Commercial Strategy
+                Market Positioning & Go-to-Market
               </h3>
               
               <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
@@ -156,20 +149,20 @@ export function AboutPage() {
                       Toni Hukkanen
                     </h4>
                     <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-                      Brand Building & Commercialisation
+                      Brand & Commercialisation
                     </p>
                     <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                      Toni is a strategic brand and digital design leader with extensive experience building commercially viable brands in regulated and industrial contexts. He supports RipeSwitch in positioning, narrative clarity, and translating technical value into understandable propositions for retail and industrial stakeholders.
+                      Toni leads brand and digital design, with experience in regulated and industrial markets. He supports positioning, narrative clarity, and stakeholder-facing communication.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Project Structuring & Change Management */}
+            {/* Program Delivery & Partnerships */}
             <div className="mb-[10vh]">
               <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
-                Project Structuring & Change Management
+                Program Delivery & Partnerships
               </h3>
               
               <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
@@ -192,17 +185,17 @@ export function AboutPage() {
                       Project Management & Development
                     </p>
                     <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                      Noora has experience in structured project development, organisational change, and cross-stakeholder coordination. She supports RipeSwitch in aligning technical development with funding requirements, pilot structuring, and long-term programme planning.
+                      Noora supports project development, change management, and cross-stakeholder coordination. She aligns technical progress with funding, pilot structuring, and program planning.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Creative Sustainability & Systems Thinking */}
+            {/* Sustainability & Product Design */}
             <div className="mb-[10vh]">
               <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
-                Creative Sustainability & Systems Thinking
+                Sustainability & Product Design
               </h3>
               
               <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
@@ -222,20 +215,20 @@ export function AboutPage() {
                       Simone Gagileone
                     </h4>
                     <p className="text-[#026448] leading-[1.4] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-                      Sustainability, Product and Packging Design
+                      Sustainability, Product and Packaging Design
                     </p>
                     <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                      Simone works at the intersection of sustainability, design, and systems thinking, with a focus on translating environmental challenges into practical, human-centred solutions. She contributes perspective on circularity, material ethics, and long-term sustainability framing.
+                      Simone contributes sustainability and product design input, focusing on circularity, material ethics, and practical systems thinking.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Materials Science & Engineering */}
+            {/* Materials Engineering & Scale-Up */}
             <div>
               <h3 className="text-[#026448] leading-[1.3] mb-[4vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700, letterSpacing: '0.02em' }}>
-                Materials Science & Engineering
+                Materials Engineering & Scale-Up
               </h3>
               
               <div className="bg-[#f8f8f8] rounded-2xl overflow-hidden border border-[#e0e0e0]">
@@ -258,7 +251,7 @@ export function AboutPage() {
                       Materials Science & Process Engineering Advisor
                     </p>
                     <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                      Irikefe is a materials science specialist with experience in fibre materials, packaging machinery, and industrial-scale process engineering. His background includes work connected to large pulp and paper ecosystems and applied research environments. He advises RipeSwitch on material behaviour, integration feasibility, and scale-up considerations.
+                      Irikefe is a materials science specialist focused on fibre materials, packaging machinery, and industrial process engineering. He advises on material behavior, integration feasibility, and scale-up.
                     </p>
                   </div>
                 </div>
