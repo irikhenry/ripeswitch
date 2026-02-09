@@ -5,8 +5,44 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#026448" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preload" href="/fonts/InstrumentSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+      <link rel="preload" href="/fonts/InstrumentSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+      <link rel="preload" href="/fonts/InstrumentSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+      <link rel="preload" href="/fonts/Outfit-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+      <style>
+        :root {
+          --background: #ffffff;
+          --foreground: #0a0a0a;
+        }
+        * {
+          box-sizing: border-box;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizeLegibility;
+        }
+        html {
+          font-size: 16px;
+        }
+        body {
+          margin: 0;
+          background: var(--background);
+          color: var(--foreground);
+          font-family: 'Instrument Sans', 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            'Roboto', 'Helvetica Neue', Arial, sans-serif;
+        }
+      </style>
+
+      <link rel="preload" as="style" href="/src/styles/index.css" />
+      <link
+        rel="stylesheet"
+        href="/src/styles/index.css"
+        media="print"
+        onload="this.media='all'"
+      />
+      <noscript>
+        <link rel="stylesheet" href="/src/styles/index.css" />
+      </noscript>
       <title>RipeSwitch</title>
       <meta name="description" content="Active ripening control, built into paper. Extends produce shelf life without plastics, electronics, or coatings." />
 

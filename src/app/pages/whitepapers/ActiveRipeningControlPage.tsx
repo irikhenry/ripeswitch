@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
 import { WhitePaperDetailWrapper } from "../../components/WhitePaperDetailWrapper";
 import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
-import heroImage from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077.webp";
-import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
-import plasticPackaging from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b.webp";
+import { heroPackaging, overripeFruitImage, plasticPackagingImage } from "../../assets/responsiveImages";
 
 export function ActiveRipeningControlPage() {
   return (
@@ -46,7 +44,11 @@ export function ActiveRipeningControlPage() {
           >
             <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
               <ImageWithFallback
-                src={heroImage}
+                src={heroPackaging.src}
+                srcSet={heroPackaging.srcSet}
+                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
+                width={heroPackaging.width}
+                height={heroPackaging.height}
                 alt="RipeSwitch paper packaging"
                 className="w-full h-full object-cover"
               />
@@ -74,7 +76,11 @@ export function ActiveRipeningControlPage() {
               className="relative h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden"
             >
               <ImageWithFallback
-                src={overripeFruit}
+                src={overripeFruitImage.src}
+                srcSet={overripeFruitImage.srcSet}
+                sizes="(max-width: 1024px) 90vw, 50vw"
+                width={overripeFruitImage.width}
+                height={overripeFruitImage.height}
                 alt="Household and retail fruit waste"
                 className="w-full h-full object-cover"
               />
@@ -146,7 +152,11 @@ export function ActiveRipeningControlPage() {
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
                 <ImageWithFallback
-                  src={plasticPackaging}
+                  src={plasticPackagingImage.src}
+                  srcSet={plasticPackagingImage.srcSet}
+                  sizes="(max-width: 1024px) 90vw, 50vw"
+                  width={plasticPackagingImage.width}
+                  height={plasticPackagingImage.height}
                   alt="Plastic produce packaging"
                   className="w-full h-full object-cover"
                 />

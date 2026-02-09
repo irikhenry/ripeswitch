@@ -1,9 +1,7 @@
 import { motion } from "motion/react";
 import Logo from "../imports/Logo";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
-import heroImage from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077.webp";
-import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
-import plasticPackaging from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b.webp";
+import { heroPackaging, overripeFruitImage, plasticPackagingImage } from "./assets/responsiveImages";
 import mechanismIllustration from "@/assets/92b9f5e155f2beeff77bbad48b5895559f909d98.webp";
 import retailUse from "@/assets/705e0dd601e893c242eb4bf0eeb9c749ae0a98c5.webp";
 import paperConverting from "@/assets/0df46eb4c699ca7f1ee082a13c21a365cb336417.webp";
@@ -52,7 +50,15 @@ export default function WebflowPage() {
               className="relative"
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback src={heroImage} alt="RipeSwitch paper packaging" className="w-full h-full object-cover" />
+                <ImageWithFallback
+                  src={heroPackaging.src}
+                  srcSet={heroPackaging.srcSet}
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
+                  width={heroPackaging.width}
+                  height={heroPackaging.height}
+                  alt="RipeSwitch paper packaging"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"
@@ -77,7 +83,15 @@ export default function WebflowPage() {
               transition={{ duration: 0.8 }}
               className="relative h-[55vh] md:h-[70vh] rounded-3xl overflow-hidden"
             >
-              <ImageWithFallback src={overripeFruit} alt="Household and retail fruit waste" className="w-full h-full object-cover" />
+              <ImageWithFallback
+                src={overripeFruitImage.src}
+                srcSet={overripeFruitImage.srcSet}
+                sizes="(max-width: 1024px) 90vw, 50vw"
+                width={overripeFruitImage.width}
+                height={overripeFruitImage.height}
+                alt="Household and retail fruit waste"
+                className="w-full h-full object-cover"
+              />
               <figcaption 
                 className="text-[#666] mt-[2vh] italic"
                 style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}
@@ -145,7 +159,15 @@ export default function WebflowPage() {
               className="relative"
             >
               <div className="relative h-[50vh] md:h-[60vh] rounded-3xl overflow-hidden">
-                <ImageWithFallback src={plasticPackaging} alt="Plastic produce packaging" className="w-full h-full object-cover" />
+                <ImageWithFallback
+                  src={plasticPackagingImage.src}
+                  srcSet={plasticPackagingImage.srcSet}
+                  sizes="(max-width: 1024px) 90vw, 50vw"
+                  width={plasticPackagingImage.width}
+                  height={plasticPackagingImage.height}
+                  alt="Plastic produce packaging"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <figcaption 
                 className="text-[#666] text-center mt-[2vh] italic"

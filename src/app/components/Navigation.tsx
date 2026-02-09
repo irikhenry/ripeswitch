@@ -62,6 +62,7 @@ export function Navigation() {
       <div
         id="nav-drawer"
         aria-hidden={!isMenuOpen}
+        inert={!isMenuOpen ? "" : undefined}
         className={`fixed inset-0 bg-[#026448] z-40 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
@@ -71,6 +72,7 @@ export function Navigation() {
             <Link
               to="/"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/' ? 'text-[#EEFF41]' : ''
               }`}
@@ -82,6 +84,7 @@ export function Navigation() {
             <Link
               to="/technology"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/technology' ? 'text-[#EEFF41]' : ''
               }`}
@@ -93,6 +96,7 @@ export function Navigation() {
             <Link
               to="/technical-specification"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/technical-specification' ? 'text-[#EEFF41]' : ''
               }`}
@@ -104,6 +108,7 @@ export function Navigation() {
             <Link
               to="/research"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname.startsWith('/research') ? 'text-[#EEFF41]' : ''
               }`}
@@ -115,6 +120,7 @@ export function Navigation() {
             <Link
               to="/about"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/about' ? 'text-[#EEFF41]' : ''
               }`}
@@ -126,6 +132,7 @@ export function Navigation() {
             <Link
               to="/contact"
               onClick={closeMenu}
+              tabIndex={isMenuOpen ? 0 : -1}
               className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/contact' ? 'text-[#EEFF41]' : ''
               }`}

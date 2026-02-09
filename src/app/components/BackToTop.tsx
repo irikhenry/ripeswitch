@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { ChevronUp } from 'lucide-react';
 
 export function BackToTop() {
@@ -27,20 +27,16 @@ export function BackToTop() {
   };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          transition={{ duration: 0.3 }}
-          onClick={scrollToTop}
-          className="fixed bottom-[4vh] right-[4vw] z-50 bg-[#026448] text-white p-4 rounded-full shadow-lg hover:bg-[#EEFF41] hover:text-[#026448] transition-colors duration-300 group"
-          aria-label="Back to top"
-        >
-          <ChevronUp className="w-6 h-6" />
-        </motion.button>
-      )}
-    </AnimatePresence>
+    <motion.button
+      initial={false}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.3 }}
+      onClick={scrollToTop}
+      className="fixed bottom-[4vh] right-[4vw] z-50 bg-[#026448] text-white p-4 rounded-full shadow-lg hover:bg-[#EEFF41] hover:text-[#026448] transition-colors duration-300 group"
+      aria-label="Back to top"
+      style={{ pointerEvents: isVisible ? "auto" : "none" }}
+    >
+      <ChevronUp className="w-6 h-6" />
+    </motion.button>
   );
 }

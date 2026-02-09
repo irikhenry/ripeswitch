@@ -18,7 +18,7 @@ export function AboutPage() {
         path="/about"
       />
       {/* Hero Section */}
-      <section id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
+      <main id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">
@@ -40,7 +40,7 @@ export function AboutPage() {
             Applied materials science for scalable alternatives to plastic food packaging
           </p>
         </div>
-      </section>
+      </main>
 
       {/* Project Overview Section */}
       <section className="relative w-full min-h-[70vh] bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[6vh] md:py-[8vh]">

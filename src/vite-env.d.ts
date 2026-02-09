@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import "react";
 
 declare module "*.webp" {
   const src: string;

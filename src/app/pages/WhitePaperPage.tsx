@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Navigation } from "../components/Navigation";
 import { Seo } from "../components/Seo";
-import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
+import { overripeFruitImage } from "../assets/responsiveImages";
 
 export function WhitePaperPage() {
   return (
@@ -13,7 +13,7 @@ export function WhitePaperPage() {
         path="/research"
       />
       {/* Hero Section */}
-      <section id="main-content" className="relative w-full bg-[#026448]">
+      <main id="main-content" className="relative w-full bg-[#026448]">
         {/* Navigation Bar */}
         <Navigation />
 
@@ -41,7 +41,7 @@ export function WhitePaperPage() {
             <span>Retail commercial validation next</span>
           </div>
         </div>
-      </section>
+      </main>
 
       {/* Publications List */}
       <section className="relative w-full min-h-screen bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
@@ -145,7 +145,11 @@ export function WhitePaperPage() {
             
             <div className="border border-[#1a1a1a]/10 overflow-hidden mb-[8vh]">
               <ImageWithFallback 
-                src={overripeFruit}
+                src={overripeFruitImage.src}
+                srcSet={overripeFruitImage.srcSet}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 900px"
+                width={overripeFruitImage.width}
+                height={overripeFruitImage.height}
                 alt="Fresh produce ripening research"
                 className="w-full h-[300px] md:h-[400px] object-cover"
               />

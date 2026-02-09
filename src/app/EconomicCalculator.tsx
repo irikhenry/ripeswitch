@@ -66,7 +66,7 @@ export function EconomicCalculator() {
         {/* Annual Revenue Slider */}
         <div className="mb-[4vh]">
           <div className="flex items-baseline justify-between mb-[2vh]">
-            <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
+            <label htmlFor="annual-revenue" className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Annual revenue
             </label>
             <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -74,6 +74,7 @@ export function EconomicCalculator() {
             </span>
           </div>
           <input
+            id="annual-revenue"
             type="range"
             min="100"
             max="2000"
@@ -91,7 +92,7 @@ export function EconomicCalculator() {
         {/* Produce Share Slider */}
         <div className="mb-[4vh]">
           <div className="flex items-baseline justify-between mb-[2vh]">
-            <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
+            <label htmlFor="produce-share" className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Produce share of revenue
             </label>
             <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -99,6 +100,7 @@ export function EconomicCalculator() {
             </span>
           </div>
           <input
+            id="produce-share"
             type="range"
             min="5"
             max="20"
@@ -116,7 +118,7 @@ export function EconomicCalculator() {
         {/* Current Shrink Slider */}
         <div className="mb-[4vh]">
           <div className="flex items-baseline justify-between mb-[2vh]">
-            <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
+            <label htmlFor="current-shrink" className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Current produce shrink
             </label>
             <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -124,6 +126,7 @@ export function EconomicCalculator() {
             </span>
           </div>
           <input
+            id="current-shrink"
             type="range"
             min="3"
             max="15"
@@ -141,7 +144,7 @@ export function EconomicCalculator() {
         {/* Shrink Reduction Slider */}
         <div className="mb-[4vh]">
           <div className="flex items-baseline justify-between mb-[2vh]">
-            <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
+            <label htmlFor="shrink-reduction" className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Target shrink reduction
             </label>
             <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -155,6 +158,7 @@ export function EconomicCalculator() {
             Applied reduction: {cappedReduction.toFixed(1)}% (relative)
           </div>
           <input
+            id="shrink-reduction"
             type="range"
             min="5"
             max="40"
@@ -187,7 +191,7 @@ export function EconomicCalculator() {
         {/* Implementation Cost Slider */}
         <div className="mb-[4vh]">
           <div className="flex items-baseline justify-between mb-[2vh]">
-            <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
+            <label htmlFor="implementation-cost" className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Implementation cost (% of produce revenue)
             </label>
             <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -199,6 +203,7 @@ export function EconomicCalculator() {
             Assumes conservative all-in cost (packaging premium + operational overhead during early rollout).
           </div>
           <input
+            id="implementation-cost"
             type="range"
             min="0.2"
             max="1.5"

@@ -13,7 +13,7 @@ export function TechnicalSpecificationPage() {
         path="/technical-specification"
       />
       {/* Hero Section */}
-      <section id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
+      <main id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">
@@ -31,7 +31,7 @@ export function TechnicalSpecificationPage() {
             Material properties, integration requirements, and indicative performance parameters for packaging engineers and converters.
           </p>
         </div>
-      </section>
+      </main>
 
       {/* Document Header */}
       <section className="relative w-full min-h-[70vh] bg-[#f8f8f8] border-b border-[#e0e0e0] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[6vh] md:py-[8vh]">

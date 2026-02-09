@@ -10,7 +10,7 @@ export function ContactPage() {
         path="/contact"
       />
       {/* Hero Section */}
-      <section id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
+      <main id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">
@@ -48,7 +48,7 @@ export function ContactPage() {
             </p>
           </div>
         </div>
-      </section>
+      </main>
 
     </div>
   );

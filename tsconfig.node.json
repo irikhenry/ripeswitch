@@ -5,7 +5,9 @@
     "moduleResolution": "Bundler",
     "types": ["node"],
     "skipLibCheck": true,
-    "noEmit": true
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/tsc"
   },
   "include": ["vite.config.ts", "postcss.config.mjs"]
 }

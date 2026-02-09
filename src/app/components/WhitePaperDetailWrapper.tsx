@@ -22,7 +22,7 @@ export function WhitePaperDetailWrapper({ children, title, type, date, path, des
         path={path ?? "/research"}
       />
       {/* Paper Metadata Hero */}
-      <section id="main-content" className="relative w-full bg-[#026448]">
+      <main id="main-content" className="relative w-full bg-[#026448]">
         {/* Navigation Bar */}
         <Navigation />
 
@@ -47,7 +47,7 @@ export function WhitePaperDetailWrapper({ children, title, type, date, path, des
             </p>
           </motion.div>
         </div>
-      </section>
+      </main>
 
       {/* Main Content */}
       <main className="relative w-full bg-white">

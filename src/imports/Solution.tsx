@@ -12,7 +12,15 @@ export default function Solution() {
         {/* Card 1 - Paper Bag */}
         <div className="flex-1 flex items-center justify-center w-full md:w-auto">
           <div className="bg-[#026448] backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl shadow-xl w-[280px] h-[280px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] flex items-center justify-center p-[3vh]">
-            <img src={imgPaper} alt="Active Paper" className="max-w-full max-h-full object-contain" />
+            <img
+              src={imgPaper}
+              alt="Active Paper"
+              className="max-w-full max-h-full object-contain"
+              width="138"
+              height="141"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 
@@ -24,7 +32,15 @@ export default function Solution() {
         {/* Card 2 - Patch */}
         <div className="flex-1 flex items-center justify-center w-full md:w-auto">
           <div className="bg-[#026448] backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl shadow-xl w-[280px] h-[280px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] flex items-center justify-center p-[3vh]">
-            <img src={imgPatch} alt="Smart Patch" className="max-w-full max-h-full object-contain" />
+            <img
+              src={imgPatch}
+              alt="Smart Patch"
+              className="max-w-full max-h-full object-contain"
+              width="134"
+              height="85"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 
@@ -36,7 +52,15 @@ export default function Solution() {
         {/* Card 3 - Banana */}
         <div className="flex-1 flex items-center justify-center w-full md:w-auto">
           <div className="bg-[#026448] backdrop-blur-sm border border-white/20 rounded-2xl md:rounded-3xl shadow-xl w-[280px] h-[280px] md:w-[220px] md:h-[220px] lg:w-[280px] lg:h-[280px] flex items-center justify-center p-[3vh]">
-            <img src={imgBanana} alt="RipeSwitch Control" className="max-w-full max-h-full object-contain" />
+            <img
+              src={imgBanana}
+              alt="RipeSwitch Control"
+              className="max-w-full max-h-full object-contain"
+              width="92"
+              height="99"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 

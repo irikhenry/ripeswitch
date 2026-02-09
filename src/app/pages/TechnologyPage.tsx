@@ -27,7 +27,7 @@ export function TechnologyPage() {
         path="/technology"
       />
       {/* Hero Section */}
-      <section id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
+      <main id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[18vh] md:py-[22vh]">
@@ -45,7 +45,7 @@ export function TechnologyPage() {
             Material-based ripening control built into paper. Modulates ethylene exposure at the packaging interface.
           </p>
         </div>
-      </section>
+      </main>
 
       {/* Content Section */}
       <section className="relative w-full min-h-screen bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
