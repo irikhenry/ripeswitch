@@ -1,4 +1,5 @@
 import { Navigation } from "../components/Navigation";
+import { Seo } from "../components/Seo";
 import { motion } from "motion/react";
 import { FileText, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,8 +7,13 @@ import { Link } from "react-router-dom";
 export function TechnicalSpecificationPage() {
   return (
     <div className="w-full bg-white min-h-screen">
+      <Seo
+        title="Technical Specification | RipeSwitch"
+        description="Non-confidential engineering specifications for the RipeSwitch packaging system."
+        path="/technical-specification"
+      />
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
+      <section id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">

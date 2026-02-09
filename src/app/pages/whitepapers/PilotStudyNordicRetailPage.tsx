@@ -8,6 +8,8 @@ export function PilotStudyNordicRetailPage() {
       title="Pilot Study Results: Nordic Retail Chain"
       type="Case Study"
       date="October 2025"
+      path="/research/pilot-study-nordic-retail"
+      description="Pilot study framework and results for retail and distribution validation."
     >
       {/* Executive Summary */}
       <section className="relative w-full bg-white px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">

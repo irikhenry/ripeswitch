@@ -11,6 +11,8 @@ export function ActiveRipeningControlPage() {
       title="Active Ripening Control in Paper-Based Packaging"
       type="White Paper"
       date="January 2026"
+      path="/research/active-ripening-control"
+      description="Core technical principles of the RipeSwitch system and its integration into fibre-based packaging."
     >
       {/* Section 01 — Introduction */}
       <section className="relative w-full min-h-[70vh] bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[12vh]">

@@ -1,4 +1,5 @@
 import { Navigation } from "../components/Navigation";
+import { Seo } from "../components/Seo";
 import Logo from "../../imports/Logo";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
@@ -20,8 +21,13 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
 export function TechnologyPage() {
   return (
     <div className="w-full bg-white min-h-screen">
+      <Seo
+        title="Technology | RipeSwitch"
+        description="Material-based ripening control integrated into paper packaging. System architecture, operating modes, and validation approach."
+        path="/technology"
+      />
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448] min-h-screen flex items-center">
+      <section id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[18vh] md:py-[22vh]">
@@ -149,7 +155,13 @@ export function TechnologyPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh]">
-              <img src={layeredStructure} alt="Material structure" className="w-full max-w-[1000px] mx-auto rounded-2xl" />
+              <img
+                src={layeredStructure}
+                alt="Material structure"
+                className="w-full max-w-[1000px] mx-auto rounded-2xl"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </motion.div>
 
@@ -218,6 +230,8 @@ export function TechnologyPage() {
                     src={stage.image}
                     alt={stage.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <h4 className="text-[#026448] leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
@@ -298,6 +312,8 @@ export function TechnologyPage() {
                 src={packageFormats}
                 alt="RipeSwitch packaging formats — box, wrap, and tray configurations"
                 className="w-full h-auto max-w-[1100px] mx-auto"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>
@@ -318,6 +334,8 @@ export function TechnologyPage() {
                     src={tomatoesRetail}
                     alt="RipeSwitch retail packaging for tomatoes"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -361,6 +379,8 @@ export function TechnologyPage() {
                     src={vegetablesRetail}
                     alt="RipeSwitch retail packaging for vegetables"
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

@@ -1,4 +1,5 @@
 import { Navigation } from "../components/Navigation";
+import { Seo } from "../components/Seo";
 import { motion } from "motion/react";
 import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,8 +12,13 @@ import simonePhoto from "@/assets/43c1704256a7315de76c9b3b7c45f48f30ea29f7.webp"
 export function AboutPage() {
   return (
     <div className="w-full bg-white min-h-screen">
+      <Seo
+        title="About | RipeSwitch"
+        description="RipeSwitch develops fibre-based ripening control in paper packaging. Team, mission, and partner collaboration."
+        path="/about"
+      />
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
+      <section id="main-content" className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">

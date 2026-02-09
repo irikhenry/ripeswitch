@@ -8,6 +8,8 @@ export function MaterialSafetyCompliancePage() {
       title="Material Safety & Regulatory Compliance"
       type="Technical Specification"
       date="November 2025"
+      path="/research/material-safety-compliance"
+      description="Regulatory positioning and material safety considerations for fibre-based active packaging."
     >
       {/* Introduction */}
       <section className="relative w-full bg-white px-[5vw] md:px-[8vw] py-[12vh] md:px-[14vh]">

@@ -9,6 +9,7 @@ import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { CompetitiveBenchmark } from "./CompetitiveBenchmark";
 import { EconomicCalculator } from "./EconomicCalculator";
 import { Navigation } from "./components/Navigation";
+import { Seo } from "./components/Seo";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { BackToTop } from "./components/BackToTop";
@@ -31,7 +32,6 @@ import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.web
 import paperImage from "@/assets/04650068b44f6d0f94fd7bd08fad65080804fd18.webp";
 import coatingsImage from "@/assets/a862d039022cc63029916bf4db377aa9dc3cf67d.webp";
 import gadgetsImage from "@/assets/d9cddfce247e250dccd009700756f04fe8065dda.webp";
-import reducedVentImage from "@/assets/fc56beace820f5952006753be2f688f311532b49.webp";
 import increasedVentImage from "@/assets/d46104a6ab5434c040d5c1d7aa5d43e0a5053118.webp";
 import mechanismIllustration from "@/assets/92b9f5e155f2beeff77bbad48b5895559f909d98.webp";
 import mechanismImage from "@/assets/7ef91b08ae6a15d57dbfbf4d9cf75e8c29fc2a52.webp";
@@ -72,10 +72,31 @@ function AnimatedCounter({ target, duration = 2, suffix = "", inView }: { target
 
 // Home Page Component
 function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "RipeSwitch",
+    url: "https://www.ripeswitch.com",
+    logo: "https://www.ripeswitch.com/website_og.png",
+    description:
+      "Active ripening control, built into paper. Extends produce shelf life without plastics, electronics, or coatings.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Helsinki",
+      addressCountry: "FI"
+    }
+  };
+
   return (
     <div className="w-full bg-white">
+      <Seo
+        title="RipeSwitch | Active Ripening Control in Paper"
+        description="Active ripening control, built into paper. Extends produce shelf life without plastics, electronics, or coatings."
+        path="/"
+        jsonLd={jsonLd}
+      />
       {/* Hero Section - Full Viewport */}
-      <section className="relative w-full h-screen bg-[#026448] flex flex-col overflow-hidden">
+      <section id="main-content" className="relative w-full h-screen bg-[#026448] flex flex-col overflow-hidden">
         {/* Navigation Bar */}
         <Navigation />
 
@@ -107,7 +128,16 @@ function HomePage() {
               {/* Image container with particle effect */}
               <div className="relative w-full overflow-visible -mx-[5vw] md:-mx-[8vw] lg:mx-0 flex items-center justify-center">
                 <div className="relative w-full rounded-[28px] backdrop-blur-sm p-[2vh] md:p-[2.5vh] overflow-visible">
-                  <img src={heroImage} alt="RipeSwitch" className="w-full h-auto block" />
+                  <img
+                    src={heroImage}
+                    alt="RipeSwitch hero packaging"
+                    className="w-full h-auto block"
+                    loading="eager"
+                    fetchPriority="high"
+                    decoding="async"
+                    width="2048"
+                    height="1127"
+                  />
                 </div>
                 
                 {/* Particle overlay */}
@@ -253,6 +283,8 @@ function HomePage() {
               src={overripeFruit}
               alt="Food waste problem"
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
           </motion.div>
@@ -300,6 +332,8 @@ function HomePage() {
                   src={problem.image}
                   alt={problem.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
 
@@ -747,7 +781,13 @@ function HomePage() {
               Layered material architecture
             </h3>
             <div className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh]">
-              <img src={layeredStructure} alt="Material structure" className="w-full max-w-[1000px] mx-auto rounded-2xl" />
+              <img
+                src={layeredStructure}
+                alt="Material structure"
+                className="w-full max-w-[1000px] mx-auto rounded-2xl"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </motion.div>
         </div>
@@ -783,23 +823,23 @@ function HomePage() {
               {
                 icon: ShoppingBag,
                 image: paperImage,
-                title: "Plain paper",
-                problem: "No moisture or ripening control.",
+                title: "Conventional paper packaging",
+                problem: "Corrugated carton lack moisture and ripening control.",
                 result: "Spoilage accelerates."
               },
               {
                 icon: SprayCan,
                 image: coatingsImage,
-                title: "Chemical coatings",
-                problem: "Adds complexity and cost.",
+                title: "Chemical surface coatings",
+                problem: "Additives applied to produce (e.g., Apeel).",
                 result: "Regulatory uncertainty"
               },
               {
                 icon: Cpu,
                 image: gadgetsImage,
-                title: "Smart packaging",
+                title: "Active climate devices",
                 problem: "Requires new infrastructure.",
-                result: "Unscalable economics"
+                result: "Difficult to scale"
               }
             ].map((alt, index) => {
               const Icon = alt.icon;
@@ -818,12 +858,14 @@ function HomePage() {
                       src={alt.image}
                       alt={alt.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                     
                     {/* Icon Overlay */}
-                    <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#026448]" />
+                    <div className="absolute top-4 right-4 w-24 h-24 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
+                      <Icon className="w-12 h-12 text-[#026448]" />
                     </div>
                   </div>
 
@@ -1368,6 +1410,8 @@ function HomePage() {
                     src={stage.image}
                     alt={stage.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-6 md:p-7">
@@ -1429,7 +1473,13 @@ function HomePage() {
       <section className="relative w-full min-h-screen flex items-center overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <img src={futureResearchBg} alt="Future research" className="w-full h-full object-cover" />
+          <img
+            src={futureResearchBg}
+            alt="Future research"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-[#026448]/90" />
         </div>
 
@@ -1545,7 +1595,7 @@ export default function App() {
               <Route path="/technical-specification" element={<TechnicalSpecificationPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/research" element={<WhitePaperPageWithNav />} />
+              <Route path="/research" element={<WhitePaperPage />} />
               <Route path="/research/active-ripening-control" element={<ActiveRipeningControlPage />} />
               <Route path="/research/economic-impact-assessment" element={<EconomicImpactAssessmentPage />} />
               <Route path="/research/material-safety-compliance" element={<MaterialSafetyCompliancePage />} />
@@ -1559,14 +1609,4 @@ export default function App() {
   );
 }
 
-// Wrapper for WhitePaper page with Navigation
-function WhitePaperPageWithNav() {
-  return (
-    <div className="w-full relative">
-      <div className="absolute top-0 left-0 right-0 z-30">
-        <Navigation />
-      </div>
-      <WhitePaperPage />
-    </div>
-  );
-}
+// Wrapper removed: WhitePaperPage includes Navigation.

@@ -1,13 +1,19 @@
 import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Navigation } from "../components/Navigation";
+import { Seo } from "../components/Seo";
 import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
 
 export function WhitePaperPage() {
   return (
     <div className="w-full bg-white min-h-screen">
+      <Seo
+        title="Research | RipeSwitch"
+        description="Research library and technical references supporting fibre-based ripening control."
+        path="/research"
+      />
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448]">
+      <section id="main-content" className="relative w-full bg-[#026448]">
         {/* Navigation Bar */}
         <Navigation />
 

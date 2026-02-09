@@ -1,11 +1,16 @@
 import { Navigation } from "../components/Navigation";
-import Logo from "../../imports/Logo";
+import { Seo } from "../components/Seo";
 
 export function ContactPage() {
   return (
     <div className="w-full bg-white min-h-screen">
+      <Seo
+        title="Contact | RipeSwitch"
+        description="Contact RipeSwitch for pilot inquiries, technical documentation, or partnership discussions."
+        path="/contact"
+      />
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448] min-h-screen flex items-center">
+      <section id="main-content" className="relative w-full bg-[#026448] min-h-screen flex items-center">
         <Navigation />
 
         <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">

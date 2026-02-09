@@ -9,6 +9,8 @@ export function EconomicImpactAssessmentPage() {
       title="Economic Impact Assessment: Retail Produce Shrink Mitigation"
       type="Industry Report"
       date="December 2025"
+      path="/research/economic-impact-assessment"
+      description="Quantitative modelling of produce shrink reduction and margin sensitivity under retail conditions."
     >
       {/* Executive Summary */}
       <section className="relative w-full bg-white px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">

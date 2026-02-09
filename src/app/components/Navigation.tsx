@@ -27,6 +27,12 @@ export function Navigation() {
           ? 'bg-transparent backdrop-blur-xl border-b border-white/10' 
           : 'bg-transparent'
       }`}>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-white text-[#026448] px-4 py-2 rounded-full"
+        >
+          Skip to content
+        </a>
         <div className="w-full flex items-center justify-between">
           <Link to="/" className="w-[clamp(140px,22vw,320px)] md:w-[clamp(180px,18vw,320px)]" onClick={closeMenu}>
             <Logo />
@@ -36,6 +42,8 @@ export function Navigation() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-[#026448]/80 backdrop-blur-md border text-white hover:text-[#EEFF41] hover:border-[#EEFF41]/30 transition-all z-50 font-ui"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="nav-drawer"
           >
             <span className="hidden md:inline text-sm font-light tracking-wider">MENU</span>
             {isMenuOpen ? (
@@ -52,6 +60,8 @@ export function Navigation() {
 
       {/* Menu Drawer Overlay */}
       <div
+        id="nav-drawer"
+        aria-hidden={!isMenuOpen}
         className={`fixed inset-0 bg-[#026448] z-40 transition-transform duration-500 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}

@@ -2,19 +2,27 @@ import { ReactNode } from "react";
 import { motion } from "motion/react";
 import Logo from "../../imports/Logo";
 import { Navigation } from "./Navigation";
+import { Seo } from "./Seo";
 
 interface WhitePaperDetailWrapperProps {
   children: ReactNode;
   title: string;
   type: string;
   date: string;
+  path?: string;
+  description?: string;
 }
 
-export function WhitePaperDetailWrapper({ children, title, type, date }: WhitePaperDetailWrapperProps) {
+export function WhitePaperDetailWrapper({ children, title, type, date, path, description }: WhitePaperDetailWrapperProps) {
   return (
     <div className="w-full bg-white">
+      <Seo
+        title={`${title} | RipeSwitch`}
+        description={description ?? "Technical white paper supporting fibre-based ripening control."}
+        path={path ?? "/research"}
+      />
       {/* Paper Metadata Hero */}
-      <section className="relative w-full bg-[#026448]">
+      <section id="main-content" className="relative w-full bg-[#026448]">
         {/* Navigation Bar */}
         <Navigation />
 
