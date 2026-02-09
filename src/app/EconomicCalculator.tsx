@@ -56,8 +56,8 @@ export function EconomicCalculator() {
           <button
             type="button"
             onClick={applyTypicalPreset}
-            className="px-4 py-2 bg-[#EEFF41] text-[#026448] rounded-full font-semibold hover:bg-[#EEFF41]/90 transition-colors font-ui"
-            style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}
+            className="px-3 py-1.5 bg-[#EEFF41] text-[#026448] rounded-full font-semibold hover:bg-[#EEFF41]/90 transition-colors font-ui whitespace-nowrap tracking-tight"
+            style={{ fontSize: 'clamp(0.7rem, 0.9vw, 0.95rem)' }}
           >
             Typical retailer preset: €300M / 12% / 7% / 20%
           </button>
