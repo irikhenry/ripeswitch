@@ -1,12 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { Navigation } from "../components/Navigation";
-import Logo from "../../imports/Logo";
 import overripeFruit from "@/assets/480164da373b17192b4517497d43538a5c4e94f9.webp";
 
 export function WhitePaperPage() {
-  const location = useLocation();
-  
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section */}
@@ -26,7 +23,7 @@ export function WhitePaperPage() {
           <div className="w-24 h-[1px] bg-white/30 mb-[6vh]"></div>
 
           <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
-            Lab-validated simulations, material studies, and system-level testing supporting fibre-based ripening control.
+            Scientific, material, and system‑level research supporting fibre‑based ripening control.
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/70 mt-[4vh]" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)' }}>
@@ -35,7 +32,7 @@ export function WhitePaperPage() {
               Research ongoing
             </span>
             <span>·</span>
-            <span>Pilot validation in preparation</span>
+            <span>Retail commercial validation next</span>
           </div>
         </div>
       </section>
@@ -50,10 +47,10 @@ export function WhitePaperPage() {
               Purpose
             </p>
             <p className="text-[#4a4a4a] leading-[1.85] mb-[4vh] max-w-[750px]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 300 }}>
-              This technical library documents the scientific, material, and system-level basis of the RipeSwitch invention. The materials support internal validation, partner evaluation, and preparation for pilot-scale deployment.
+              This library documents the scientific, material, and system basis of RipeSwitch. It supports partner evaluation and pilot‑scale preparation.
             </p>
             <p className="text-[#666] leading-[1.85] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-              All documents are non-public working materials and evolve in parallel with laboratory testing and real-world pilots.
+              Documents are working materials updated as laboratory and pilot data accumulates.
             </p>
             <div className="w-full h-[1px] bg-[#1a1a1a]/10 mt-[6vh]"></div>
           </div>
@@ -67,18 +64,18 @@ export function WhitePaperPage() {
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[#4a4a4a] mb-[6vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#026448]"></span>
-                Piloting
+                Mechanism validated
               </span>
               <span>·</span>
-              <span>Pre-commercial validation phase</span>
+              <span>Retail commercial validation next</span>
             </div>
 
             <p className="text-[#4a4a4a] leading-[1.85] mb-[4vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 300 }}>
-              The core functional mechanisms of RipeSwitch have been demonstrated and validated through controlled laboratory testing and prototype construction. The system integrates into standard paper packaging structures and is compatible with existing converting infrastructure.
+              Core mechanisms are validated. The system integrates into standard paper packaging and existing converting infrastructure.
             </p>
 
             <p className="text-[#666] leading-[1.85] mb-[6vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-              The current phase enables retail and supply-chain operators to validate performance in their own operating environments, generating independent data under real handling conditions.
+              The current phase enables retail and supply‑chain operators to validate performance in operating environments and generate independent data under real handling conditions.
             </p>
 
             <div className="bg-[#f8f8f8] border-l-4 border-[#026448] p-[4vh]">
@@ -86,7 +83,7 @@ export function WhitePaperPage() {
                 Path to Commercial Deployment
               </p>
               <p className="text-[#666] leading-[1.85]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                Piloting with retail operators validates manufacturability, shrink reduction, and operational integration before full-scale rollout. Partner-generated data supports commercial decision-making and formal IP protection, positioning the system for market entry.
+                Retail pilots validate manufacturability, shrink reduction, and operational integration before scale‑up. Partner data supports commercial decisions and formal IP protection.
               </p>
             </div>
 
@@ -99,7 +96,7 @@ export function WhitePaperPage() {
               Document Maturity Framework
             </p>
             <p className="text-[#4a4a4a] leading-[1.85] mb-[6vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-              To ensure clarity and transparency, all technical documents are classified using the following maturity levels:
+              Documents are classified by maturity:
             </p>
 
             <div className="space-y-[5vh]">
@@ -108,7 +105,7 @@ export function WhitePaperPage() {
                   Draft
                 </h3>
                 <p className="text-[#666] leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Early-stage technical documentation based on laboratory experiments, simulations, and initial prototyping. Used to define hypotheses, system architecture, and validation targets.
+                  Early‑stage documentation based on laboratory experiments, simulations, and initial prototyping. Used to define hypotheses, architecture, and validation targets.
                 </p>
               </div>
 
@@ -117,7 +114,7 @@ export function WhitePaperPage() {
                   Pilot
                 </h3>
                 <p className="text-[#666] leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Documentation updated with data from controlled pilot deployments and converter trials. Used to assess performance under operational conditions and refine design parameters.
+                  Documentation updated with data from controlled pilot deployments and converter trials. Used to assess operational performance and refine parameters.
                 </p>
               </div>
 
@@ -126,7 +123,7 @@ export function WhitePaperPage() {
                   Validated
                 </h3>
                 <p className="text-[#666] leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Documentation supported by repeatable pilot results and third-party verification where applicable. Used for regulatory review, licensing discussions, and commercial scale-up preparation.
+                  Documentation supported by repeatable pilot results and third‑party verification where applicable. Used for regulatory review, licensing discussions, and commercial scale‑up preparation.
                 </p>
               </div>
             </div>
@@ -161,7 +158,7 @@ export function WhitePaperPage() {
                 </div>
 
                 <p className="text-[#4a4a4a] leading-[1.85] mb-[5vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 300 }}>
-                  This document describes the core technical principles of the RipeSwitch system and its integration into fibre-based packaging formats.
+                  This document describes the core technical principles of the RipeSwitch system and its integration into fibre‑based packaging formats.
                 </p>
 
                 <p className="text-[#1a1a1a] leading-[1.3] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)', fontWeight: 500 }}>
@@ -169,12 +166,12 @@ export function WhitePaperPage() {
                 </p>
 
                 <ul className="space-y-[2vh] text-[#4a4a4a] mb-[5vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  <li className="leading-[1.75]">System architecture for controlled gas exchange in paper-based enclosures</li>
+                  <li className="leading-[1.75]">System architecture for controlled gas exchange in paper‑based enclosures</li>
                   <li className="leading-[1.75]">Functional layer integration within standard paper substrates</li>
-                  <li className="leading-[1.75]">Ripening window management for climacteric fruit</li>
-                  <li className="leading-[1.75]">Converter compatibility and roll-to-roll process constraints</li>
+                  <li className="leading-[1.75]">Ripening‑window management for climacteric fruit</li>
+                  <li className="leading-[1.75]">Converter compatibility and roll‑to‑roll process constraints</li>
                   <li className="leading-[1.75]">Performance indicators derived from laboratory simulations and bench testing</li>
-                  <li className="leading-[1.75]">Initial considerations for food-contact compliance and recyclability pathways</li>
+                  <li className="leading-[1.75]">Initial considerations for food‑contact compliance and recyclability pathways</li>
                 </ul>
 
                 <p className="text-[#666] leading-[1.75] mb-[5vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.15rem)', fontWeight: 300 }}>
@@ -234,7 +231,7 @@ export function WhitePaperPage() {
                 </h3>
 
                 <p className="text-[#4a4a4a] leading-[1.85] mb-[3vh] max-w-[700px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Overview of regulatory positioning and material safety considerations relevant to fibre-based active packaging.
+                  Overview of regulatory positioning and material safety considerations relevant to fibre‑based active packaging.
                 </p>
 
                 <p className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(0.9rem, 1vw, 1.1rem)', fontWeight: 500 }}>
@@ -302,7 +299,7 @@ export function WhitePaperPage() {
                   Post-Harvest Physiology
                 </h3>
                 <p className="text-[#666] leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Ethylene exposure management, respiration kinetics, and ripening window control for climacteric fruit.
+                  Ethylene exposure management, respiration kinetics, and ripening‑window control for climacteric fruit.
                 </p>
               </div>
 
@@ -311,7 +308,7 @@ export function WhitePaperPage() {
                   Manufacturing Integration
                 </h3>
                 <p className="text-[#666] leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Compatibility with existing converting lines, quality control checkpoints, and scale-up feasibility.
+                  Compatibility with existing converting lines, quality control checkpoints, and scale‑up feasibility.
                 </p>
               </div>
             </div>
@@ -326,11 +323,11 @@ export function WhitePaperPage() {
             </p>
 
             <p className="text-[#4a4a4a] leading-[1.85] mb-[4vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 300 }}>
-              The transition away from single-use plastic packaging in food retail is creating a structural gap in fresh produce handling. European regulation requires removal of plastic for many produce categories, while paper-based alternatives lack ripening control. This is increasing shrink and operational risk across retail supply chains.
+              The transition away from single‑use plastic packaging in food retail is creating a structural gap in fresh produce handling. European regulation requires removal of plastic for many produce categories, while paper‑based alternatives lack ripening control—raising shrink and operational risk across retail supply chains.
             </p>
 
             <p className="text-[#666] leading-[1.85] mb-[6vh] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-              RipeSwitch addresses this gap at a system level, functioning within existing infrastructure without electronics, chemical coatings, or active energy. Its relevance applies across high-volume grocery chains, discount retailers, and produce distributors handling climacteric fruit.
+              RipeSwitch addresses this gap at system level, functioning within existing infrastructure without electronics, chemical coatings, or active energy. It applies across high‑volume grocery chains, discount retailers, and produce distributors handling climacteric fruit.
             </p>
 
             <div className="bg-[#f8f8f8] border-l-4 border-[#026448] p-[4vh] mb-[6vh]">
@@ -338,7 +335,7 @@ export function WhitePaperPage() {
                 Pilot Validation Requirements
               </p>
               <p className="text-[#666] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                Early development has been self-funded, focused on experimental validation and prototype construction. The next phase requires pilot-scale validation with retail operators to generate independent performance data:
+                Early development has been self‑funded, focused on experimental validation and prototype construction. The next phase requires retail validation to generate independent performance data:
               </p>
 
               <ul className="space-y-[1.5vh] text-[#666]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 300 }}>
