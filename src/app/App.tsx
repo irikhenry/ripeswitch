@@ -314,7 +314,7 @@ function HomePage() {
                 <img
                   src={problem.image.src}
                   srcSet={problem.image.srcSet}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 360px"
+                  sizes="(max-width: 768px) 90vw, 360px"
                   alt={problem.title}
                   className="w-full h-full object-cover"
                   loading="lazy"

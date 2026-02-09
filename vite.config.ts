@@ -5,19 +5,26 @@ import react from '@vitejs/plugin-react'
 
 const deferStylesPlugin = () => ({
   name: 'defer-styles',
-  transformIndexHtml(html: string) {
-    const links: string[] = []
-    const updated = html.replace(/<link rel="stylesheet"([^>]*?)href="([^"]+\\.css)"([^>]*)>/g, (match, pre, href, post) => {
-      const attrs = `${pre}${post}`
-      const hasCrossorigin = /crossorigin/.test(attrs)
-      links.push(href)
-      return `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'"${hasCrossorigin ? ' crossorigin' : ''}>`
-    })
+  transformIndexHtml: {
+    enforce: 'post',
+    transform(html: string) {
+      const links: string[] = []
+      const updated = html.replace(/<link\\b([^>]*?)>/gi, (match, attrs) => {
+        const relMatch = attrs.match(/\\brel=(\"|')stylesheet\\1/i)
+        const hrefMatch = attrs.match(/\\bhref=(\"|')([^\"']+\\.css)\\1/i)
+        if (!relMatch || !hrefMatch) return match
 
-    if (!links.length) return html
+        const href = hrefMatch[2]
+        links.push(href)
+        const hasCrossorigin = /\\bcrossorigin\\b/i.test(attrs)
+        return `<link rel=\"stylesheet\" href=\"${href}\" media=\"print\" onload=\"this.media='all'\"${hasCrossorigin ? ' crossorigin' : ''}>`
+      })
 
-    const noscript = links.map((href) => `<noscript><link rel="stylesheet" href="${href}"></noscript>`).join('')
-    return updated.replace('</head>', `${noscript}</head>`)
+      if (!links.length) return html
+
+      const noscript = links.map((href) => `<noscript><link rel=\"stylesheet\" href=\"${href}\"></noscript>`).join('')
+      return updated.replace('</head>', `${noscript}</head>`)
+    },
   },
 })
 
