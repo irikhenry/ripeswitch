@@ -3,9 +3,7 @@ import Group from "../imports/Group";
 import Hero from "../imports/Hero";
 import Solution from "../imports/Solution";
 import Future from "../imports/Future";
-import Vector from "../imports/Vector";
-import Vector2 from "../imports/Vector-28-624";
-import Vector3 from "../imports/Vector-28-650";
+import { OperatingModes } from "./components/OperatingModes";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./components/figma/ImageWithFallback";
 import { CompetitiveBenchmark } from "./CompetitiveBenchmark";
@@ -200,28 +198,12 @@ function HomePage() {
 
       {/* Problem Section */}
       <section className="relative w-full min-h-screen bg-[#f8f8f8] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
-        {/* Two-Column Hero Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6vh] lg:gap-[7vw] items-center mb-[6vh] md:mb-[8vh] max-w-[1300px] w-full mx-auto">
-          {/* Left - Hero Image */}
+        {/* Unified Problem Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-[4vh] lg:gap-[3vw] w-full">
+          {/* Left - Content */}
           <motion.div
-            className="relative h-[40vh] md:h-[55vh] lg:h-[70vh] rounded-3xl overflow-hidden order-2 lg:order-1 border border-black/10 shadow-[0_18px_50px_rgba(0,0,0,0.12)] lg:ml-[-6vw] lg:mr-[2vw] w-full z-0"
+            className="order-1 relative z-10 lg:col-span-1"
             initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src={overripeFruit}
-              alt="Food waste problem"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
-          </motion.div>
-
-          {/* Right - Content */}
-          <motion.div
-            className="order-1 lg:order-2 relative z-10"
-            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -235,7 +217,7 @@ function HomePage() {
 
             {/* Hero Stat */}
             <div className="mb-[3vh] md:mb-[4vh]">
-              <div className="text-[#026448] leading-[0.9] mb-[2vh]" style={{ fontSize: 'clamp(5rem, 12vw, 14rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-[0.9] mb-[2vh] font-heading" style={{ fontSize: 'clamp(5rem, 12vw, 14rem)', fontWeight: 700 }}>
                 19%
               </div>
               <h2 className="text-[#1a1a1a] leading-[1.15]" style={{ fontSize: 'clamp(1.8rem, 3vw, 3.4rem)', fontWeight: 600, letterSpacing: '-0.01em' }}>
@@ -258,59 +240,50 @@ function HomePage() {
               </span>
             </div>
           </motion.div>
+
+          {/* Right - Hero Image */}
+          <motion.div
+            className="relative h-[40vh] md:h-[55vh] lg:h-[70vh] rounded-3xl overflow-hidden order-2 border border-black/10 shadow-[0_18px_50px_rgba(0,0,0,0.12)] w-full z-0 lg:col-span-2"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              src={overripeFruit}
+              alt="Food waste problem"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-black/0" />
+          </motion.div>
         </div>
 
-        {/* Stats Row */}
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-3 gap-[4vh] md:gap-[3vw] mb-[6vh] md:mb-[8vh] pb-[5vh] md:pb-[7vh] border-b border-[#e0e0e0] sm:divide-x sm:divide-[#e3e3e3]"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          {[
-            { value: '2029', label: 'EU plastic packaging phase-out deadline', highlight: true },
-            { value: '40%', label: 'Loss occurs in transit & back rooms', highlight: false },
-            { value: '1.3B', label: 'Tons of food wasted globally per year', highlight: false }
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center sm:text-left sm:px-[2.5vw]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-            >
-              <div className={`leading-none mb-2 ${stat.highlight ? 'text-[#026448]' : 'text-[#1a1a1a]'}`} style={{ fontSize: 'clamp(2.6rem, 4.2vw, 5rem)', fontWeight: 700 }}>
-                {stat.value}
-              </div>
-              <div className="text-[#4a4a4a] leading-[1.5] max-w-[280px] mx-auto sm:mx-0" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 500, letterSpacing: '0.01em' }}>
-                {stat.label}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* Three Problem Cards - Clean Editorial Style */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw]">
+        {/* Second Row: Three Insight Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw] w-full lg:col-span-3 mt-[4vh] md:mt-[3vw]">
           {[
             {
               image: plasticPackaging,
+              stat: "2029",
               title: "Plastic exit is set",
               emoji: "🇪🇺",
-              description: "EU phase-out of single-use plastic packaging by 31 December 2029 demands alternatives that preserve shelf-life performance."
+              label: "EU policy",
+              description: "EU phase-out demands alternatives that preserve shelf-life performance."
             },
             {
               image: warehouse,
-              title: "Ripening-related loss",
+              stat: "40%",
+              title: "Back-room loss",
               emoji: "📦",
-              description: "Most loss occurs in transit and back rooms, before the shelf—low visibility, high impact."
+              label: "Supply chain",
+              description: "Most loss occurs before the shelf—low visibility, high impact."
             },
             {
               image: overripeFruit,
-              title: "Produce waste",
+              stat: "1.3B",
+              title: "Global food waste",
               emoji: "🍌",
-              description: "Household waste is the visible outcome, not the root cause in the supply chain."
+              label: "Global impact",
+              description: "Household waste is the visible outcome, not the root cause."
             }
           ].map((problem, index) => (
             <motion.div
@@ -332,14 +305,20 @@ function HomePage() {
 
               {/* Content */}
               <div className="px-6 py-6">
-                <div className="flex items-start gap-3 mb-[2vh]">
-                  <div className="text-2xl leading-none">
+                <div className="flex items-end justify-between mb-[1.5vh]">
+                  <div className="text-[#026448] leading-none tabular-nums font-heading" style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3.6rem)', fontWeight: 700 }}>
+                    {problem.stat}
+                  </div>
+                  <div className="leading-none" style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3.6rem)' }}>
                     {problem.emoji}
                   </div>
-                  <h3 className="text-[#1a1a1a] leading-[1.25] flex-1" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
-                    {problem.title}
-                  </h3>
                 </div>
+                <div className="inline-flex items-center px-3 py-1 rounded-full border border-[#026448]/20 text-[#026448] mb-[1.5vh]" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.9rem)', fontWeight: 600 }}>
+                  {problem.label}
+                </div>
+                <h3 className="text-[#1a1a1a] leading-[1.25] mb-[1vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
+                  {problem.title}
+                </h3>
                 <p className="text-[#4a4a4a] leading-[1.65]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)' }}>
                   {problem.description}
                 </p>
@@ -440,7 +419,7 @@ function HomePage() {
                       Total waste (tonnes)
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative tabular-nums"
+                      className="text-white leading-none relative tabular-nums font-heading"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
@@ -477,7 +456,7 @@ function HomePage() {
                       Per capita (kg)
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative tabular-nums"
+                      className="text-white leading-none relative tabular-nums font-heading"
                       style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}
                     >
                       <motion.span
@@ -510,7 +489,7 @@ function HomePage() {
                       GHG emissions value
                     </div>
                     <motion.div 
-                      className="text-white leading-none relative tabular-nums"
+                      className="text-white leading-none relative tabular-nums font-heading"
                       style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}
                     >
                       <motion.span
@@ -595,7 +574,7 @@ function HomePage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.15 }}
                   >
-                    <div className="text-[#EEFF41] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(3.2rem, 5.2vw, 7.2rem)', fontWeight: 700 }}>
+                    <div className="text-[#EEFF41] leading-none mb-[2vh] tabular-nums font-heading" style={{ fontSize: 'clamp(3.2rem, 5.2vw, 7.2rem)', fontWeight: 700 }}>
                       {stat.value}
                     </div>
                     <div className="text-white leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.8rem)', fontWeight: 600 }}>
@@ -686,7 +665,7 @@ function HomePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.3 + index * 0.15 }}
               >
-                <div className="text-[#026448] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(2.6rem, 3.8vw, 4.6rem)', fontWeight: 700 }}>
+                <div className="text-[#026448] leading-none mb-[2vh] tabular-nums font-heading" style={{ fontSize: 'clamp(2.6rem, 3.8vw, 4.6rem)', fontWeight: 700 }}>
                   {benefit.number}
                 </div>
                 <h3 className="text-[#026448] leading-[1.2] mb-[2vh]" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)', fontWeight: 700 }}>
@@ -754,105 +733,7 @@ function HomePage() {
           </motion.div>
 
           {/* Two Modes Side by Side */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[5vh] lg:gap-[5vw] mb-[10vh] md:mb-[14vh]">
-            {/* HOLD Mode */}
-            <motion.div
-              className="bg-[#026448] rounded-3xl p-[5vh] md:p-[6vh] text-white border border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.18)]"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="mb-[4vh]">
-                <div className="inline-block px-4 py-2 bg-white/10 rounded-full mb-[3vh]">
-                  <span className="text-[#EEFF41] tracking-wider uppercase font-bold" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)' }}>
-                    Mode 01
-                  </span>
-                </div>
-                <h3 className="text-white leading-[1.15] mb-[2vh]" style={{ fontSize: 'clamp(2rem, 3vw, 3.5rem)', fontWeight: 700 }}>
-                  HOLD
-                </h3>
-                <p className="text-white/80 leading-[1.6]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
-                  Delays ripening during transit and storage.
-                </p>
-              </div>
-
-              <div
-                className="relative h-[22vh] md:h-[28vh] rounded-2xl overflow-hidden mb-[3vh] flex items-center justify-center [&>svg]:w-auto [&>svg]:h-auto [&>svg]:max-w-full [&>svg]:max-h-full"
-              >
-                <Vector />
-              </div>
-
-              <div className="space-y-[2vh]">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#EEFF41] flex-shrink-0 mt-1" />
-                  <p className="text-white/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Reduces ethylene exposure
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#EEFF41] flex-shrink-0 mt-1" />
-                  <p className="text-white/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Preserves firmness longer
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#EEFF41] flex-shrink-0 mt-1" />
-                  <p className="text-white/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Extends handling window
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* READY Mode */}
-            <motion.div
-              className="bg-[#EEFF41] rounded-3xl p-[5vh] md:p-[6vh] border border-black/10 shadow-[0_18px_40px_rgba(0,0,0,0.12)]"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="mb-[4vh]">
-                <div className="inline-block px-4 py-2 bg-[#026448]/10 rounded-full mb-[3vh]">
-                  <span className="text-[#026448] tracking-wider uppercase font-bold" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)' }}>
-                    Mode 02
-                  </span>
-                </div>
-                <h3 className="text-[#026448] leading-[1.15] mb-[2vh]" style={{ fontSize: 'clamp(2rem, 3vw, 3.5rem)', fontWeight: 700 }}>
-                  READY
-                </h3>
-                <p className="text-[#026448]/80 leading-[1.6]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>
-                  Allows natural ripening at the consumer stage.
-                </p>
-              </div>
-
-              <div className="relative w-full rounded-2xl overflow-hidden mb-[3vh]" style={{ aspectRatio: '455.573 / 335.048' }}>
-                <Vector3 />
-              </div>
-
-              <div className="space-y-[2vh]">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#026448] flex-shrink-0 mt-1" />
-                  <p className="text-[#026448]/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Resumes normal gas exchange
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#026448] flex-shrink-0 mt-1" />
-                  <p className="text-[#026448]/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Predictable ripening curve
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-[#026448] flex-shrink-0 mt-1" />
-                  <p className="text-[#026448]/90 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                    Optimal eating window
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+          <OperatingModes />
 
           {/* Material Structure */}
           <motion.div
@@ -1079,7 +960,7 @@ function HomePage() {
                         <h4 className="text-white leading-[1.2] mb-[1vh]" style={{ fontSize: 'clamp(0.95rem, 1.15vw, 1.3rem)', fontWeight: 700 }}>
                           {item.title}
                         </h4>
-                        <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[0.8vh]`} style={{ fontSize: 'clamp(1.2rem, 1.7vw, 2rem)', fontWeight: 700 }}>
+                        <div className={`${item.highlight ? 'text-[#EEFF41]' : 'text-white'} leading-none mb-[0.8vh] font-heading`} style={{ fontSize: 'clamp(1.2rem, 1.7vw, 2rem)', fontWeight: 700 }}>
                           {item.value}
                         </div>
                         <p className="text-white/70 leading-[1.5]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
@@ -1271,7 +1152,7 @@ function HomePage() {
                 <div className="text-[#4a4a4a] mb-[1vh] uppercase tracking-wider" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
                   {stat.metric}
                 </div>
-                <div className="text-[#026448] leading-none mb-[1vh]" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+                <div className="text-[#026448] leading-none mb-[1vh] font-heading" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
                   {stat.value}
                 </div>
                 {stat.unit && (
@@ -1308,7 +1189,7 @@ function HomePage() {
                     <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
                       If savings are passed to consumers
                     </div>
-                    <div className="text-white leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
+                    <div className="text-white leading-none font-heading" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
                       €1.61 → €1.46
                     </div>
                     <div className="text-white/50 mt-[1vh]" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)' }}>
@@ -1354,7 +1235,7 @@ function HomePage() {
                     <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
                       If margin is retained at current price
                     </div>
-                    <div className="text-white leading-none" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
+                    <div className="text-white leading-none font-heading" style={{ fontSize: 'clamp(2rem, 3.5vw, 4rem)', fontWeight: 700 }}>
                       40% → 46%
                     </div>
                   </div>
@@ -1490,7 +1371,7 @@ function HomePage() {
                   />
                 </div>
                 <div className="p-6 md:p-7">
-                  <div className="text-[#026448] leading-none mb-[2vh] tabular-nums" style={{ fontSize: 'clamp(2rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                  <div className="text-[#026448] leading-none mb-[2vh] tabular-nums font-heading" style={{ fontSize: 'clamp(2rem, 2.5vw, 3rem)', fontWeight: 700 }}>
                     {stage.step}
                   </div>
                   <h4 className="text-[#026448] leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)', fontWeight: 700 }}>
@@ -1512,15 +1393,15 @@ function HomePage() {
             {[
               {
                 title: "Low unit economics",
-                description: "Material costs align with commodity packaging. Premium pricing is typically not required."
+                description: "Material costs align with commodity packaging. Premium pricing is not required for market entry."
               },
               {
                 title: "Rapid scale-up",
-                description: "Uses existing global converting capacity. Faster path from validation to volume."
+                description: "Leverages existing global paper converting capacity. Fast path from validation to volume."
               },
               {
                 title: "Supply chain ready",
-                description: "Operates within current logistics with minimal special handling or infrastructure."
+                description: "Works within current logistics with minimal special handling or infrastructure build-out."
               }
             ].map((benefit, index) => (
               <motion.div

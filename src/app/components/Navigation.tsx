@@ -22,22 +22,22 @@ export function Navigation() {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 px-[5vw] md:px-[8vw] py-[3vh] md:py-[4vh] transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 px-[5vw] md:px-[3vw] py-[3vh] md:py-[4vh] transition-all duration-300 ${
         isScrolled 
-          ? 'bg-[#026448]/95 backdrop-blur-lg shadow-lg' 
+          ? 'bg-transparent backdrop-blur-xl border-b border-white/10' 
           : 'bg-transparent'
       }`}>
-        <div className="flex items-center justify-between">
+        <div className="w-full flex items-center justify-between">
           <Link to="/" className="w-[clamp(140px,22vw,320px)] md:w-[clamp(180px,18vw,320px)]" onClick={closeMenu}>
             <Logo />
           </Link>
           
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:text-[#EEFF41] hover:border-[#EEFF41]/30 transition-all z-50"
+            className="flex items-center gap-2 md:gap-3 px-4 md:px-6 py-2 md:py-3 rounded-full bg-[#026448]/80 backdrop-blur-md border text-white hover:text-[#EEFF41] hover:border-[#EEFF41]/30 transition-all z-50 font-ui"
             aria-label="Toggle menu"
           >
-            <span className="text-xs md:text-sm font-light tracking-wider">MENU</span>
+            <span className="hidden md:inline text-sm font-light tracking-wider">MENU</span>
             {isMenuOpen ? (
               <X size={16} strokeWidth={1.5} className="md:w-5 md:h-5" />
             ) : (
@@ -61,7 +61,7 @@ export function Navigation() {
             <Link
               to="/"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/' ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
@@ -72,7 +72,7 @@ export function Navigation() {
             <Link
               to="/technology"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/technology' ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
@@ -83,7 +83,7 @@ export function Navigation() {
             <Link
               to="/technical-specification"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/technical-specification' ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
@@ -94,7 +94,7 @@ export function Navigation() {
             <Link
               to="/research"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname.startsWith('/research') ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
@@ -105,7 +105,7 @@ export function Navigation() {
             <Link
               to="/about"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/about' ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
@@ -116,7 +116,7 @@ export function Navigation() {
             <Link
               to="/contact"
               onClick={closeMenu}
-              className={`block text-white hover:text-[#EEFF41] transition-colors ${
+              className={`block text-white hover:text-[#EEFF41] transition-colors font-ui ${
                 location.pathname === '/contact' ? 'text-[#EEFF41]' : ''
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}

@@ -1,5 +1,4 @@
 import { Navigation } from "../components/Navigation";
-import Logo from "../../imports/Logo";
 import { motion } from "motion/react";
 import { FileText, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,59 +7,59 @@ export function TechnicalSpecificationPage() {
   return (
     <div className="w-full bg-white min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full bg-[#026448] min-h-screen flex items-center">
+      <section className="relative w-full bg-[#026448] min-h-[80vh] flex items-center">
         <Navigation />
 
-        <div className="w-full max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[20vh] md:py-[25vh]">
-          <p className="text-white/60 uppercase tracking-[0.25em] mb-[3vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 400 }}>
+        <div className="w-full max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[20vh] md:py-[25vh]">
+          <p className="text-white/60 uppercase tracking-[0.25em] mb-[3vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)' }}>
             Specifications
           </p>
 
-          <h1 className="text-white leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(3rem, 6.5vw, 7.5rem)', fontWeight: 300, letterSpacing: '-0.04em' }}>
+          <h1 className="text-white leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(3rem, 6.5vw, 7.5rem)', letterSpacing: '-0.04em' }}>
             Technical Specification
           </h1>
 
           <div className="w-24 h-[1px] bg-white/30 mb-[6vh]"></div>
 
-          <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)', fontWeight: 300 }}>
-            Material properties, integration requirements, and performance parameters for packaging engineers and converters.
+          <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
+            Material properties, integration requirements, and indicative performance parameters for packaging engineers and converters.
           </p>
         </div>
       </section>
 
       {/* Document Header */}
-      <section className="relative w-full bg-[#f8f8f8] border-b border-[#e0e0e0]">
-        <div className="max-w-[1100px] mx-auto px-[5vw] lg:px-[8vw] py-[8vh]">
+      <section className="relative w-full min-h-[70vh] bg-[#f8f8f8] border-b border-[#e0e0e0] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[6vh] md:py-[8vh]">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-[3vh]">
             <div>
-              <h2 className="text-[#1a1a1a] leading-[1.3]" style={{ fontSize: 'clamp(1.4rem, 1.8vw, 2.2rem)', fontWeight: 600 }}>
+              <h2 className="text-[#1a1a1a] leading-[1.3]" style={{ fontSize: 'clamp(1.4rem, 1.8vw, 2.2rem)' }}>
                 RipeSwitch™ Active Ripening Control for Paper-Based Fruit Packaging
               </h2>
             </div>
             <Link
               to="/contact"
-              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#026448] text-[#026448] rounded-lg hover:bg-[#026448] hover:text-white transition-all"
+              className="flex items-center gap-2 px-6 py-3 bg-white border border-[#026448] text-[#026448] rounded-lg hover:bg-[#026448] hover:text-white transition-all font-ui"
             >
               <Mail className="w-4 h-4" />
-              <span style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)', fontWeight: 600 }}>
+              <span style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}>
                 Request Technical Specification
               </span>
             </Link>
           </div>
           
           <p className="text-[#666] leading-[1.7] mt-[3vh] max-w-[800px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-            This technical reference provides engineering specifications for the RipeSwitch packaging system. It is intended for packaging engineers, converters, manufacturing partners, and technical reviewers to assess compatibility, integration feasibility, and operational scope.
+            This reference provides non‑confidential engineering specifications for the RipeSwitch system, for technical assessment of compatibility, integration feasibility, and operational scope by packaging engineers, converters, manufacturing partners, and reviewers.
           </p>
           
-          <p className="text-[#026448] leading-[1.65] mt-[2vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 600 }}>
-            This document does not disclose proprietary formulations, material recipes, or protected process parameters.
+          <p className="text-[#026448] leading-[1.65] mt-[2vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
+            This document excludes proprietary formulations, material recipes, and protected process parameters.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="relative w-full bg-white">
-        <div className="max-w-[1100px] mx-auto px-[5vw] lg:px-[8vw] py-[12vh] md:py-[16vh]">
+      <section className="relative w-full min-h-[70vh] bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[6vh] md:py-[8vh]">
+        <div className="max-w-[1400px] w-full mx-auto">
           
           {/* Section 01: System Overview */}
           <motion.div
@@ -71,21 +70,21 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 01
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   System Overview
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  RipeSwitch is a paper-based packaging system designed to moderate fruit ripening behaviour through integrated functional media embedded within conventional fibre-based packaging structures.
+                  RipeSwitch is a paper‑based packaging system that moderates ripening via an integrated functional media layer embedded in conventional fibre‑based structures.
                 </p>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  The system operates under open or semi-open packaging conditions, without forming a sealed modified atmosphere enclosure and without applying coatings directly to the produce.
+                  The system operates in open or semi‑open configurations without forming a sealed modified‑atmosphere enclosure and without applying coatings directly to produce.
                 </p>
                 <p className="text-[#4a4a4a] leading-[1.75]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  RipeSwitch is designed as a drop-in compatible packaging component that integrates into existing paper converting workflows.
+                  RipeSwitch is designed as a drop‑in component for existing paper converting workflows.
                 </p>
               </div>
             </div>
@@ -100,20 +99,20 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 02
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Structural Configuration
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[4vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  The packaging system consists of the following functional elements:
+                  The system comprises the following functional elements:
                 </p>
                 
                 <div className="space-y-[4vh]">
                   <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] border border-[#e0e0e0]">
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       2.1 Structural Substrate
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -133,7 +132,7 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] border border-[#e0e0e0]">
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       2.2 Functional Media Layer
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -151,7 +150,7 @@ export function TechnicalSpecificationPage() {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>Does not act as a barrier film</span>
+                        <span>Not a barrier film</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
@@ -161,7 +160,7 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] border border-[#e0e0e0]">
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       2.3 Internal Package Environment
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -193,15 +192,15 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 03
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Functional Principle
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  The system functions by influencing the local micro-environment surrounding the fruit:
+                  The system influences the local micro‑environment around the fruit:
                 </p>
                 
                 <ul className="space-y-[2vh] mb-[3vh]">
@@ -211,21 +210,21 @@ export function TechnicalSpecificationPage() {
                   </li>
                   <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <span className="text-[#026448] mt-1">•</span>
-                    <span>Stabilisation of moisture balance within the package headspace</span>
+                    <span>Stabilisation of moisture balance in the package headspace</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <span className="text-[#026448] mt-1">•</span>
-                    <span>Reduction of uncontrolled cross-ripening between adjacent units</span>
+                    <span>Reduction of uncontrolled cross‑ripening between adjacent units</span>
                   </li>
                 </ul>
 
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  The interaction is distributed at unit level, allowing each package to self-regulate without reliance on store-wide atmospheric control.
+                  Interaction is distributed at unit level, enabling each package to self‑regulate without reliance on store‑wide atmospheric control.
                 </p>
                 
                 <div className="bg-[#EEFF41]/20 border-l-4 border-[#026448] rounded-r-xl p-[3vh]">
-                  <p className="text-[#1a1a1a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-                    No chemical treatment is applied to the fruit itself.
+                  <p className="text-[#1a1a1a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
+                    No chemical treatment is applied to the fruit.
                   </p>
                 </div>
               </div>
@@ -241,26 +240,26 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 04
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Converting & Manufacturing Compatibility
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[4vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  RipeSwitch is designed for compatibility with standard European paper converting infrastructure.
+                  RipeSwitch is designed for standard European paper converting infrastructure.
                 </p>
                 
                 <div className="space-y-[4vh]">
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       4.1 Process Compatibility
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vh]">
                       <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
                         <p className="text-[#4a4a4a] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                          Folding carton converting
+                          Folding‑carton converting
                         </p>
                       </div>
                       <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
@@ -270,7 +269,7 @@ export function TechnicalSpecificationPage() {
                       </div>
                       <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
                         <p className="text-[#4a4a4a] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                          Molded fibre hybrid applications
+                          Molded‑fibre hybrid applications
                         </p>
                       </div>
                       <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
@@ -282,7 +281,7 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       4.2 Mechanical Tolerance
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -296,13 +295,13 @@ export function TechnicalSpecificationPage() {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>No additional curing or activation steps required post-conversion</span>
+                        <span>No additional curing or activation steps required after conversion</span>
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       4.3 Equipment Requirements
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -312,11 +311,11 @@ export function TechnicalSpecificationPage() {
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>No modification of existing converting lines</span>
+                        <span>No modification to existing converting lines</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>Designed to run on standard high-speed industrial equipment</span>
+                        <span>Designed to run on standard high‑speed industrial equipment</span>
                       </li>
                     </ul>
                   </div>
@@ -334,25 +333,25 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 05
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[4vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[4vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Operating Conditions & Scope
                 </h3>
                 
                 <div className="space-y-[4vh]">
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       5.1 Intended Product Categories
                     </h4>
                     <p className="text-[#4a4a4a] leading-[1.75] mb-[2.5vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                      Fresh climacteric fruits with ethylene-driven ripening behaviour
+                      Fresh climacteric fruits with ethylene‑driven ripening behaviour
                     </p>
                     <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] border border-[#e0e0e0]">
-                      <p className="text-[#666] mb-[2vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 600 }}>
-                        Typical applications include:
+                      <p className="text-[#666] mb-[2vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
+                        Typical applications:
                       </p>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-[1.5vh]">
                         {['Avocados', 'Bananas', 'Tomatoes', 'Mangos', 'Stone fruits', 'Pears'].map((fruit, idx) => (
@@ -366,7 +365,7 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       5.2 Environmental Conditions
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
@@ -386,17 +385,17 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <div>
-                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)', fontWeight: 700 }}>
+                    <h4 className="text-[#026448] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.4vw, 1.6rem)' }}>
                       5.3 Known Boundaries
                     </h4>
                     <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>Not designed to replace cold-chain logistics</span>
+                        <span>Not designed to replace cold‑chain logistics</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
-                        <span>Not intended for non-respiring products</span>
+                        <span>Not intended for non‑respiring products</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="text-[#026448] mt-1">•</span>
@@ -418,15 +417,15 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 06
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
-                  Performance Characteristics <span className="text-[#666]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)', fontWeight: 400 }}>(Indicative)</span>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
+                  Performance Characteristics <span className="text-[#666]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.4rem)' }}>(Indicative)</span>
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[4vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  Performance outcomes are dependent on application context and handling conditions. Indicative effects observed during controlled evaluation include:
+                  Performance outcomes depend on application context and handling conditions. Indicative effects observed under controlled evaluation include:
                 </p>
                 
                 <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] md:p-[5vh] border border-[#e0e0e0] mb-[3vh]">
@@ -434,8 +433,8 @@ export function TechnicalSpecificationPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-3 h-3 bg-[#026448] rounded-full mt-2"></div>
                       <div>
-                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 600 }}>
-                          Reduced ripening rate variability
+                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
+                          Reduced ripening‑rate variability
                         </p>
                         <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
                           More consistent ripening across units
@@ -446,11 +445,11 @@ export function TechnicalSpecificationPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-3 h-3 bg-[#026448] rounded-full mt-2"></div>
                       <div>
-                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 600 }}>
+                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
                           Extension of sellable quality window
                         </p>
                         <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                          Prolonged peak quality period
+                          Prolonged peak‑quality period
                         </p>
                       </div>
                     </div>
@@ -458,7 +457,7 @@ export function TechnicalSpecificationPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-3 h-3 bg-[#026448] rounded-full mt-2"></div>
                       <div>
-                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 600 }}>
+                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
                           Reduction in visible spoilage
                         </p>
                         <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
@@ -470,11 +469,11 @@ export function TechnicalSpecificationPage() {
                     <div className="flex items-start gap-3">
                       <div className="w-3 h-3 bg-[#026448] rounded-full mt-2"></div>
                       <div>
-                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 600 }}>
+                        <p className="text-[#1a1a1a] leading-[1.5] mb-1" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
                           Improved display consistency
                         </p>
                         <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-                          Better quality throughout retail cycles
+                          Better quality through retail cycles
                         </p>
                       </div>
                     </div>
@@ -483,7 +482,7 @@ export function TechnicalSpecificationPage() {
 
                 <div className="bg-[#EEFF41]/20 border-l-4 border-[#026448] rounded-r-xl p-[3vh]">
                   <p className="text-[#1a1a1a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                    Quantitative performance values are validated through controlled testing and pilot deployments and are not fixed system guarantees.
+                    Quantitative values are derived from controlled testing and pilot deployments and are not fixed system guarantees.
                   </p>
                 </div>
               </div>
@@ -499,36 +498,32 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 07
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Regulatory & Compliance Positioning
                 </h3>
                 
                 <ul className="space-y-[2vh] mb-[3vh]">
                   <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <span className="text-[#026448] mt-1">•</span>
-                    <span>Fibre-based packaging system</span>
+                    <span>Fibre‑based packaging system</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <span className="text-[#026448] mt-1">•</span>
-                    <span>Designed for compatibility with food-contact regulatory pathways</span>
+                    <span>Designed for compatibility with food‑contact regulatory pathways</span>
                   </li>
                   <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <span className="text-[#026448] mt-1">•</span>
-                    <span>No direct food additives or coatings applied to produce</span>
-                  </li>
-                  <li className="flex items-start gap-3 text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
-                    <span className="text-[#026448] mt-1">•</span>
-                    <span>Supports transition away from single-use plastic packaging</span>
+                    <span>No direct food additives or produce coatings; aligned with single‑use plastic phase‑out</span>
                   </li>
                 </ul>
 
                 <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] border border-[#e0e0e0]">
                   <p className="text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
-                    Formal compliance certification is dependent on final configuration, jurisdiction, and deployment context.
+                    Formal compliance certification depends on final configuration, jurisdiction, and deployment context.
                   </p>
                 </div>
               </div>
@@ -544,20 +539,20 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 08
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Intellectual Property & Disclosure Status
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  This document provides a functional and structural overview only.
+                  This document provides a high‑level functional and structural overview only.
                 </p>
                 
                 <div className="bg-[#f8f8f8] rounded-2xl p-[4vh] md:p-[5vh] border border-[#e0e0e0] mb-[3vh]">
-                  <p className="text-[#1a1a1a] leading-[1.6] mb-[2.5vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)', fontWeight: 600 }}>
-                    The following aspects are intentionally not disclosed:
+                  <p className="text-[#1a1a1a] leading-[1.6] mb-[2.5vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
+                    Non‑disclosed items include:
                   </p>
                   <ul className="space-y-[1.5vh] text-[#4a4a4a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.25rem)' }}>
                     <li className="flex items-start gap-3">
@@ -570,7 +565,7 @@ export function TechnicalSpecificationPage() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#026448] mt-1">•</span>
-                      <span>Integration methods beyond high-level compatibility</span>
+                      <span>Integration methods beyond high‑level compatibility</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-[#026448] mt-1">•</span>
@@ -580,13 +575,13 @@ export function TechnicalSpecificationPage() {
                 </div>
 
                 <div className="bg-[#EEFF41]/20 border-l-4 border-[#026448] rounded-r-xl p-[3vh] mb-[2.5vh]">
-                  <p className="text-[#1a1a1a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
+                  <p className="text-[#1a1a1a] leading-[1.7]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
                     The invention has not been publicly disclosed in an enabling form.
                   </p>
                 </div>
 
                 <p className="text-[#4a4a4a] leading-[1.75]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  Formal intellectual property protection is planned following pilot-scale validation and prior to commercial deployment or technical publication.
+                  Formal IP protection is planned after pilot‑scale validation and before commercial deployment or technical publication.
                 </p>
               </div>
             </div>
@@ -601,42 +596,42 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 09
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Validation Status
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  RipeSwitch is under ongoing evaluation using:
+                  RipeSwitch is under ongoing evaluation across:
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[2.5vh] mb-[4vh]">
                   <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
-                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 600 }}>
+                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)' }}>
                       Material simulation and modelling
                     </p>
                   </div>
                   <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
-                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 600 }}>
+                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)' }}>
                       Laboratory testing
                     </p>
                   </div>
                   <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
-                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 600 }}>
+                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)' }}>
                       Controlled environment trials
                     </p>
                   </div>
                   <div className="bg-[#f8f8f8] rounded-xl p-[3vh] border border-[#e0e0e0]">
-                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)', fontWeight: 600 }}>
+                    <p className="text-[#1a1a1a] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.25rem)' }}>
                       Structured pilot studies
                     </p>
                   </div>
                 </div>
 
                 <p className="text-[#4a4a4a] leading-[1.75]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  The system is designed to support iterative optimisation based on real-world data.
+                  Findings inform iterative optimisation based on real‑world data.
                 </p>
               </div>
             </div>
@@ -651,20 +646,20 @@ export function TechnicalSpecificationPage() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-start gap-[4vw] mb-[4vh]">
-              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)', fontWeight: 700 }}>
+              <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 4vw, 5rem)' }}>
                 10
               </div>
               <div className="flex-1">
-                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+                <h3 className="text-[#1a1a1a] leading-[1.2] mb-[3vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)' }}>
                   Technical Enquiries & Pilot Collaboration
                 </h3>
                 <p className="text-[#4a4a4a] leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
-                  This technical reference is intended to support early-stage evaluation and pilot planning.
+                  This reference supports early‑stage evaluation and pilot planning.
                 </p>
                 
                 <div className="bg-[#026448] rounded-2xl p-[5vh] md:p-[6vh]">
                   <p className="text-white/90 leading-[1.75] mb-[3vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
-                    Organisations interested in:
+                    Organisations seeking:
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-[2vh] mb-[4vh]">
@@ -677,23 +672,23 @@ export function TechnicalSpecificationPage() {
                   </div>
 
                   <p className="text-white/90 leading-[1.75] mb-[4vh]" style={{ fontSize: 'clamp(1rem, 1.15vw, 1.3rem)' }}>
-                    may request additional non-confidential technical documentation through the RipeSwitch technical team.
+                    may request additional non‑confidential documentation from the RipeSwitch technical team.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-[2vh]">
                     <Link 
                       to="/contact"
-                      className="flex items-center justify-center gap-2 px-6 py-4 bg-white text-[#026448] rounded-lg hover:bg-[#EEFF41] transition-all"
+                      className="flex items-center justify-center gap-2 px-6 py-4 bg-white text-[#026448] rounded-lg hover:bg-[#EEFF41] transition-all font-ui"
                     >
                       <Mail className="w-4 h-4" />
-                      <span style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.15rem)', fontWeight: 600 }}>
+                      <span style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.15rem)' }}>
                         Contact Technical Team
                       </span>
                     </Link>
                     {/* Hidden until documentation is ready */}
                     {/* <button className="flex items-center justify-center gap-2 px-6 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all">
                       <FileText className="w-4 h-4" />
-                      <span style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.15rem)', fontWeight: 600 }}>
+                      <span style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.15rem)' }}>
                         Request Documentation
                       </span>
                     </button> */}

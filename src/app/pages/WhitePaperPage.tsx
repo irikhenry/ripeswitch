@@ -14,22 +14,22 @@ export function WhitePaperPage() {
         {/* Navigation Bar */}
         <Navigation />
 
-        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] pt-[20vh] md:pt-[25vh] pb-[12vh] md:pb-[16vh]">
-          <p className="text-white/60 uppercase tracking-[0.25em] mb-[3vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 400 }}>
+        <div className="max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] pt-[20vh] md:pt-[25vh] pb-[12vh] md:pb-[16vh]">
+          <p className="text-white/60 uppercase tracking-[0.25em] mb-[3vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)' }}>
             Research
           </p>
 
-          <h1 className="text-white leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(3rem, 6.5vw, 7.5rem)', fontWeight: 300, letterSpacing: '-0.04em' }}>
+          <h1 className="text-white leading-[1.1] mb-[6vh]" style={{ fontSize: 'clamp(3rem, 6.5vw, 7.5rem)', letterSpacing: '-0.04em' }}>
             Research & Technical Reference
           </h1>
 
           <div className="w-24 h-[1px] bg-white/30 mb-[6vh]"></div>
 
-          <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)', fontWeight: 300 }}>
+          <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
             Lab-validated simulations, material studies, and system-level testing supporting fibre-based ripening control.
           </p>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/70 mt-[4vh]" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)', fontWeight: 300 }}>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/70 mt-[4vh]" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)' }}>
             <span className="flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-white"></span>
               Research ongoing
@@ -41,8 +41,8 @@ export function WhitePaperPage() {
       </section>
 
       {/* Publications List */}
-      <section className="relative w-full bg-white">
-        <div className="max-w-[1200px] mx-auto px-[5vw] lg:px-[8vw] py-[10vh] md:py-[14vh]">
+      <section className="relative w-full min-h-screen bg-white flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
+        <div className="max-w-[1400px] w-full mx-auto">
           
           {/* Purpose Section */}
           <div className="mb-[12vh]">
@@ -148,7 +148,7 @@ export function WhitePaperPage() {
               />
               
               <div className="p-[5vh] md:p-[6vh]">
-                <h2 className="text-[#1a1a1a] leading-[1.25] mb-[2vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 300, letterSpacing: '-0.02em' }}>
+                <h2 className="text-[#1a1a1a] leading-[1.25] mb-[2vh]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
                   Active Ripening Control in Paper-Based Packaging
                 </h2>
 
@@ -201,7 +201,7 @@ export function WhitePaperPage() {
                   <span className="text-[#026448] font-medium">Draft</span>
                 </div>
 
-                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 300, letterSpacing: '-0.02em' }}>
+                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
                   Economic Impact Assessment: Retail Produce Shrink Mitigation
                 </h3>
 
@@ -229,7 +229,7 @@ export function WhitePaperPage() {
                   <span className="text-[#666] font-medium">Working Document</span>
                 </div>
 
-                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 300, letterSpacing: '-0.02em' }}>
+                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
                   Material Safety & Regulatory Considerations
                 </h3>
 
@@ -257,7 +257,7 @@ export function WhitePaperPage() {
                   <span className="text-[#026448] font-medium">Draft</span>
                 </div>
 
-                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 300, letterSpacing: '-0.02em' }}>
+                <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
                   Pilot Study Framework: Nordic Retail Environment
                 </h3>
 

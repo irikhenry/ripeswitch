@@ -123,7 +123,7 @@ export function FeaturedWhitePaper(props: FeaturedWhitePaperProps) {
             {pdfHref ? (
               <a
                 href={pdfHref}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#026448] text-[#026448] rounded-full hover:bg-[#026448]/5 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#026448] text-[#026448] rounded-full hover:bg-[#026448]/5 transition-colors font-ui"
                 style={{ fontSize: "clamp(0.95rem, 1.05vw, 1.2rem)", fontWeight: 700 }}
               >
                 <Download className="w-4 h-4" />
@@ -132,7 +132,7 @@ export function FeaturedWhitePaper(props: FeaturedWhitePaperProps) {
             ) : (
               <a
                 href="mailto:tutki@ripeswitch.com?subject=Request%20Featured%20White%20Paper%20PDF"
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#e0e0e0] text-[#1a1a1a] rounded-full hover:border-[#026448] transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-[#e0e0e0] text-[#1a1a1a] rounded-full hover:border-[#026448] transition-colors font-ui"
                 style={{ fontSize: "clamp(0.95rem, 1.05vw, 1.2rem)", fontWeight: 650 }}
               >
                 Request PDF

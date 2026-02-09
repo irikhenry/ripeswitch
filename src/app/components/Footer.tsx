@@ -3,8 +3,8 @@ import Logo from "../../imports/Logo";
 
 export function Footer() {
   return (
-    <footer className="relative w-full bg-[#0a1f1a] px-[5vw] md:px-[8vw] pt-[10vh] md:pt-[16vh] pb-[6vh] md:pb-[10vh]">
-      <div className="max-w-[1400px] mx-auto">
+    <footer className="relative w-full bg-[#0a1f1a] px-[5vw] md:px-[3vw] pt-[10vh] md:pt-[16vh] pb-[6vh] md:pb-[10vh]">
+      <div className="w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

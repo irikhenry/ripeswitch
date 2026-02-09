@@ -56,7 +56,7 @@ export function EconomicCalculator() {
           <button
             type="button"
             onClick={applyTypicalPreset}
-            className="px-4 py-2 bg-[#EEFF41] text-[#026448] rounded-full font-semibold hover:bg-[#EEFF41]/90 transition-colors"
+            className="px-4 py-2 bg-[#EEFF41] text-[#026448] rounded-full font-semibold hover:bg-[#EEFF41]/90 transition-colors font-ui"
             style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}
           >
             Typical retailer preset: €300M / 12% / 7% / 20%
@@ -69,7 +69,7 @@ export function EconomicCalculator() {
             <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Annual revenue
             </label>
-            <span className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
+            <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
               €{annualRevenue}M
             </span>
           </div>
@@ -94,7 +94,7 @@ export function EconomicCalculator() {
             <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Produce share of revenue
             </label>
-            <span className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
+            <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
               {produceShare}%
             </span>
           </div>
@@ -119,7 +119,7 @@ export function EconomicCalculator() {
             <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Current produce shrink
             </label>
-            <span className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
+            <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
               {currentShrink}%
             </span>
           </div>
@@ -144,7 +144,7 @@ export function EconomicCalculator() {
             <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Target shrink reduction
             </label>
-            <span className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
+            <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
               {shrinkReduction}%
             </span>
           </div>
@@ -190,7 +190,7 @@ export function EconomicCalculator() {
             <label className="text-white/80" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 500 }}>
               Implementation cost (% of produce revenue)
             </label>
-            <span className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
+            <span className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.6rem)' }}>
               {implementationCost.toFixed(1)}%
             </span>
           </div>
@@ -217,13 +217,13 @@ export function EconomicCalculator() {
         <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/20">
           <div>
             <div className="text-white/60 text-sm mb-1">Without RipeSwitch</div>
-            <div className="text-white font-bold" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)' }}>
+            <div className="text-white font-bold font-heading" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)' }}>
               {currentShrink.toFixed(1)}%
             </div>
           </div>
           <div>
             <div className="text-white/60 text-sm mb-1">With RipeSwitch</div>
-            <div className="text-[#EEFF41] font-bold" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)' }}>
+            <div className="text-[#EEFF41] font-bold font-heading" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 2rem)' }}>
               {newShrinkRate.toFixed(1)}%
             </div>
           </div>
@@ -250,7 +250,7 @@ export function EconomicCalculator() {
           <div className="text-[#026448]/70 mb-[2vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
             Annual savings
           </div>
-          <div className="text-[#026448] leading-none mb-[2vh]" style={{ fontSize: 'clamp(3rem, 5vw, 6.5rem)', fontWeight: 700 }}>
+          <div className="text-[#026448] leading-none mb-[2vh] font-heading" style={{ fontSize: 'clamp(3rem, 5vw, 6.5rem)', fontWeight: 700 }}>
             €{annualSavings.toFixed(1)}M
           </div>
         <div className="text-[#026448]/70 mb-[1.5vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
@@ -270,11 +270,11 @@ export function EconomicCalculator() {
             Net annual savings (after implementation cost)
           </div>
           {netAnnualSavings >= 0 ? (
-            <div className="leading-none text-[#EEFF41]" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+            <div className="leading-none text-[#EEFF41] font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
               €{netAnnualSavings.toFixed(1)}M
             </div>
           ) : (
-            <div className="leading-none text-white" style={{ fontSize: 'clamp(1.4rem, 2vw, 2.6rem)', fontWeight: 700 }}>
+            <div className="leading-none text-white font-heading" style={{ fontSize: 'clamp(1.4rem, 2vw, 2.6rem)', fontWeight: 700 }}>
               Break-even at ≤{breakEvenCostRate.toFixed(2)}%
             </div>
           )}
@@ -296,7 +296,7 @@ export function EconomicCalculator() {
             <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 500 }}>
               Current annual shrink loss
             </div>
-            <div className="text-white leading-none" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+            <div className="text-white leading-none font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
               €{currentShrinkLoss.toFixed(1)}M
             </div>
           </div>
@@ -306,7 +306,7 @@ export function EconomicCalculator() {
             <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 500 }}>
               Projected annual shrink loss
             </div>
-            <div className="text-[#EEFF41] leading-none" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
+            <div className="text-[#EEFF41] leading-none font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
               €{newShrinkLoss.toFixed(1)}M
             </div>
           </div>
