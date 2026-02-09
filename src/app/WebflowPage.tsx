@@ -53,7 +53,7 @@ export default function WebflowPage() {
                 <ImageWithFallback
                   src={heroPackaging.src}
                   srcSet={heroPackaging.srcSet}
-                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 900px"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 60vw, 600px"
                   width={heroPackaging.width}
                   height={heroPackaging.height}
                   alt="RipeSwitch paper packaging"

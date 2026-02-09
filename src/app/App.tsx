@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, MotionConfig } from "motion/react";
 import { LazySection } from "./components/LazySection";
 import { Navigation } from "./components/Navigation";
 import { Seo } from "./components/Seo";
@@ -108,7 +108,7 @@ function HomePage() {
                   <img
                     src={heroPackaging.src}
                     srcSet={heroPackaging.srcSet}
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 720px"
+                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 600px"
                     alt="RipeSwitch hero packaging"
                     className="w-full h-auto block"
                     loading="eager"
@@ -360,36 +360,53 @@ function HomePage() {
 
 // Main App Component with Routing
 export default function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const media = window.matchMedia("(max-width: 768px)");
+    const update = () => setIsMobile(media.matches);
+    update();
+    if (media.addEventListener) {
+      media.addEventListener("change", update);
+      return () => media.removeEventListener("change", update);
+    }
+    media.addListener(update);
+    return () => media.removeListener(update);
+  }, []);
+
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <BackToTop />
-      <div className="flex flex-col min-h-screen">
-        <div className="flex-1">
-          <Suspense
-            fallback={
-              <div className="min-h-[60vh] flex items-center justify-center text-[#026448]">
-                <span className="text-lg font-medium">Loading…</span>
-              </div>
-            }
-          >
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/technology" element={<TechnologyPage />} />
-              <Route path="/technical-specification" element={<TechnicalSpecificationPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/research" element={<WhitePaperPage />} />
-              <Route path="/research/active-ripening-control" element={<ActiveRipeningControlPage />} />
-              <Route path="/research/economic-impact-assessment" element={<EconomicImpactAssessmentPage />} />
-              <Route path="/research/material-safety-compliance" element={<MaterialSafetyCompliancePage />} />
-              <Route path="/research/pilot-study-nordic-retail" element={<PilotStudyNordicRetailPage />} />
-            </Routes>
-          </Suspense>
+    <MotionConfig reducedMotion={isMobile ? "always" : "user"}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <BackToTop />
+        <div className="flex flex-col min-h-screen">
+          <div className="flex-1">
+            <Suspense
+              fallback={
+                <div className="min-h-[60vh] flex items-center justify-center text-[#026448]">
+                  <span className="text-lg font-medium">Loading…</span>
+                </div>
+              }
+            >
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/technology" element={<TechnologyPage />} />
+                <Route path="/technical-specification" element={<TechnicalSpecificationPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/research" element={<WhitePaperPage />} />
+                <Route path="/research/active-ripening-control" element={<ActiveRipeningControlPage />} />
+                <Route path="/research/economic-impact-assessment" element={<EconomicImpactAssessmentPage />} />
+                <Route path="/research/material-safety-compliance" element={<MaterialSafetyCompliancePage />} />
+                <Route path="/research/pilot-study-nordic-retail" element={<PilotStudyNordicRetailPage />} />
+              </Routes>
+            </Suspense>
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </MotionConfig>
   );
 }
 

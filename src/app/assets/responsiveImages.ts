@@ -1,7 +1,7 @@
 import heroImage from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077.webp";
 import heroImage420 from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077-420w.webp";
+import heroImage540 from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077-540w.webp";
 import heroImage600 from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077-600w.webp";
-import heroImage780 from "@/assets/f242dfb4f8f798366aca052e5e03a6786f6c7077-780w.webp";
 
 import plasticPackaging from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b.webp";
 import plasticPackaging480 from "@/assets/b4eab2076f593911636cd87ce06d111d1f33466b-480w.webp";
@@ -22,10 +22,10 @@ import overripeFruit768 from "@/assets/480164da373b17192b4517497d43538a5c4e94f9-
 import overripeFruit1024 from "@/assets/480164da373b17192b4517497d43538a5c4e94f9-1024w.webp";
 
 export const heroPackaging = {
-  src: heroImage,
-  srcSet: `${heroImage420} 420w, ${heroImage600} 600w, ${heroImage780} 780w`,
-  width: 780,
-  height: 771
+  src: heroImage600,
+  srcSet: `${heroImage420} 420w, ${heroImage540} 540w, ${heroImage600} 600w`,
+  width: 600,
+  height: 593
 };
 
 export const overripeFruitImage = {
