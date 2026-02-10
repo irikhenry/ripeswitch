@@ -7,6 +7,7 @@ import { ScrollToTop } from "./components/ScrollToTop";
 import { BackToTop } from "./components/BackToTop";
 import { useEffect, useState, Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+const PerformanceModelingPage = lazy(() => import("./pages/PerformanceModelingPage").then((m) => ({ default: m.PerformanceModelingPage })));
 const WhitePaperPage = lazy(() => import("./pages/WhitePaperPage").then((m) => ({ default: m.WhitePaperPage })));
 const ActiveRipeningControlPage = lazy(() => import("./pages/whitepapers/ActiveRipeningControlPage").then((m) => ({ default: m.ActiveRipeningControlPage })));
 const EconomicImpactAssessmentPage = lazy(() => import("./pages/whitepapers/EconomicImpactAssessmentPage").then((m) => ({ default: m.EconomicImpactAssessmentPage })));
@@ -273,32 +274,32 @@ function HomePage() {
           </motion.div>
         </div>
 
-        {/* Second Row: Three Insight Cards */}
+        {/* Second Row: Three Symptom Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[4vh] md:gap-[3vw] w-full lg:col-span-3 mt-[4vh] md:mt-[3vw]">
           {[
             {
               image: plasticPackagingImage,
-              stat: "2029",
-              title: "Plastic exit is set",
+              stat: "Policy clock",
+              title: "Plastic ban timeline",
               emoji: "🇪🇺",
-              label: "EU policy",
-              description: "EU phase-out demands alternatives that preserve shelf-life performance."
+              label: "Regulatory pressure",
+              description: "The phase-out is moving faster than viable shelf-life alternatives."
             },
             {
               image: warehouseImage,
-              stat: "40%",
+              stat: "Low visibility",
               title: "Back-room loss",
               emoji: "📦",
-              label: "Supply chain",
-              description: "Most loss occurs before the shelf—low visibility, high impact."
+              label: "Operational blind spot",
+              description: "Shrink builds before the shelf because ripening isn’t managed upstream."
             },
             {
               image: overripeFruitImage,
-              stat: "1.3B",
-              title: "Global food waste",
+              stat: "Margin erosion",
+              title: "Retailer impact",
               emoji: "🍌",
-              label: "Global impact",
-              description: "Household waste is the visible outcome, not the root cause."
+              label: "Commercial consequence",
+              description: "Waste shows up as lost margin, not just discarded product."
             }
           ].map((problem, index) => (
             <motion.div
@@ -326,6 +327,9 @@ function HomePage() {
 
               {/* Content */}
               <div className="px-6 py-6">
+                <div className="inline-flex items-center px-3 py-1 rounded-full border border-[#026448]/20 text-[#026448] mb-[1.5vh]" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.9rem)', fontWeight: 600 }}>
+                  {problem.label}
+                </div>
                 <div className="flex items-end justify-between mb-[1.5vh]">
                   <div className="text-[#026448] leading-none tabular-nums font-heading" style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3.6rem)', fontWeight: 700 }}>
                     {problem.stat}
@@ -333,9 +337,6 @@ function HomePage() {
                   <div className="leading-none" style={{ fontSize: 'clamp(2.2rem, 3.2vw, 3.6rem)' }}>
                     {problem.emoji}
                   </div>
-                </div>
-                <div className="inline-flex items-center px-3 py-1 rounded-full border border-[#026448]/20 text-[#026448] mb-[1.5vh]" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.9rem)', fontWeight: 600 }}>
-                  {problem.label}
                 </div>
                 <h3 className="text-[#1a1a1a] leading-[1.25] mb-[1vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700 }}>
                   {problem.title}
@@ -346,6 +347,69 @@ function HomePage() {
               </div>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Critical Insight Section */}
+      <section className="relative bg-[#026448] px-[5vw] md:px-[8vw] py-[10vh] md:py-[14vh] overflow-hidden">
+        <div className="absolute top-[-10vh] right-[-12vw] w-[45vw] h-[45vw] rounded-full bg-white/5 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-[-15vh] left-[-10vw] w-[50vw] h-[50vw] rounded-full bg-black/10 blur-3xl pointer-events-none" />
+        <div className="max-w-[1400px] mx-auto">
+          <motion.div
+            className="text-center mb-[8vh] md:mb-[12vh] relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#EEFF41] rounded-full mb-[4vh] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+              <span className="text-[#026448] tracking-widest uppercase font-bold" style={{ fontSize: 'clamp(0.8rem, 0.95vw, 1.05rem)' }}>
+                Critical Insight
+              </span>
+            </div>
+            <h3 className="text-[#EEFF41] leading-[1.1] max-w-[1000px] mx-auto" style={{ fontSize: 'clamp(2.1rem, 4.2vw, 5.2rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+              Policy cannot substitute for material performance
+            </h3>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[3.5vh] md:gap-[2.8vw] mb-[8vh] md:mb-[12vh] md:items-stretch">
+            {[
+              { value: 'Capability gap', label: 'Shelf-life extension is still the limiting factor', sublabel: 'Regulation moves faster than packaging capability' },
+              { value: 'Methane burden', label: 'Food loss remains a major emissions driver', sublabel: 'Eliminating waste is a climate lever, not just a cost' },
+              { value: 'Material constraint', label: 'Passive packaging can’t manage ripening', sublabel: 'Control must be built into the substrate itself' }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                className="text-left bg-white/5 rounded-3xl border border-white/10 px-8 py-9 md:px-10 md:py-12 backdrop-blur-sm h-full min-h-[26vh] md:min-h-[30vh] flex flex-col"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 + index * 0.15 }}
+              >
+                <div className="text-[#EEFF41] leading-none mb-[2vh] tabular-nums font-heading" style={{ fontSize: 'clamp(2rem, 3.2vw, 4.2rem)', fontWeight: 700 }}>
+                  {stat.value}
+                </div>
+                <div className="text-white leading-[1.3] mb-[1.5vh]" style={{ fontSize: 'clamp(1.2rem, 1.7vw, 2rem)', fontWeight: 600 }}>
+                  {stat.label}
+                </div>
+                <div className="text-white/60 leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.15vw, 1.3rem)', fontWeight: 400 }}>
+                  {stat.sublabel}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="text-center max-w-[900px] mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <p className="text-white/80 leading-[1.7]" style={{ fontSize: 'clamp(1.1rem, 1.35vw, 1.6rem)', fontWeight: 400 }}>
+              The root issue isn’t behavior—it’s missing system-level ripening control in packaging.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -395,7 +459,8 @@ export default function App() {
                 <Route path="/technical-specification" element={<TechnicalSpecificationPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
-                <Route path="/research" element={<WhitePaperPage />} />
+                <Route path="/research" element={<PerformanceModelingPage />} />
+                <Route path="/research-library" element={<WhitePaperPage />} />
                 <Route path="/research/active-ripening-control" element={<ActiveRipeningControlPage />} />
                 <Route path="/research/economic-impact-assessment" element={<EconomicImpactAssessmentPage />} />
                 <Route path="/research/material-safety-compliance" element={<MaterialSafetyCompliancePage />} />

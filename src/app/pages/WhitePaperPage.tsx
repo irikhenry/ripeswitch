@@ -8,8 +8,8 @@ export function WhitePaperPage() {
   return (
     <div className="w-full bg-white min-h-screen">
       <Seo
-        title="Research | RipeSwitch"
-        description="Research library and technical references supporting fibre-based ripening control."
+        title="Research & Technical Reference | RipeSwitch"
+        description="Technical, economic, and system-level references supporting fibre-based ripening control."
         path="/research"
       />
       {/* Hero Section */}
@@ -28,8 +28,14 @@ export function WhitePaperPage() {
 
           <div className="w-24 h-[1px] bg-white/30 mb-[6vh]"></div>
 
-          <p className="text-white/90 leading-[1.85] max-w-[650px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
-            Scientific, material, and system‑level research supporting fibre‑based ripening control.
+          <p className="text-white/90 leading-[1.85] max-w-[700px]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
+            <span className="block text-white/70 uppercase tracking-[0.2em] mb-[2vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 500 }}>
+              Technical–Economic Performance Modeling
+            </span>
+            This section presents a model-based economic analysis derived from shrink-rate simulations, category-specific loss data, and observed handling conditions.
+            <span className="block mt-[2vh]">
+              The model is intended to support pilot design, hypothesis testing, and validation planning.
+            </span>
           </p>
 
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/70 mt-[4vh]" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)' }}>
@@ -58,6 +64,137 @@ export function WhitePaperPage() {
             <p className="text-[#666] leading-[1.85] max-w-[750px]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
               Documents are working materials updated as laboratory and pilot data accumulates.
             </p>
+            <div className="w-full h-[1px] bg-[#1a1a1a]/10 mt-[6vh]"></div>
+          </div>
+
+          {/* Unit Economics Slide */}
+          <div className="mb-[12vh]">
+            <p className="text-[#1a1a1a] uppercase tracking-[0.2em] mb-[4vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 500 }}>
+              Unit Economics
+            </p>
+
+            <div className="border border-[#1a1a1a]/10 rounded-3xl p-[6vh] md:p-[7vh]">
+              <div className="mb-[5vh]">
+                <h2 className="text-[#0f172a] leading-[1.1] mb-[2vh]" style={{ fontSize: 'clamp(2rem, 3.2vw, 3rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  RipeSwitch: Shrink → Margin Recovery (Unit Economics)
+                </h2>
+                <p className="text-[#475569] leading-[1.6]" style={{ fontSize: 'clamp(1rem, 1.1vw, 1.25rem)', fontWeight: 500 }}>
+                  A €0.03 packaging input that protects €0.85 of product value
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6vh] lg:gap-[6vw]">
+                {/* Left - Visual Logic */}
+                <div>
+                  <div className="bg-[#f8fafc] rounded-2xl p-[4vh] md:p-[5vh] border border-[#e5e7eb]">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex flex-col items-center gap-3 flex-1">
+                        <div className="flex gap-2">
+                          {[0, 1, 2, 3].map((i) => (
+                            <div key={i} className="w-7 h-9 rounded-[10px] bg-[#cbd5e1]" />
+                          ))}
+                        </div>
+                        <div className="text-[#64748b] text-xs uppercase tracking-wider">
+                          100,000 avocados / year
+                        </div>
+                      </div>
+
+                      <div className="flex flex-col items-center gap-2">
+                        <div className="w-8 h-[3px] bg-[#dc2626]/60 rounded-full" />
+                        <div className="text-[#dc2626] text-xs uppercase tracking-wider">
+                          15% shrink
+                        </div>
+                        <div className="w-8 h-[3px] bg-[#dc2626]/60 rounded-full" />
+                      </div>
+
+                      <div className="flex flex-col items-center gap-3 flex-1">
+                        <div className="flex gap-2">
+                          {[0, 1, 2, 3].map((i) => (
+                            <div key={i} className="w-7 h-9 rounded-[10px] bg-[#16a34a]" />
+                          ))}
+                        </div>
+                        <div className="text-[#64748b] text-xs uppercase tracking-wider">
+                          RipeSwitch active
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-[#64748b] mt-[2vh]" style={{ fontSize: 'clamp(0.8rem, 0.95vw, 1rem)' }}>
+                    Illustrative example based on discount retail produce handling
+                  </div>
+                </div>
+
+                {/* Right - Economics */}
+                <div>
+                  <div className="text-[#0f172a] mb-[3vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.4rem)', fontWeight: 600 }}>
+                    Illustrative unit economics (avocados)
+                  </div>
+
+                  <div className="space-y-[2vh]">
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Wholesale cost per avocado</span>
+                      <span className="text-[#0f172a] font-semibold">€0.85</span>
+                    </div>
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Typical shrink (discount retail)</span>
+                      <span className="text-[#0f172a] font-semibold">15%</span>
+                    </div>
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Annual loss (100k units)</span>
+                      <span className="text-[#0f172a] font-semibold">€12,750</span>
+                    </div>
+                  </div>
+
+                  <div className="w-full h-[1px] bg-[#e5e7eb] my-[3vh]" />
+
+                  <div className="space-y-[2vh]">
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Shrink reduction (relative)</span>
+                      <span className="text-[#0f172a] font-semibold">40%</span>
+                    </div>
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Avocados saved</span>
+                      <span className="text-[#0f172a] font-semibold">6,000 units</span>
+                    </div>
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Value recovered</span>
+                      <span className="text-[#0f172a] font-semibold">€5,100</span>
+                    </div>
+                  </div>
+
+                  <div className="w-full h-[1px] bg-[#e5e7eb] my-[3vh]" />
+
+                  <div className="space-y-[2vh]">
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Cost per unit</span>
+                      <span className="text-[#0f172a] font-semibold">€0.03</span>
+                    </div>
+                    <div className="flex items-center justify-between text-[#334155]" style={{ fontSize: 'clamp(0.95rem, 1.05vw, 1.15rem)' }}>
+                      <span>Annual cost (100k units)</span>
+                      <span className="text-[#0f172a] font-semibold">€3,000</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#f0fdf4] border border-[#86efac] rounded-xl p-[3vh] mt-[3vh]">
+                    <div className="text-[#166534] text-sm uppercase tracking-wider mb-2">Net annual gain</div>
+                    <div className="text-[#166534]" style={{ fontSize: 'clamp(1.6rem, 2.4vw, 2.6rem)', fontWeight: 700 }}>
+                      +€2,100
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-[5vh] bg-[#f8fafc] border-t border-[#e5e7eb] px-[3vh] py-[2.5vh] rounded-2xl text-center">
+                <div className="text-[#0f172a]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)', fontWeight: 600 }}>
+                  Every €1 spent on RipeSwitch protects ~€1.70 of product value
+                </div>
+                <div className="text-[#64748b] mt-[1vh]" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 0.95rem)' }}>
+                  Applies to produce categories only. Results vary by fruit, handling, and baseline shrink. Pilot validation planned with retail partners.
+                </div>
+              </div>
+            </div>
+
             <div className="w-full h-[1px] bg-[#1a1a1a]/10 mt-[6vh]"></div>
           </div>
 
@@ -203,17 +340,17 @@ export function WhitePaperPage() {
               {/* Document 1 */}
               <div className="border-l-2 border-[#026448] pl-[4vh] py-[2vh]">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[#666] mb-[2vh]" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
-                  <span>Industry Analysis</span>
+                  <span>Performance Modeling</span>
                   <span>·</span>
                   <span className="text-[#026448] font-medium">Draft</span>
                 </div>
 
                 <h3 className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(1.2rem, 1.5vw, 1.8rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                  Economic Impact Assessment: Retail Produce Shrink Mitigation
+                  Technical-Economic Performance Modeling (Non-Confidential)
                 </h3>
 
-                <p className="text-[#4a4a4a] leading-[1.85] mb-[3vh] max-w-[700px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
-                  Quantitative modelling of produce shrink reduction and margin sensitivity under different retail conditions.
+                <p className="text-[#4a4a4a] leading-[1.85] mb-[3vh] max-w-[720px]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 300 }}>
+                  Model-based economic analysis derived from shrink-rate simulations, category-average loss data, and observed handling conditions. Intended to support pilot design and validation planning.
                 </p>
 
                 <p className="text-[#1a1a1a] leading-[1.3] mb-[2vh]" style={{ fontSize: 'clamp(0.9rem, 1vw, 1.1rem)', fontWeight: 500 }}>
@@ -221,10 +358,10 @@ export function WhitePaperPage() {
                 </p>
 
                 <ul className="space-y-[1.5vh] text-[#666] max-w-[700px]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 300 }}>
-                  <li className="leading-[1.75]">Typical shrink ranges by produce category</li>
-                  <li className="leading-[1.75]">Impact of incremental shelf-life extension on retail economics</li>
-                  <li className="leading-[1.75]">Sensitivity analysis for discount and premium retail formats</li>
-                  <li className="leading-[1.75]">Implementation considerations for phased rollout</li>
+                  <li className="leading-[1.75]">Model inputs, assumptions, and adjustable parameters</li>
+                  <li className="leading-[1.75]">Sensitivity analysis for shrink delta and cost ranges</li>
+                  <li className="leading-[1.75]">Derived outputs for loss exposure and recovery scenarios</li>
+                  <li className="leading-[1.75]">Boundary conditions and pilot validation requirements</li>
                 </ul>
               </div>
 

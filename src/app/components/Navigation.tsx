@@ -11,11 +11,19 @@ export function Navigation() {
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 50;
+        setIsScrolled((prev) => (prev !== scrolled ? scrolled : prev));
+        ticking = false;
+      });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -24,7 +32,7 @@ export function Navigation() {
       {/* Navigation Bar */}
       <nav className={`fixed top-0 left-0 right-0 z-50 px-[5vw] md:px-[3vw] py-[3vh] md:py-[4vh] transition-all duration-300 ${
         isScrolled 
-          ? 'bg-transparent backdrop-blur-xl border-b border-white/10' 
+          ? 'bg-transparent backdrop-blur-none md:backdrop-blur-xl border-b border-white/10' 
           : 'bg-transparent'
       }`}>
         <a
@@ -114,7 +122,7 @@ export function Navigation() {
               }`}
               style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 300, letterSpacing: '-0.02em' }}
             >
-              Research & White Papers
+              Performance Modeling
             </Link>
 
             <Link

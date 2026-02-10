@@ -1,16 +1,15 @@
 import { motion } from "motion/react";
 import { WhitePaperDetailWrapper } from "../../components/WhitePaperDetailWrapper";
-import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 import { TrendingUp, DollarSign, Percent, ShoppingCart } from "lucide-react";
 
 export function EconomicImpactAssessmentPage() {
   return (
     <WhitePaperDetailWrapper
-      title="Economic Impact Assessment: Retail Produce Shrink Mitigation"
-      type="Industry Report"
+      title="Technical-Economic Performance Modeling (Non-Confidential)"
+      type="Performance Modeling"
       date="December 2025"
       path="/research/economic-impact-assessment"
-      description="Quantitative modelling of produce shrink reduction and margin sensitivity under retail conditions."
+      description="Model-based economic analysis derived from shrink-rate simulations, category-average loss data, and observed handling conditions."
     >
       {/* Executive Summary */}
       <section className="relative w-full bg-white px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">
@@ -22,27 +21,27 @@ export function EconomicImpactAssessmentPage() {
           >
             <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[4vh]">
               <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
-                Executive Summary
+                Overview
               </span>
             </div>
             <h2 className="text-[#1a1a1a] leading-[1.1] mb-[4vh]" style={{ fontSize: 'clamp(2.5rem, 5vw, 6.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              Quantifying the margin recovery opportunity
+              Technical-economic modeling for retail shrink recovery
             </h2>
             <div className="text-[#4a4a4a] leading-[1.8] space-y-[3vh]" style={{ fontSize: 'clamp(1.05rem, 1.3vw, 1.5rem)' }}>
               <p>
-                Produce shrink represents a structural margin leak in European retail operations. Current industry average shrink rates range from 8–14% for climacteric fruit categories, translating to €2.3B in annual margin erosion across EU grocery retail.
+                This section presents a model-based economic analysis derived from shrink-rate simulations, category-average loss data, and observed handling conditions. The model is intended to support pilot design, hypothesis testing, and validation planning.
               </p>
               <p>
-                This assessment quantifies the economic impact of deploying active ripening control technology at scale, modeling margin recovery scenarios across diverse operational contexts.
+                It does not present commercial guarantees. Results are illustrative and will be validated through controlled pilots and independent measurements.
               </p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Current State Analysis */}
+      {/* Model Inputs */}
       <section className="relative w-full bg-[#f8f8f8] px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1100px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,28 +50,34 @@ export function EconomicImpactAssessmentPage() {
             className="mb-[8vh]"
           >
             <h2 className="text-[#1a1a1a] leading-[1.15] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4vw, 5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              Baseline shrink economics
+              Model inputs (adjustable parameters)
             </h2>
-            <p className="text-[#4a4a4a] leading-[1.7] max-w-[800px]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
-              Industry data reveals shrink is concentrated in specific loss vectors, each with distinct cost structures and intervention opportunities.
+            <p className="text-[#4a4a4a] leading-[1.7] max-w-[850px]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
+              Inputs are adjustable to reflect retailer scale, category mix, and assumed shrink dynamics. Values used here are illustrative.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[5vh] md:gap-[5vw]">
             {[
               {
+                icon: DollarSign,
+                title: "Annual retailer turnover (€)",
+                detail: "Adjustable based on enterprise scale"
+              },
+              {
                 icon: ShoppingCart,
-                title: "Store-level shrink",
-                percentage: "8-12%",
-                detail: "Average shrink for bananas, avocados, stone fruit in standard retail environment",
-                drivers: "Display degradation, consumer handling, overripe markdowns"
+                title: "Produce share of revenue (%)",
+                detail: "Category mix and merchandising profile"
+              },
+              {
+                icon: Percent,
+                title: "Baseline shrink rate (%)",
+                detail: "Category-average loss assumptions"
               },
               {
                 icon: TrendingUp,
-                title: "Back-room loss",
-                percentage: "15-22%",
-                detail: "Additional loss in receiving and storage before reaching shelf",
-                drivers: "Delayed rotation, inadequate temperature control, batch ripening misalignment"
+                title: "Target shrink delta (%)",
+                detail: "Modeled reduction range under ripening control"
               }
             ].map((item, index) => {
               const Icon = item.icon;
@@ -89,18 +94,12 @@ export function EconomicImpactAssessmentPage() {
                     <div className="w-14 h-14 rounded-full bg-[#026448]/10 flex items-center justify-center">
                       <Icon className="w-7 h-7 text-[#026448]" />
                     </div>
-                    <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(2.5rem, 3.5vw, 4rem)', fontWeight: 700 }}>
-                      {item.percentage}
-                    </div>
                   </div>
-                  <h3 className="text-[#1a1a1a] leading-[1.2] mb-[2vh]" style={{ fontSize: 'clamp(1.4rem, 1.7vw, 2rem)', fontWeight: 700 }}>
+                  <h3 className="text-[#1a1a1a] leading-[1.2] mb-[1.5vh]" style={{ fontSize: 'clamp(1.3rem, 1.6vw, 1.9rem)', fontWeight: 700 }}>
                     {item.title}
                   </h3>
-                  <p className="text-[#026448] leading-[1.6] mb-[2vh]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)', fontWeight: 600 }}>
+                  <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.95rem, 1.1vw, 1.3rem)' }}>
                     {item.detail}
-                  </p>
-                  <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                    <strong>Key drivers:</strong> {item.drivers}
                   </p>
                 </motion.div>
               );
@@ -120,10 +119,10 @@ export function EconomicImpactAssessmentPage() {
             className="mb-[10vh]"
           >
             <h2 className="text-[#1a1a1a] leading-[1.15] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4vw, 5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              Margin recovery modeling
+              Shrink sensitivity model (illustrative)
             </h2>
             <p className="text-[#4a4a4a] leading-[1.7] max-w-[900px]" style={{ fontSize: 'clamp(1rem, 1.25vw, 1.4rem)' }}>
-              Three deployment scenarios modeled across a representative 150-store European retail chain with €280M annual produce revenue. Analysis assumes baseline 11% shrink rate and €0.08/unit RipeSwitch packaging cost increment.
+              Scenario outputs are modeled using adjustable parameters and are intended to explore sensitivity, not to project commercial guarantees.
             </p>
           </motion.div>
 
@@ -133,25 +132,25 @@ export function EconomicImpactAssessmentPage() {
                 scenario: "Conservative",
                 shrinkReduction: "18%",
                 netMarginGain: "€1.8M annually",
-                roi: "340%",
-                description: "Deployment limited to high-velocity SKUs (bananas, avocados). HOLD mode in distribution, READY mode on shelf.",
-                assumptions: "50% of produce volume covered, 18% shrink reduction in covered categories"
+                roi: "3.4x",
+                description: "Modeled coverage limited to high-velocity SKUs (bananas, avocados).",
+                assumptions: "50% of produce volume modeled, 18% reduction in covered categories"
               },
               {
                 scenario: "Moderate",
                 shrinkReduction: "24%",
                 netMarginGain: "€3.2M annually",
-                roi: "380%",
-                description: "Extended to stone fruit and pears. Optimized rotation protocols aligned with packaging modes.",
-                assumptions: "70% of produce volume covered, 24% shrink reduction with operational integration"
+                roi: "3.8x",
+                description: "Modeled expansion to additional climacteric categories.",
+                assumptions: "70% of produce volume modeled, 24% reduction with operational integration"
               },
               {
                 scenario: "Comprehensive",
                 shrinkReduction: "31%",
                 netMarginGain: "€4.9M annually",
-                roi: "420%",
-                description: "Full climacteric fruit coverage plus supply chain coordination with distributor partners.",
-                assumptions: "85% of produce volume covered, enhanced reduction through upstream coordination"
+                roi: "4.2x",
+                description: "Modeled full climacteric coverage with upstream coordination assumptions.",
+                assumptions: "85% of produce volume modeled, enhanced reduction through upstream coordination"
               }
             ].map((scenario, index) => (
               <motion.div
@@ -182,7 +181,7 @@ export function EconomicImpactAssessmentPage() {
                     </div>
                     <div>
                       <div className="text-[#666] uppercase tracking-wider mb-[0.5vh]" style={{ fontSize: 'clamp(0.75rem, 0.9vw, 1rem)', fontWeight: 600 }}>
-                        ROI
+                        Modeled Return
                       </div>
                       <div className="text-[#026448] leading-none" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
                         {scenario.roi}
@@ -194,7 +193,7 @@ export function EconomicImpactAssessmentPage() {
                   {scenario.description}
                 </p>
                 <p className="text-[#666] leading-[1.6]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)' }}>
-                  <strong>Modeling assumptions:</strong> {scenario.assumptions}
+                  <strong>Modeling assumptions (illustrative):</strong> {scenario.assumptions}
                 </p>
               </motion.div>
             ))}
@@ -202,7 +201,29 @@ export function EconomicImpactAssessmentPage() {
         </div>
       </section>
 
-      {/* Implementation Pathways */}
+      {/* Derived Outputs */}
+      <section className="relative w-full bg-[#f8f8f8] px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">
+        <div className="max-w-[1000px] mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-[#1a1a1a] leading-[1.15] mb-[6vh]" style={{ fontSize: 'clamp(2.2rem, 4vw, 5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+              Derived outputs
+            </h2>
+            <div className="space-y-[3vh] text-[#4a4a4a]" style={{ fontSize: 'clamp(1rem, 1.2vw, 1.35rem)' }}>
+              <div>Annual shrink exposure (€)</div>
+              <div>Modeled loss reduction (€)</div>
+              <div>Net margin recovery (€)</div>
+              <div>Payback period (months)</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Interpretation */}
       <section className="relative w-full bg-[#026448] px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">
         <div className="max-w-[1000px] mx-auto">
           <motion.div
@@ -212,25 +233,21 @@ export function EconomicImpactAssessmentPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#EEFF41] leading-[1.15] mb-[6vh]" style={{ fontSize: 'clamp(2.2rem, 4vw, 5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              Deployment considerations
+              Interpretation
             </h2>
             <div className="space-y-[4vh]">
               {[
                 {
-                  title: "Supply chain integration",
-                  content: "Maximum value capture requires coordination between distributor partners and retail operations. HOLD mode deployment in transit reduces back-room shrink; READY mode on retail floor optimizes display life."
+                  title: "Non-linear margin effects",
+                  content: "Small reductions in shrink (2–5 percentage points) can produce disproportionate margin effects due to the low-margin nature of fresh produce."
                 },
                 {
-                  title: "Operational training",
-                  content: "Store teams require training on packaging mode transitions and rotation protocols. Pilot data shows 2-week ramp-up period for operational proficiency."
+                  title: "Cost boundary conditions",
+                  content: "Modeled outcomes indicate that packaging interventions operating below ~1.5% of produce revenue can materially affect profitability."
                 },
                 {
-                  title: "Category prioritization",
-                  content: "Highest ROI in high-shrink, high-velocity categories. Bananas and avocados show fastest payback; stone fruit and pears deliver strong secondary returns."
-                },
-                {
-                  title: "Consumer communication",
-                  content: "Minimal consumer-facing messaging required. Packaging appears as standard paper; functional benefits manifest as improved product quality and availability."
+                  title: "Pricing pressure relief",
+                  content: "By reducing shrink-driven margin erosion, retailers face less pressure to recover losses through price increases, particularly in high-waste produce categories."
                 }
               ].map((item, index) => (
                 <motion.div
@@ -254,7 +271,7 @@ export function EconomicImpactAssessmentPage() {
         </div>
       </section>
 
-      {/* Conclusion */}
+      {/* Model Scope */}
       <section className="relative w-full bg-white px-[5vw] md:px-[8vw] py-[12vh] md:py-[14vh]">
         <div className="max-w-[900px] mx-auto text-center">
           <motion.div
@@ -264,10 +281,10 @@ export function EconomicImpactAssessmentPage() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-[#1a1a1a] leading-[1.15] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              A margin lever, not a cost item
+              Model scope
             </h2>
             <p className="text-[#4a4a4a] leading-[1.8]" style={{ fontSize: 'clamp(1.05rem, 1.3vw, 1.5rem)' }}>
-              RipeSwitch deployment delivers 3–4× ROI in conservative scenarios through direct shrink reduction. When integrated with optimized rotation protocols and supply chain coordination, margin recovery scales significantly. The technology converts a persistent operational loss into a controllable variable with measurable financial impact.
+              This analysis is based on public shrink benchmarks, simulated ripening behavior, and category-average handling assumptions. Actual results depend on produce mix, logistics conditions, and store-level practices and will be validated through controlled pilots.
             </p>
           </motion.div>
         </div>

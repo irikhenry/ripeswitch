@@ -225,77 +225,6 @@ export function HomeBelowFold() {
             </motion.div>
           </div>
 
-          {/* Bottom Full-Width Impact Section */}
-          <motion.div 
-            className="relative bg-[#026448] px-[5vw] md:px-[8vw] py-[10vh] md:py-[14vh] overflow-hidden"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <div className="absolute top-[-10vh] right-[-12vw] w-[45vw] h-[45vw] rounded-full bg-white/5 blur-3xl pointer-events-none" />
-            <div className="absolute bottom-[-15vh] left-[-10vw] w-[50vw] h-[50vw] rounded-full bg-black/10 blur-3xl pointer-events-none" />
-            <div className="max-w-[1400px] mx-auto">
-              {/* Critical Insight */}
-              <motion.div
-                className="text-center mb-[8vh] md:mb-[12vh] relative"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              >
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#EEFF41] rounded-full mb-[4vh] shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
-                  <span className="text-[#026448] tracking-widest uppercase font-bold" style={{ fontSize: 'clamp(0.8rem, 0.95vw, 1.05rem)' }}>
-                    Critical Insight
-                  </span>
-                </div>
-                <h3 className="text-[#EEFF41] leading-[1.1] max-w-[1000px] mx-auto" style={{ fontSize: 'clamp(2.1rem, 4.2vw, 5.2rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-                  Policy cannot substitute for material performance
-                </h3>
-              </motion.div>
-
-              {/* Global Stats Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-[3.5vh] md:gap-[2.8vw] mb-[8vh] md:mb-[12vh]">
-                {[
-                  { value: '~1B', label: 'Tonnes lost annually', sublabel: 'Global supply chain waste' },
-                  { value: '14%', label: 'Of global methane emissions', sublabel: 'From food system losses' },
-                  { value: '40%', label: 'Loss occurs before consumer', sublabel: 'Transit, storage, back rooms' }
-                ].map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    className="text-center bg-white/5 rounded-3xl border border-white/10 px-6 py-8 backdrop-blur-sm"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.15 }}
-                  >
-                    <div className="text-[#EEFF41] leading-none mb-[2vh] tabular-nums font-heading" style={{ fontSize: 'clamp(3.2rem, 5.2vw, 7.2rem)', fontWeight: 700 }}>
-                      {stat.value}
-                    </div>
-                    <div className="text-white leading-[1.3] mb-[1vh]" style={{ fontSize: 'clamp(1.1rem, 1.5vw, 1.8rem)', fontWeight: 600 }}>
-                      {stat.label}
-                    </div>
-                    <div className="text-white/60 leading-[1.5]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 400 }}>
-                      {stat.sublabel}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Bottom Callout */}
-              <motion.div
-                className="text-center max-w-[900px] mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-              >
-                <p className="text-white/80 leading-[1.7]" style={{ fontSize: 'clamp(1.1rem, 1.35vw, 1.6rem)', fontWeight: 400 }}>
-                  The root issue isn’t behavior—it’s missing system-level ripening control in packaging.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -568,29 +497,29 @@ export function HomeBelowFold() {
         </div>
       </section>
 
-      {/* Economic Impact Calculator Section */}
-      <section className="relative w-full min-h-screen bg-[#026448] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
-        <div className="max-w-[1400px] w-full mx-auto">
-          {/* Section Header */}
-          <motion.div
-            className="text-center mb-[8vh] md:mb-[12vh]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[4vh]">
-              <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)', fontWeight: 700 }}>
-                Economic Impact
-              </span>
-            </div>
-            <h2 className="text-[#EEFF41] leading-[1.1] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
-              The numbers that matter
-            </h2>
-            <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
-              Modest reductions in produce shrink deliver substantial impact at retail scale.
-            </p>
-          </motion.div>
+          {/* Economic Modeling Section */}
+          <section className="relative w-full min-h-screen bg-[#026448] flex flex-col justify-center px-[5vw] md:px-[8vw] py-[8vh] md:py-[10vh]">
+            <div className="max-w-[1400px] w-full mx-auto">
+              {/* Section Header */}
+              <motion.div
+                className="text-center mb-[8vh] md:mb-[12vh]"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="inline-block px-5 py-2 bg-[#EEFF41] rounded-full mb-[4vh]">
+                  <span className="text-[#026448] tracking-wider uppercase" style={{ fontSize: 'clamp(0.7rem, 0.85vw, 0.95rem)', fontWeight: 700 }}>
+                    Performance Modeling
+                  </span>
+                </div>
+                <h2 className="text-[#EEFF41] leading-[1.1] mb-[4vh]" style={{ fontSize: 'clamp(2.2rem, 4.5vw, 5.5rem)', fontWeight: 700, letterSpacing: '-0.02em' }}>
+                  Shrink Sensitivity Model
+                </h2>
+                <p className="text-white/90 leading-[1.7] max-w-[900px] mx-auto" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.5rem)' }}>
+                  Model-based sensitivity analysis using adjustable parameters. Intended to support pilot design.
+                </p>
+              </motion.div>
 
           {/* Interactive Calculator */}
           <LazySection minHeight="520px">

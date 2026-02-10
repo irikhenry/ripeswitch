@@ -49,9 +49,12 @@ export function EconomicCalculator() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h3 className="text-white leading-[1.2] mb-[4vh]" style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 700 }}>
-          Calculate your impact
+        <h3 className="text-white leading-[1.2] mb-[2vh]" style={{ fontSize: 'clamp(1.5rem, 2vw, 2.5rem)', fontWeight: 700 }}>
+          Model inputs (adjustable)
         </h3>
+        <div className="text-white/60 mb-[4vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}>
+          Modeling to explore sensitivity.
+        </div>
         <div className="mb-[4vh]">
           <button
             type="button"
@@ -235,7 +238,7 @@ export function EconomicCalculator() {
         </div>
 
         <div className="mt-[4vh] text-white/80" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.1rem)' }}>
-          Rule of thumb: €{savingsPer100M.toFixed(2)}M annual savings per €100M revenue at current settings.
+          Modeled rule of thumb: €{savingsPer100M.toFixed(2)}M annual recovery per €100M revenue at current settings.
         </div>
         <div className="mt-[1vh] text-white/60" style={{ fontSize: 'clamp(0.8rem, 0.95vw, 1.05rem)' }}>
           Scope: ripening-related losses in climacteric fruit categories (not handling damage or theft).
@@ -253,7 +256,7 @@ export function EconomicCalculator() {
         {/* Annual Savings */}
         <div className="bg-[#EEFF41] rounded-3xl p-[5vh] md:p-[6vh]">
           <div className="text-[#026448]/70 mb-[2vh]" style={{ fontSize: 'clamp(0.9rem, 1.05vw, 1.2rem)', fontWeight: 600 }}>
-            Annual savings
+            Modeled loss reduction
           </div>
           <div className="text-[#026448] leading-none mb-[2vh] font-heading" style={{ fontSize: 'clamp(3rem, 5vw, 6.5rem)', fontWeight: 700 }}>
             €{annualSavings.toFixed(1)}M
@@ -265,14 +268,14 @@ export function EconomicCalculator() {
           €{savingsPer100M.toFixed(2)}M savings per €100M revenue
         </div>
           <div className="text-[#026448] pt-[2vh] border-t border-[#026448]/20" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 600 }}>
-            Margin recovery can reduce pressure on price inflation
+            By reducing shrink-driven margin erosion, retailers face less pressure to recover losses through price increases
           </div>
         </div>
 
         {/* Net Impact */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-[4vh] md:p-[5vh] border border-white/20">
           <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 500 }}>
-            Net annual savings (after implementation cost)
+            Net modeled recovery (after implementation cost)
           </div>
           {netAnnualSavings >= 0 ? (
             <div className="leading-none text-[#EEFF41] font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
@@ -299,7 +302,7 @@ export function EconomicCalculator() {
           {/* Current Loss */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-[3vh] md:p-[4vh] border border-white/20">
             <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 500 }}>
-              Current annual shrink loss
+              Modeled baseline loss
             </div>
             <div className="text-white leading-none font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
               €{currentShrinkLoss.toFixed(1)}M
@@ -309,7 +312,7 @@ export function EconomicCalculator() {
           {/* New Loss */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-[3vh] md:p-[4vh] border border-white/20">
             <div className="text-white/60 mb-[1vh]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)', fontWeight: 500 }}>
-              Projected annual shrink loss
+              Modeled post-intervention loss
             </div>
             <div className="text-[#EEFF41] leading-none font-heading" style={{ fontSize: 'clamp(1.8rem, 2.5vw, 3rem)', fontWeight: 700 }}>
               €{newShrinkLoss.toFixed(1)}M
@@ -319,7 +322,7 @@ export function EconomicCalculator() {
           {/* ROI Note */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-[3vh] md:p-[4vh] border border-white/10">
             <div className="text-white/80 leading-[1.6]" style={{ fontSize: 'clamp(0.85rem, 1vw, 1.15rem)' }}>
-              <strong className="text-[#EEFF41]">Note:</strong> Applies to produce categories only. Actual results vary by category mix and baseline shrink rates.
+              <strong className="text-[#EEFF41]">Model scope:</strong> Based on public shrink benchmarks and category-average handling assumptions. Actual results vary by produce mix, logistics conditions, and store-level practices.
             </div>
           </div>
         </div>
