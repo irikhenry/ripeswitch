@@ -362,7 +362,7 @@ export function PerformanceModelingPage() {
 
       {/* Unit Economics Example Section */}
       <section className="relative w-full bg-white">
-        <div className="max-w-[1400px] mx-auto px-[5vw] md:px-[8vw] py-[12vh] md:py-[16vh]">
+        <div className="max-w-[1600px] mx-auto px-[5vw] md:px-[8vw] py-[12vh] md:py-[16vh]">
           
           {/* Section Header */}
           <motion.div
@@ -384,7 +384,7 @@ export function PerformanceModelingPage() {
           </motion.div>
 
           {/* Two-Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-[6vh] lg:gap-[8vw] mb-[8vh] md:mb-[10vh]">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-[5vh] lg:gap-[6vw] mb-[8vh] md:mb-[10vh] items-start">
             
             {/* Left Column - Visual Flow */}
             <motion.div
@@ -394,17 +394,17 @@ export function PerformanceModelingPage() {
               transition={{ duration: 0.8 }}
             >
               {/* Visual Flow Container */}
-              <div className="bg-[#f8f8f8] rounded-3xl p-[5vh] md:p-[6vh] border border-[#e0e0e0]">
+              <div className="bg-[#f8f8f8] rounded-3xl p-[4vh] md:p-[5vh] lg:p-[6vh] border border-[#e0e0e0]">
                 <p className="text-[#1a1a1a] uppercase tracking-[0.2em] mb-[5vh]" style={{ fontSize: 'clamp(0.7rem, 0.8vw, 0.85rem)', fontWeight: 500 }}>
                   Visual Logic
                 </p>
 
                 {/* Flow Diagram */}
-                <div className="space-y-[4vh]">
+                <div className="space-y-[3vh] lg:space-y-[3.5vh]">
                   
                   {/* Baseline Stack */}
                   <div className="text-center">
-                    <div className="flex justify-center gap-2 mb-[2vh]">
+                    <div className="flex justify-center gap-2 mb-[1.5vh] lg:mb-[2vh]">
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-[#CBD5E1] flex items-center justify-center text-2xl">
                           🥑
@@ -422,7 +422,7 @@ export function PerformanceModelingPage() {
                   {/* Loss Arrow */}
                   <div className="flex items-center justify-center">
                     <div className="text-center">
-                      <div className="w-full h-[3px] bg-[#DC2626] mb-[1.5vh] rounded-full opacity-60"></div>
+                      <div className="w-full h-[3px] bg-[#DC2626] mb-[1vh] rounded-full opacity-60"></div>
                       <p className="text-[#DC2626] font-medium" style={{ fontSize: 'clamp(0.85rem, 0.95vw, 1.05rem)' }}>
                         15% shrink (baseline)
                       </p>
@@ -434,7 +434,7 @@ export function PerformanceModelingPage() {
 
                   {/* Protected Stack */}
                   <div className="text-center">
-                    <div className="flex justify-center gap-2 mb-[2vh]">
+                    <div className="flex justify-center gap-2 mb-[1.5vh] lg:mb-[2vh]">
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-[#16A34A]/20 border-2 border-[#16A34A] flex items-center justify-center text-2xl relative">
                           🥑
@@ -456,7 +456,7 @@ export function PerformanceModelingPage() {
                 </div>
 
                 {/* Caption */}
-                <p className="text-[#64748B] text-center mt-[4vh] italic" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
+                <p className="text-[#64748B] text-center mt-[3vh] lg:mt-[4vh] italic" style={{ fontSize: 'clamp(0.8rem, 0.9vw, 1rem)' }}>
                   Illustrative example based on discount retail produce handling
                 </p>
               </div>
@@ -469,10 +469,10 @@ export function PerformanceModelingPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="space-y-[4vh]">
+              <div className="space-y-[3vh] lg:space-y-[3.5vh]">
                 
                 {/* Section: Baseline */}
-                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[4vh] md:p-[5vh]">
+                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[3.5vh] md:p-[4.5vh] lg:p-[5vh]">
                   <h3 className="text-[#1a1a1a] mb-[3vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.5rem)', fontWeight: 600 }}>
                     Baseline (without RipeSwitch)
                   </h3>
@@ -499,7 +499,7 @@ export function PerformanceModelingPage() {
                 </div>
 
                 {/* Section: With RipeSwitch */}
-                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[4vh] md:p-[5vh]">
+                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[3.5vh] md:p-[4.5vh] lg:p-[5vh]">
                   <h3 className="text-[#1a1a1a] mb-[3vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.5rem)', fontWeight: 600 }}>
                     With RipeSwitch (conservative pilot case)
                   </h3>
@@ -526,7 +526,7 @@ export function PerformanceModelingPage() {
                 </div>
 
                 {/* Section: Cost of RipeSwitch */}
-                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[4vh] md:p-[5vh]">
+                <div className="bg-white border border-[#e0e0e0] rounded-2xl p-[3.5vh] md:p-[4.5vh] lg:p-[5vh]">
                   <h3 className="text-[#1a1a1a] mb-[3vh]" style={{ fontSize: 'clamp(1.1rem, 1.3vw, 1.5rem)', fontWeight: 600 }}>
                     Cost of RipeSwitch
                   </h3>

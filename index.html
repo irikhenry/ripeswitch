@@ -34,12 +34,11 @@
         }
       </style>
 
-      <link rel="preload" as="style" href="/src/styles/index.css" />
       <link
-        rel="stylesheet"
+        rel="preload"
+        as="style"
         href="/src/styles/index.css"
-        media="print"
-        onload="this.media='all'"
+        onload="this.onload=null;this.rel='stylesheet'"
       />
       <noscript>
         <link rel="stylesheet" href="/src/styles/index.css" />

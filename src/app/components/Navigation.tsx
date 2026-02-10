@@ -30,9 +30,9 @@ export function Navigation() {
   return (
     <>
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 px-[5vw] md:px-[3vw] py-[3vh] md:py-[4vh] transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 h-16 md:h-20 px-[5vw] md:px-[3vw] py-0 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-transparent backdrop-blur-none md:backdrop-blur-xl border-b border-white/10' 
+          ? 'bg-transparent backdrop-blur-xl border-b border-white/10' 
           : 'bg-transparent'
       }`}>
         <a
@@ -41,7 +41,7 @@ export function Navigation() {
         >
           Skip to content
         </a>
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full h-full flex items-center justify-between">
           <Link to="/" className="w-[clamp(140px,22vw,320px)] md:w-[clamp(180px,18vw,320px)]" onClick={closeMenu}>
             <Logo />
           </Link>
