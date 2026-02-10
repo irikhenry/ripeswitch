@@ -424,7 +424,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <LazySection minHeight="1200px">
+      <LazySection minHeight="clamp(2200px, 260vh, 3600px)">
         <Suspense fallback={<div className="min-h-[60vh]" />}>
           <HomeBelowFold />
         </Suspense>
